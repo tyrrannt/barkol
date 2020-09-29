@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    display: flex;
+}
+
+.top_menu {
+    display: flex;
+    flex-direction: row;
+    
+}
