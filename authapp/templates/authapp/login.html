@@ -1,0 +1,20 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <div class="card-header bg-light"><h3 class="text-center font-weight-light my-4">Авторизация</h3>
+    </div>
+    <form class="form-horizontal bg-light" action="{% url 'auth:login' %}" method="post">
+        {% csrf_token %}
+        {{ login_form.as_table }}
+        <br>
+        <input class="form-control" type="submit" value="войти">
+    </form>
+    <hr>
+    <button type="button" class="btn btn-block btn-outline-secondary"><a href="{% url 'auth:register' %}">Нужен аккаунт?
+        Зарегистрируйся!</a></button>
+    <hr>
+    <button type="button" class="btn btn-block btn-outline-secondary"><a href="{% url 'mainapp:index' %}">Главная
+        страница</a></button>
+{% endblock %}
