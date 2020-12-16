@@ -1,0 +1,115 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Houston | Home</title>
+    <!-- google fonts roboto regular -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,500' type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lora:400,700' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.structure.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.countdown.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/red.css' %}">
+    <link rel="stylesheet" href="{% static 'css/select2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plyr.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.raty.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/hotel.style.css' %}">
+</head>
+
+<body class="rq-homepage-one">
+
+    <div id="rq-circle-loader-wrapper">
+        <div id="rq-circle-loader-center">
+            <div class="rq-circle-load">
+                <img src="{% static 'img/oval.svg' %}" alt="Page Loader">
+            </div>
+        </div>
+    </div>
+
+    {% include 'libapp/nav.html' %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="rq-footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-6 col-xs-12">
+                        <div class="footer-logo">
+                            <img src="{% static 'img/footer-logo.png' %}" class="img-responsive"
+                                alt="Responsive image" />
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <h5>address</h5>
+                        <address>
+                            <ul>
+                                <li class="rq-hotel-address"><i class="fa fa-map-marker"></i>Green lake, Hotel plaza
+                                    <br>new
+                                    york, USA
+                                </li>
+                                <li class="rq-phone"><i class="fa fa-phone"></i>807 302 2186</li>
+                                <li class="rq-email"><i class="fa fa-envelope-o"></i>info@barkol.ru</li>
+                            </ul>
+                        </address>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <h5>useful link</h5>
+                        <ul class="rq-footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Booking System</a></li>
+                            <li><a href="#">Hotel Services</a></li>
+                            <li><a href="#">Booking Agent</a></li>
+                            <li><a href="#">Conntact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <h5>newsletter</h5>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <div class="rq-common-btn">
+                            <button class="btn rq-btn-primary" type="submit">отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rq-footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p>&copy; Copyright {% now 'Y' %}. All right researved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="main-wrapper">
+    </div>
+    <!--main-wrapper-->
+    <!-- Latest jQuery plugin-->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- Latest compiled and minified JavaScript for bootstrap-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/parallax.min.js' %}"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script src="{% static 'js/select2.min.js' %}"></script>
+    <script src="{% static 'js/icheck.min.js' %}"></script>
+    <script src="{% static 'js/jquery.raty.js' %}"></script>
+    <script src="{% static 'js/jquery.datetimepicker.full.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+
+</body>
+
+</html>

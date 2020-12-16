@@ -1,3 +1,6 @@
 from django.contrib import admin
+from libapp.models import Category, Document, Access_document
 
-# Register your models here.
+admin.site.register(Category)
+admin.site.register(Document)
+admin.site.register(Access_document)
