@@ -54,7 +54,7 @@ $(document).ready(function(){
     function languageFlag (language) {
         if (!language.id) { return language.text; }
         var $language = $(
-            '<span>' + language.text + '<span class="rq-flag-wrapper"><img src="img/flags/' + language.element.value.toLowerCase() + '.png" class="img-flag" /></span></span>'
+            '<span>' + language.text + '<span class="rq-flag-wrapper"><img src="../img/flags/' + language.element.value.toLowerCase() + '.png" class="img-flag" /></span></span>'
         );
         return $language;
     };

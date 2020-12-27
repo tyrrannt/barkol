@@ -1,0 +1,50 @@
+<!--================================
+                SIDE MENU
+    =================================-->
+<!-- PAGE OVERLAY WHEN MENU ACTIVE -->
+<div class="rq-side-menu-overlay"></div>
+<!-- PAGE OVERLAY WHEN MENU ACTIVE END -->
+
+<div class="rq-side-menu-wrap">
+    <!-- OVERLAY -->
+    <div class="rq-dark-overlay"></div>
+    <!-- OVERLAY END -->
+
+    <div id="rq-side-menu" class="rq-side-menu">
+        <div class="rq-side-menu-widget-wrap">
+            <div class="rq-login-form-wrapper">
+                {% if not user.is_authenticated %}
+                    <h3>Вход пользователя</h3>
+                    <p>Войдите в систему, чтобы получить доступ ко всем функциям</p>
+
+                    <div class="rq-login-form">
+                        <form action="{% url 'auth:login' %}" method="post">
+                            {% csrf_token %}
+                            <input type="text" name="username" id="rq-user-input" placeholder="User Name">
+                            <input type="password" name="password" id="rq-user-password" placeholder="Password">
+                            <button type="submit">Войти</button>
+                        </form>
+                    </div>
+
+                    <div class="rq-social-login-opt">
+                        <a href="#" class="rq-social-login-btn rq-facebook-login">Login with Facebook</a>
+                        <a href="#" class="rq-social-login-btn rq-twitter-login">Login with Twitter</a>
+                    </div>
+
+                    <div class="rq-other-options">
+                        <a href="#" class="rq-forgot-pass">Забыли пароль?</a>
+                        <a href="#" class="rq-signup">Регистрация</a>
+                    </div>
+                {% else %}
+                    <div class="rq-other-options">
+                        <a href="#" class="rq-forgot-pass">Мой профиль</a>
+                        <a href="{% url 'auth:logout' %}" class="rq-signup">Выход</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <button class="rq-side-menu-close-button" id="rq-side-menu-close-button">Close Menu</button>
+</div>
+<!-- SIDE MENU END -->

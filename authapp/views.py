@@ -7,8 +7,6 @@ from django.urls import reverse
 
 
 def login(request):
-    title = 'вход'
-
     login_form = UserLoginForm(data=request.POST)
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST['username']
@@ -17,15 +15,15 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user and user.is_active:
             auth.login(request, user)
-            return HttpResponseRedirect(reverse('mainapp:index'))
+            return HttpResponseRedirect(reverse('index'))
 
-    content = {'title': title, 'login_form': login_form}
-    return render(request, 'authapp/login.html', content)
+    content = {'login_form': login_form}
+    return render(request, 'libapp/index.html', content)
 
 
 def logout(request):
     auth.logout(request)
-    return HttpResponseRedirect(reverse('mainapp:index'))
+    return HttpResponseRedirect(reverse('index'))
 
 
 def register(request):

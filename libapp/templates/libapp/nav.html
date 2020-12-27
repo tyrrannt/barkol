@@ -21,56 +21,22 @@
             <!-- navbar-collapse start-->
             <div id="nav-menu" class="navbar-collapse rq-menu-wrapper collapse" role="navigation">
                 <ul class="nav navbar-nav rq-menus">
-                    <li class="active">
-                        <a href="{% url 'index' %}">Home</a>
+                    {% for item in nav_menu %}
+                    <li class="{% if item.sequence_number == 1 %}active{% endif %}">
+                        <a href="{% url item.url_address %}">{{ item }}</a>
                         <ul class="rq-sub-menu">
                             <li>
                                 <a href="#">Homepage 2</a>
                             </li>
                         </ul>
                     </li>
+                    {% endfor %}
+
+                    {% if user.is_superuser or user.is_staff %}
                     <li>
-                        <a href="select-room-grid.html">Room</a>
-                        <ul class="rq-sub-menu">
-                            <li>
-                                <a href="single-room.html">Single Room</a>
-                            </li>
-                        </ul>
+                        <a href="{% url 'admin:index' %}">Admin</a>
                     </li>
-                    <li>
-                        <a href="about-us.html">About</a>
-                    </li>
-                    <li>
-                        <a href="cart.html">Pages</a>
-                        <ul class="rq-sub-menu">
-                            <li>
-                                <a href="cart.html">Cart</a>
-                            </li>
-                            <li>
-                                <a href="checkout.html">Check Out</a>
-                            </li>
-                            <li>
-                                <a href="comming-soon.html">Comming Soon</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                        <ul class="rq-sub-menu">
-                            <li>
-                                <a href="blog.html">Blog</a>
-                            </li>
-                            <li>
-                                <a href="blog-details.html">Blog Details</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+                    {% endif %}
                 </ul>
             </div>
             <!-- navbar-collapse end-->
