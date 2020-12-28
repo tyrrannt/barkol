@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load utilities %}
 <header>
     <!-- Navigation Menu start-->
     <nav class="navbar rq-header-main-menu navbar-fixed-top" role="navigation">
@@ -21,15 +22,19 @@
             <!-- navbar-collapse start-->
             <div id="nav-menu" class="navbar-collapse rq-menu-wrapper collapse" role="navigation">
                 <ul class="nav navbar-nav rq-menus">
-                    {% for item in nav_menu %}
-                    <li class="{% if item.sequence_number == 1 %}active{% endif %}">
-                        <a href="{% url item.url_address %}">{{ item }}</a>
-                        <ul class="rq-sub-menu">
-                            <li>
-                                <a href="#">Homepage 2</a>
-                            </li>
-                        </ul>
-                    </li>
+                    {% for key, value in nav_hash.items %}
+                        <li class="active">
+                            <a href="{% url value.1 %}">{{ value.0 }}</a>
+                            {% if value|len:'2' %}
+                            <ul class="rq-sub-menu">
+                            {% for item in value|sls:'2' %}
+                                    <li>
+                                        <a href="{% if item.1 %} {% url item.1 %} {% else %}#{% endif %}">{{ item.0 }}</a>
+                                    </li>
+                            {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
                     {% endfor %}
 
                     {% if user.is_superuser or user.is_staff %}
