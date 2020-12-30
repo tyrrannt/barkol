@@ -1,1 +1,22 @@
-[{"model": "blogapp.blogcategory", "pk": 8, "fields": {}}, {"model": "blogapp.blogcategory", "pk": 9, "fields": {}}, {"model": "blogapp.blogcategory", "pk": 10, "fields": {}}, {"model": "blogapp.blogcategory", "pk": 11, "fields": {}}]
+[
+  {
+    "model": "blogapp.blogcategory",
+    "pk": 8,
+    "fields": {}
+  },
+  {
+    "model": "blogapp.blogcategory",
+    "pk": 9,
+    "fields": {}
+  },
+  {
+    "model": "blogapp.blogcategory",
+    "pk": 10,
+    "fields": {}
+  },
+  {
+    "model": "blogapp.blogcategory",
+    "pk": 11,
+    "fields": {}
+  }
+]

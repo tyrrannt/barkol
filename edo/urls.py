@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('authapp.urls', namespace='auth')),
     path('lib/', include('libapp.urls', namespace='library')),
-    #path('blog/', include('blogapp.urls', namespace='blogapp')),
+    path('blog/', include('blogapp.urls', namespace='blog')),
+    path('doc/', include('docapp.urls', namespace='docapp')),
     path('', libapp_views.main, name='index'),
 
 ]

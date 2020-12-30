@@ -57,4 +57,3 @@ def edit(request):
     content = {'title': title, 'edit_form': edit_form}
 
     return render(request, 'authapp/edit.html', content)
-

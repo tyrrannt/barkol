@@ -1,43 +1,43 @@
 .cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
-  font-size: 2em;
+    font-size: 2em;
 }
 
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: "FontAwesome";
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  speak: none;
-  text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
 }
 
 .cancel-on-png:before {
-  content: "\e600";
+    content: "\e600";
 }
 
 .cancel-off-png:before {
-  content: "\e601";
+    content: "\e601";
 }
 
 .star-on-png:before {
-  content: "\f005";
+    content: "\f005";
 }
 
 .star-off-png:before {
-  content: "\f006";
+    content: "\f006";
 }
 
 .star-half-png:before {
-  content: "\f123";
+    content: "\f123";
 }

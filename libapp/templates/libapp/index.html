@@ -13,25 +13,25 @@
             <div class="row">
                 <div class="col-md-8 col-sm-7 rq-blog-post-wrapper">
                     {% for item in blog_post %}
-                    <!-- BLOG ITEMS -->
-                    <div class="rq-blog-items rq-image-post">
-                        <div class="rq-blog-img-wrapper">
-                            <img src="{% static 'img/placeholder-770.jpg' %}" alt="Blog Image">
-                            <div class="rq-blog-cat-icon">
-                                <i class="ion-ios-camera-outline"></i>
+                        <!-- BLOG ITEMS -->
+                        <div class="rq-blog-items rq-image-post">
+                            <div class="rq-blog-img-wrapper">
+                                <img src="{% static 'img/placeholder-770.jpg' %}" alt="Blog Image">
+                                <div class="rq-blog-cat-icon">
+                                    <i class="ion-ios-camera-outline"></i>
+                                </div>
+                            </div>
+
+                            <div class="rq-blog-item-details">
+                                <h3>
+                                    <a href="#">{{ item.name }}</a>
+                                </h3>
+                                <h5>{{ item.short_desc }}</h5>
+                                <p>{{ item.description }}</p>
+                                <span class="rq-blog-post-date">{{ item.time_publication }}</span>
                             </div>
                         </div>
-
-                        <div class="rq-blog-item-details">
-                            <h3>
-                                <a href="#">{{ item.name }}</a>
-                            </h3>
-                            <h5>{{ item.short_desc }}</h5>
-                            <p>{{ item.description }}</p>
-                            <span class="rq-blog-post-date">{{ item.time_publication }}</span>
-                        </div>
-                    </div>
-                    <!-- BLOG ITEMS END -->
+                        <!-- BLOG ITEMS END -->
                     {% endfor %}
                 </div>
 
@@ -43,18 +43,18 @@
 
                             <div class="rq-recent-post-wrapper">
                                 {% for item in blog_post %}
-                                <!-- POST ITEM -->
-                                <div class="rq-recent-post-item">
-                                    <div class="rq-recent-post-img-wrapper">
-                                        <img src="{% static 'img/placeholder-70.jpg' %}" alt="Последние пост">
-                                    </div>
+                                    <!-- POST ITEM -->
+                                    <div class="rq-recent-post-item">
+                                        <div class="rq-recent-post-img-wrapper">
+                                            <img src="{% static 'img/placeholder-70.jpg' %}" alt="Последние пост">
+                                        </div>
 
-                                    <div class="rq-recent-post-details">
-                                        <h3><a href="#">{{ item.name }}</a></h3>
-                                        <span class="rq-post-date">{{ item.time_publication }}</span>
+                                        <div class="rq-recent-post-details">
+                                            <h3><a href="#">{{ item.name }}</a></h3>
+                                            <span class="rq-post-date">{{ item.time_publication }}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- END -->
+                                    <!-- END -->
                                 {% endfor %}
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                             <h3 class="rq-sidebar-title">Категории блога</h3>
                             <ul>
                                 {% for item in blog_category %}
-                                <li><a href="#">{{ item.name }}</a></li>
+                                    <li><a href="#">{{ item.name }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
