@@ -1,10 +1,48 @@
 from django.shortcuts import render, HttpResponseRedirect
+from django.utils.decorators import method_decorator
+from django.views.generic import DetailView
 from authapp.forms import UserLoginForm
 from authapp.forms import UserRegisterForm
 from authapp.forms import UserEditForm
 from django.contrib import auth
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
+from authapp.models import Person
+from libapp.models import MainMenu
+from edo.utilities import main_menu_generate, weather
+from django.contrib.auth.decorators import user_passes_test
 
+
+class UserProfile(DetailView):
+    context = {}
+    model = Person
+    template_name = 'authapp/users/user_profile.html'
+    success_url = reverse_lazy('authapp:profile')
+    form_class = UserEditForm
+    context.update({'groups': Person.groups})
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, request, *args, **kwargs):
+        return super(UserProfile, self).dispatch(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(UserProfile, self).get_context_data(**kwargs)
+        context['title'] = title = 'редактирование'
+        context.update(weather('524901'))
+
+        return context
+
+class AdminUsersActive(DeleteView):
+    model = Person
+    template_name = 'adminapp/admin-users-update-delete.html'
+    success_url = reverse_lazy('admin_staff:admin_users')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.is_active = True
+        self.object.save()
+        return HttpResponseRedirect(self.get_success_url())
 
 def login(request):
     login_form = UserLoginForm(data=request.POST)
@@ -17,8 +55,9 @@ def login(request):
             auth.login(request, user)
             return HttpResponseRedirect(reverse('index'))
 
-    content = {'login_form': login_form}
-    return render(request, 'libapp/index.html', content)
+    context = {'login_form': login_form}
+    context.update(main_menu_generate(MainMenu.objects.all()))
+    return render(request, 'libapp/index.html', context)
 
 
 def logout(request):
@@ -38,13 +77,13 @@ def register(request):
     else:
         register_form = UserRegisterForm()
 
-    content = {'title': title, 'register_form': register_form}
-
-    return render(request, 'authapp/register.html', content)
+    context = {'title': title, 'register_form': register_form}
+    context.update(main_menu_generate(MainMenu.objects.all()))
+    return render(request, 'authapp/register.html', context)
 
 
 def edit(request):
-    title = 'редактирование'
+    title = 'Редактирование профиля'
 
     if request.method == 'POST':
         edit_form = UserEditForm(request.POST, request.FILES, instance=request.user)
@@ -54,6 +93,6 @@ def edit(request):
     else:
         edit_form = UserEditForm(instance=request.user)
 
-    content = {'title': title, 'edit_form': edit_form}
-
-    return render(request, 'authapp/edit.html', content)
+    context = {'title': title, 'edit_form': edit_form}
+    context.update(main_menu_generate(MainMenu.objects.all()))
+    return render(request, 'authapp/edit.html', context)

@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from libapp.models import MainMenu
 from blogapp.models import Blog, BlogCategory
-from edo.utilities import main_menu_generate
+from authapp.models import Counteragent
+from edo.utilities import main_menu_generate, footer_info_generator
 
 
 
@@ -19,4 +20,8 @@ def main(request):
         'blog_post': blog_post,
     }
     context.update(main_menu_generate(MainMenu.objects.all()))
+    try:
+        context.update(footer_info_generator(Counteragent.objects.get(base_counteragent=True)))
+    except Exception:
+        pass
     return render(request, 'libapp/index.html', context)

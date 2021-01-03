@@ -1,0 +1,42 @@
+{% load staticfiles %}
+{% load utilities %}
+
+<!--  BEGIN PROFILE SIDEBAR  -->
+<aside class="profile-sidebar text-center">
+    <div class="profile-content profile-content-scroll">
+        <div class="usr-profile">
+            <img src="{{ user.avatar|media_folder_users }}" alt="admin-profile" class="img-fluid">
+        </div>
+        <p class="user-name mt-4 mb-4">{{ user.first_name }} {{ user.last_name }}</p>
+        <div class="">
+            <div class="accordion" id="user-stats">
+                <div class="card">
+                    <div class="card-header pb-4 mb-4" id="status">
+                        <h6 class="mb-0" data-toggle="collapse" data-target="#user-status" aria-expanded="true"
+                            aria-controls="user-status"><i class="flaticon-view-3 mr-2"></i> Мой статус <i
+                                class="flaticon-down-arrow ml-2"></i></h6>
+                    </div>
+                    <div id="user-status" class="collapse show" aria-labelledby="status" data-parent="#user-stats">
+                        <div class="card-body text-left">
+                            <ul class="list-unstyled pb-4">
+                                <li class="status-online"><a href="javascript:void(0);">Онлайн</a></li>
+                                <li class="status-away"><a href="javascript:void(0);">Отошел</a></li>
+                                <li class="status-no-disturb"><a href="javascript:void(0);">Не беспокоить</a></li>
+                                <li class="status-invisible"><a href="javascript:void(0);">Невидим</a></li>
+                                <li class="status-offline"><a href="javascript:void(0);">Оффлайн</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-links text-left">
+            <ul class="list-unstyled">
+                <li><a href="apps_mailbox.html"><i class="flaticon-mail-22"></i> Входящие</a></li>
+                <li><a href="{% url 'authapp:profile' user.pk %}"><i class="flaticon-user-11"></i> Мой профиль</a></li>
+                <li><a href="{% url 'authapp:logout' %}"><i class="flaticon-power-off"></i> Выход</a></li>
+            </ul>
+        </div>
+    </div>
+</aside>
+<!--  BEGIN PROFILE SIDEBAR  -->

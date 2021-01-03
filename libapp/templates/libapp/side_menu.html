@@ -18,7 +18,7 @@
                     <p>Войдите в систему, чтобы получить доступ ко всем функциям</p>
 
                     <div class="rq-login-form">
-                        <form action="{% url 'auth:login' %}" method="post">
+                        <form action="{% url 'authapp:login' %}" method="post">
                             {% csrf_token %}
                             <input type="text" name="username" id="rq-user-input" placeholder="User Name">
                             <input type="password" name="password" id="rq-user-password" placeholder="Password">
@@ -33,12 +33,12 @@
 
                     <div class="rq-other-options">
                         <a href="#" class="rq-forgot-pass">Забыли пароль?</a>
-                        <a href="#" class="rq-signup">Регистрация</a>
+                        <a href="{% url 'authapp:register' %}" class="rq-signup">Регистрация</a>
                     </div>
                 {% else %}
                     <div class="rq-other-options">
-                        <a href="#" class="rq-forgot-pass">Мой профиль</a>
-                        <a href="{% url 'auth:logout' %}" class="rq-signup">Выход</a>
+                        <a href="{% url 'authapp:profile' user.pk %}" class="rq-forgot-pass">Мой профиль</a>
+                        <a href="{% url 'authapp:logout' %}" class="rq-signup">Выход</a>
                     </div>
                 {% endif %}
             </div>

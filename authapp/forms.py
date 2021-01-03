@@ -17,7 +17,7 @@ class UserLoginForm(AuthenticationForm):
 class UserEditForm(UserChangeForm):
     class Meta:
         model = Person
-        fields = ('username', 'first_name', 'last_name', 'email', 'birthday', 'password')
+        fields = ('username', 'first_name', 'last_name', 'email', 'birthday', 'password', 'avatar')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -26,13 +26,6 @@ class UserEditForm(UserChangeForm):
             field.help_text = ''
             if field_name == 'password':
                 field.widget = forms.HiddenInput()
-
-    # def clean_age(self):
-    #     data = self.cleaned_data['age']
-    #     if data < 18:
-    #         raise forms.ValidationError("Вы слишком молоды!")
-    #
-    #     return data
 
 
 class UserRegisterForm(UserCreationForm):
@@ -46,9 +39,11 @@ class UserRegisterForm(UserCreationForm):
             field.widget.attrs['class'] = 'form-control py-4'
             field.help_text = ''
 
-    # def clean_age(self):
-    #     data = self.cleaned_data['age']
-    #     if data < 18:
-    #         raise forms.ValidationError("Вы слишком молоды!")
-    #
-    #     return data
+
+class UserProfileForm(UserChangeForm):
+    class Meta:
+        model = Person
+        fields = ('username', 'first_name', 'last_name', 'surname', 'access_right', 'address', 'type_users', 'phone', 'email', 'birthday', 'password', 'avatar')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

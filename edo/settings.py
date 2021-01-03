@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -126,3 +126,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Users auth
 AUTH_USER_MODEL = 'authapp.Person'
+LOGIN_URL = '/authapp/login'

@@ -14,7 +14,7 @@
                 </button>
 
                 <!-- Logo -->
-                <a class="navbar-brand" href="{% url 'index' %}"><img class="logo" src="{% static 'img/logo.png' %}"
+                <a class="navbar-brand" href="{% url 'index' %}"><img class="logo" src="{% static 'img/logo2.png' %}"
                                                                       alt="Houston"></a>
             </div>
             <!-- Navbar Toggle End -->
@@ -38,6 +38,9 @@
                     {% endfor %}
 
                     {% if user.is_superuser or user.is_staff %}
+                        <li>
+                            <a href="{% url 'authapp:edit' %}">Админ</a>
+                        </li>
                         <li>
                             <a href="{% url 'admin:index' %}">Admin</a>
                         </li>

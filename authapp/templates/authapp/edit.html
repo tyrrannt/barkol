@@ -1,17 +1,72 @@
-{% extends 'authapp/base.html' %}
+{% extends 'authapp/index.html' %}
 {% load staticfiles %}
+{% load utilities %}
 
+{% block heads %}
+    <title>{{ title }} - {{ user.username }}</title>
+{% endblock %}
 
 {% block content %}
-    <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ edit_form.as_p }}
-        <input class="form-control" type="submit" value="сохранить">
-    </form>
-    <button class="btn btn-round form-control last">
-        <a href="{% url 'libapp:index' %}" class="">
-            на главную
-        </a>
-    </button>
-    <div class="user_avatar"><img src="/media/{{ user.avatar }}"></div>
+    <section class="rq-page-background rq-blog-page-bg">
+        <div class="banner_shadow">
+            <h1>BLOG</h1>
+        </div>
+    </section>
+    <section class="rq-blog-post-section" id="blog-post">
+        <div class="container">
+            <div class="row">
+                <!-- LEFT WIDGET -->
+                <div class="col-md-8 col-sm-7 rq-blog-post-wrapper">
+                    <form class="form-horizontal" action="{% url 'authapp:edit' %}" method="post"
+                          enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ edit_form.as_p }}
+                        <input class="form-control" type="submit" value="сохранить">
+                    </form>
+                    <button class="btn btn-round form-control last">
+                        <a href="{% url 'index' %}" class="">на главную</a>
+                    </button>
+                    <div class="user_avatar"><img src="{{ user.avatar|media_folder_users }}"></div>
+                </div>
+                <!-- RIGHT WIDGET -->
+                <div class="col-md-4 col-sm-5 rq-sidebar">
+                    <div class="rq-sidebar-wrapper">
+                        <!-- SIDEBAR WIDGET -->
+                        <div class="rq-sidebar-widget rq-recent-post-widget">
+                            <h3 class="rq-sidebar-title">Последние посты</h3>
+
+                            <div class="rq-recent-post-wrapper">
+                                {% for item in blog_post %}
+                                    <!-- POST ITEM -->
+                                    <div class="rq-recent-post-item">
+                                        <div class="rq-recent-post-img-wrapper">
+                                            <img src="{% static 'img/placeholder-70.jpg' %}" alt="Последние пост">
+                                        </div>
+
+                                        <div class="rq-recent-post-details">
+                                            <h3><a href="#">{{ item.name }}</a></h3>
+                                            <span class="rq-post-date">{{ item.time_publication }}</span>
+                                        </div>
+                                    </div>
+                                    <!-- END -->
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- END -->
+
+                        <!-- SIDEBAR WIDGET -->
+                        <div class="rq-sidebar-widget rq-category-widget">
+                            <h3 class="rq-sidebar-title">Категории блога</h3>
+                            <ul>
+                                {% for item in blog_category %}
+                                    <li><a href="#">{{ item.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
