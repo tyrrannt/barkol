@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from libapp.models import Division, AccessLevel
 
 
 class Country(models.Model):
@@ -25,7 +26,8 @@ class Weather(models.Model):
     coord_lat = models.FloatField(verbose_name='Широта')
     weather_id = models.SmallIntegerField(verbose_name='ID')
     weather_main = models.CharField(verbose_name='Погодные явление', max_length=20, blank=True, null=True, help_text='')
-    weather_description = models.CharField(verbose_name='Погодные условия', max_length=40, blank=True, null=True, help_text='')
+    weather_description = models.CharField(verbose_name='Погодные условия', max_length=40, blank=True, null=True,
+                                           help_text='')
     weather_icon = models.CharField(verbose_name='Иконка', max_length=4, blank=True, null=True, help_text='')
     main_temp = models.FloatField(verbose_name='Температура')
     main_feels_like = models.FloatField(verbose_name='Ощущение')
@@ -39,9 +41,12 @@ class Weather(models.Model):
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True, help_text='', verbose_name='Страна')
     city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True, help_text='', verbose_name='Город')
 
+    def __str__(self):
+        return f'{self.city} / {self.weather_date}'
+
 
 class PhoneNumber(models.Model):
-    number = models.CharField(max_length=15)
+    number = models.CharField(verbose_name='Номер телефона', max_length=15)
 
     def __str__(self):
         return f'{self.number}'
@@ -77,8 +82,17 @@ class Address(models.Model):
 
         return result
 
+
+class Job(models.Model):
+    code = models.CharField(verbose_name='код должности', max_length=100, help_text='', default='000')
+    name = models.CharField(verbose_name='должность', max_length=100, help_text='')
+
+
 class Work(models.Model):
-    job = models.CharField(verbose_name='должность', max_length=40, blank=True, null=True, help_text='')
+    job = models.ForeignKey(Job, verbose_name='должность', on_delete=models.SET_NULL, null=True, help_text='')
+    divisions = models.ForeignKey(Division, verbose_name='подразделение', on_delete=models.SET_NULL, null=True,
+                                  help_text='')
+
 
 class Person(AbstractUser):
     type_of = [
@@ -86,13 +100,20 @@ class Person(AbstractUser):
         ('staff_member', 'штатный сотрудник'),
         ('freelancer', 'внештатный сотрудник')
     ]
+    type_of_gender = [
+        ('male', 'мужской'),
+        ('female', 'женский')
+    ]
     surname = models.CharField(verbose_name='отчество', max_length=40, blank=True, null=True, help_text='')
     avatar = models.ImageField(upload_to='users_avatars', blank=True, help_text='')
     birthday = models.DateField(verbose_name='день рождения', blank=True, null=True, help_text='')
-    access_right = models.SmallIntegerField(verbose_name='права доступа', default=0, help_text='')
+    access_right = models.ManyToManyField(AccessLevel, verbose_name='права доступа', default=0, help_text='')
     address = models.ForeignKey(Address, on_delete=models.SET_NULL, null=True, help_text='')
     type_users = models.CharField(verbose_name='тип пользователя', max_length=40, choices=type_of, help_text='')
-    phone = models.ForeignKey(PhoneNumber, verbose_name='номер телефона', on_delete=models.SET_NULL, null=True)
+    phone = models.OneToOneField(PhoneNumber, verbose_name='номер телефона', on_delete=models.SET_NULL, null=True, related_name='cell')
+    corp_phone = models.OneToOneField(PhoneNumber, verbose_name='корпоративный номер', on_delete=models.SET_NULL, null=True, related_name='corp')
+    works = models.ForeignKey(Work, verbose_name='занятость', on_delete=models.SET_NULL, blank=True, null=True)
+    gender = models.CharField(verbose_name='пол', max_length=7, blank=True, choices=type_of_gender, help_text='')
 
     def __str__(self):
         return f'{self.last_name} {self.first_name} {self.surname}'
@@ -117,9 +138,12 @@ class Counteragent(models.Model):
     email = models.EmailField(verbose_name='Email', null=True)
     phone = models.ForeignKey(PhoneNumber, verbose_name='Номер телефона', on_delete=models.SET_NULL, null=True)
     base_counteragent = models.BooleanField(verbose_name='Основная организация', default=False)
-    director = models.ForeignKey(Person, verbose_name='Директор', on_delete=models.SET_NULL, null=True, blank=True, related_name='direct')
-    accountant = models.ForeignKey(Person, verbose_name='Бухгалтер', on_delete=models.SET_NULL, null=True, blank=True, related_name='account')
-    contact_person = models.ForeignKey(Person, verbose_name='Контактное лицо', on_delete=models.SET_NULL, null=True, blank=True, related_name='contact')
+    director = models.ForeignKey(Person, verbose_name='Директор', on_delete=models.SET_NULL, null=True, blank=True,
+                                 related_name='direct')
+    accountant = models.ForeignKey(Person, verbose_name='Бухгалтер', on_delete=models.SET_NULL, null=True, blank=True,
+                                   related_name='account')
+    contact_person = models.ForeignKey(Person, verbose_name='Контактное лицо', on_delete=models.SET_NULL, null=True,
+                                       blank=True, related_name='contact')
 
     def __str__(self):
         return f'{self.short_name}, {self.inn}/{self.kpp}'

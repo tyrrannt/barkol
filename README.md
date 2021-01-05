@@ -32,6 +32,9 @@ manage.py dumpdata libapp.AccessLevel > edo\fixtures\access.json
 manage.py dumpdata libapp.MainMenu > edo\fixtures\mainmenu.json
 
 manage.py dumpdata authapp.Address > edo\fixtures\address.json
+manage.py dumpdata authapp.Country > edo\fixtures\country.json
+manage.py dumpdata authapp.City > edo\fixtures\city.json
+manage.py dumpdata authapp.PhoneNumber > edo\fixtures\phone.json
 manage.py dumpdata authapp.Person > edo\fixtures\person.json
 
 manage.py dumpdata libapp.Document > edo\fixtures\document.json

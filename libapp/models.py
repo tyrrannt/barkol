@@ -1,7 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.contrib.auth.hashers import make_password
-from authapp.models import Person
 
 
 # Create your models here.
@@ -65,3 +64,9 @@ class MainMenu(Category):
 
     def __init__(self, *args, **kwargs):
         super(MainMenu, self).__init__(*args, **kwargs)
+
+
+class Division(Category):
+
+    def __init__(self, *args, **kwargs):
+        super(Division, self).__init__(*args, **kwargs)

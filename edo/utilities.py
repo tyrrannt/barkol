@@ -1,8 +1,17 @@
 import requests
 from authapp.models import Weather, Country, City, Person
 from datetime import datetime as dt
+from django.contrib.auth.models import User, Group
 
 appid = '52f3273beefd4ef8f61085589e9622e9'
+
+
+def groups():
+    result = {}
+    res = Group.objects.all().count()
+    result.update({'groups': res})
+    print(result)
+    return result
 
 
 # Перевод градусов в направление
@@ -49,7 +58,8 @@ def save_weather(date, data):
                                    main_feels_like=data['main']['feels_like'],
                                    main_temp_min=data['main']['temp_min'],
                                    main_temp_max=data['main']['temp_max'],
-                                   main_pressure=(data['main']['pressure']*7.501)/10,  # (pressure*7,501/10) перевод в мм рт. ст.
+                                   main_pressure=(data['main']['pressure'] * 7.501) / 10,
+                                   # (pressure*7,501/10) перевод в мм рт. ст.
                                    main_humidity=data['main']['humidity'],
                                    visibility=data['visibility'], wind_speed=data['wind']['speed'],
                                    wind_deg=data['wind']['deg'],

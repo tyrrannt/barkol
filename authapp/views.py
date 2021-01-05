@@ -10,7 +10,7 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from authapp.models import Person
 from libapp.models import MainMenu
-from edo.utilities import main_menu_generate, weather
+from edo.utilities import main_menu_generate, weather, groups
 from django.contrib.auth.decorators import user_passes_test
 
 
@@ -20,7 +20,7 @@ class UserProfile(DetailView):
     template_name = 'authapp/users/user_profile.html'
     success_url = reverse_lazy('authapp:profile')
     form_class = UserEditForm
-    context.update({'groups': Person.groups})
+
 
     @method_decorator(user_passes_test(lambda u: u.is_superuser))
     def dispatch(self, request, *args, **kwargs):
@@ -30,7 +30,9 @@ class UserProfile(DetailView):
         context = super(UserProfile, self).get_context_data(**kwargs)
         context['title'] = title = 'редактирование'
         context.update(weather('524901'))
+        context.update(groups())
 
+        print(context)
         return context
 
 class AdminUsersActive(DeleteView):
