@@ -12,7 +12,7 @@ class Country(models.Model):
 
 
 class City(models.Model):
-    city_id = models.SmallIntegerField(verbose_name='')
+    city_id = models.IntegerField(verbose_name='')
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True, help_text='')
     city_name = models.CharField(verbose_name='город', max_length=30, blank=True, null=True, help_text='')
 
@@ -24,7 +24,7 @@ class Weather(models.Model):
     weather_date = models.DateField(verbose_name='Дата')
     coord_lon = models.FloatField(verbose_name='Долгота')
     coord_lat = models.FloatField(verbose_name='Широта')
-    weather_id = models.SmallIntegerField(verbose_name='ID')
+    weather_id = models.IntegerField(verbose_name='ID')
     weather_main = models.CharField(verbose_name='Погодные явление', max_length=20, blank=True, null=True, help_text='')
     weather_description = models.CharField(verbose_name='Погодные условия', max_length=40, blank=True, null=True,
                                            help_text='')
@@ -34,10 +34,10 @@ class Weather(models.Model):
     main_temp_min = models.FloatField(verbose_name='Минимальная температура')
     main_temp_max = models.FloatField(verbose_name='Максимальная температура')
     main_pressure = models.FloatField(verbose_name='Давление')
-    main_humidity = models.SmallIntegerField(verbose_name='Влажность')
-    visibility = models.SmallIntegerField(verbose_name='Видимость')
-    wind_speed = models.SmallIntegerField(verbose_name='Скорость ветра')
-    wind_deg = models.SmallIntegerField(verbose_name='Направление ветра')
+    main_humidity = models.IntegerField(verbose_name='Влажность')
+    visibility = models.IntegerField(verbose_name='Видимость')
+    wind_speed = models.IntegerField(verbose_name='Скорость ветра')
+    wind_deg = models.IntegerField(verbose_name='Направление ветра')
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True, help_text='', verbose_name='Страна')
     city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True, help_text='', verbose_name='Город')
 
