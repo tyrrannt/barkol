@@ -2,3 +2,5 @@
 /.idea/*
 *.sqlite3
 __pycache__/
+/config/*
+settings_*
