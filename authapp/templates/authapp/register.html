@@ -1,6 +1,9 @@
 {% extends 'authapp/base_clear.html' %}
 {% load staticfiles %}
 
+{% block heads %}
+    <title>{{ title }}</title>
+{% endblock %}
 
 {% block content %}
     <form class="form-login" action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
@@ -8,6 +11,19 @@
         <div class="row">
             <div class="col-md-12 text-center mb-4">
                 <img alt="logo" src="{% static 'img/logo2.png' %}" class="theme-logo">
+            </div>
+            <div class="col-md-12 text-center mb-4">
+                {% if register_form.errors %}
+                    {% for field in register_form %}
+                        {% if field.errors %}
+                            <div class="alert alert-arrow-left alert-icon-left alert-light-danger mb-4" role="alert">
+                                <i class="flaticon-cancel-12 close" data-dismiss="alert"></i>
+                                <i class="flaticon-bell-13"></i>
+                                <strong>Ошибка!</strong>{{ field.errors }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
             </div>
             <div class="col-md-12">
                 <label for="{{ register_form.username.id_for_label }}" class="">Имя пользователя</label>
@@ -24,11 +40,14 @@
                 {{ register_form.password2 }}
                 <div class="terms-conditions-chkbox d-flex justify-content-center mb-4">
                     <div class="custom-control custom-checkbox mr-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="remember-me">
-                        <label class="custom-control-label" for="customCheck1"><span class="d-block mt-1">Я согласен со всеми <a href="#">Условиями</a></span></label>
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="remember-me" onchange="document.getElementById('submit').disabled = !this.checked">
+                        <label class="custom-control-label" for="customCheck1"><span class="d-block mt-1">Я согласен со всеми <a
+                                href="#">Условиями</a></span></label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-gradient-dark btn-rounded btn-block">Зарегистрироваться</button>
+                <button type="submit" id="submit" disabled class="btn btn-gradient-dark btn-rounded btn-block">
+                    Зарегистрироваться
+                </button>
                 <div class="forgot-pass text-center mt-4">
                     <a href="{% url 'index' %}">Вернуться на главную</a>
                 </div>

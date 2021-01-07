@@ -87,11 +87,17 @@ class Job(models.Model):
     code = models.CharField(verbose_name='код должности', max_length=100, help_text='', default='000')
     name = models.CharField(verbose_name='должность', max_length=100, help_text='')
 
+    def __str__(self):
+        return f'{self.name}'
+
 
 class Work(models.Model):
     job = models.ForeignKey(Job, verbose_name='должность', on_delete=models.SET_NULL, null=True, help_text='')
     divisions = models.ForeignKey(Division, verbose_name='подразделение', on_delete=models.SET_NULL, null=True,
                                   help_text='')
+
+    def __str__(self):
+        return f'{self.job} / {self.divisions}'
 
 
 class Person(AbstractUser):

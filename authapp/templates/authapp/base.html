@@ -82,7 +82,7 @@
     <script src="{% static 'plugins/progressbar/progressbar.min.js' %}"></script>
     <script src="{% static 'assets/js/default-dashboard/default-custom.js' %}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-
+    {% block custom_css %}{% endblock %}
     {% block footer %}{% endblock %}
 </body>
 </html>

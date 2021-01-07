@@ -1,0 +1,148 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+{% block heads %}
+    <title>{{ title }}</title>
+{% endblock %}
+
+{% block css %}
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="{% static 'plugins/jquery-ui/jquery-ui.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/ecommerce/addedit_product.css' %}" rel="stylesheet" type="text/css">
+    <!--  END CUSTOM STYLE FILE  -->
+{% endblock %}
+
+{% block content %}
+    <!--  BEGIN CONTENT PART  -->
+    <div id="content" class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <div class="page-title">
+                    <h3>Добавить новую статью</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                    <div class="statbox widget box box-shadow">
+
+                        <div class="widget-content widget-content-area add-manage-product-2">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12">
+                                    <div class="card card-default">
+                                        <div class="card-heading"><h2 class="card-title"><span>Новый пост</span></h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-body">
+                                                <form class="form-horizontal" action="{% url 'blogapp:new_blog' %}"
+                                                      method="post" enctype="multipart/form-data">
+                                                    {% csrf_token %}
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label for="{{ form.cover.id_for_label }}" class="col-md-4">Титульный лист :</label>
+                                                            <div class="col-md-8">
+                                                                <div class="mb-3">
+                                                                    <div class="custom-file">
+                                                                        {{ form.cover }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label for="{{ form.name.id_for_label }}" class="col-md-4">Заголовок :</label>
+                                                            <div class="col-md-8">
+                                                                {{ form.name }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label for="{{ form.short_desc.id_for_label }}" class="col-md-4">Краткое описание :</label>
+                                                            <div class="col-md-8">
+                                                                {{ form.short_desc }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label for="{{ form.description.id_for_label }}" class="col-md-4">Описание :</label>
+                                                            <div class="col-md-8">
+                                                                {{ form.description }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label for="{{ form.category.id_for_label }}" class="col-md-4">Категория блога :</label>
+                                                            <div class="col-md-8">
+                                                                {{ form.category }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label for="{{ form.acces_level.id_for_label }}" class="col-md-4">Уровень доступа :</label>
+                                                            <div class="col-md-8">
+                                                                {{ form.acces_level }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label class="col-md-4">Опубликовать :</label>
+                                                            <div class="col-md-8">
+                                                                <select class="form-control form-custom"
+                                                                        name="visibility">
+                                                                    <option value="">Выберите значение...</option>
+                                                                    <option value="yes">Да</option>
+                                                                    <option value="no">Нет</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label for="{{ form.doc_file.id_for_label }}" class="col-md-4">Документ :</label>
+                                                            <div class="col-md-8">
+                                                                <div class="mb-3">
+                                                                    <div class="custom-file">
+                                                                        {{ form.doc_file }}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-4">
+                                                        <div class="row">
+                                                            <label for="{{ form.author.id_for_label }}" class="col-md-4">Заголовок :</label>
+                                                            <div class="col-md-8">
+                                                                {{ form.author }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="align-center">
+                                                        <input value="Insert Product" class="btn" type="submit">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--  END CONTENT PART  -->
+{% endblock %}
+
+{% block custom_css %}
+    <!--  BEGIN CUSTOM SCRIPT FILES  -->
+    <script src="{% static 'assets/js/ecommerce/autocomplete-addedit_product.js' %}"></script>
+    <!--  END CUSTOM SCRIPT FILES  -->
+{% endblock %}

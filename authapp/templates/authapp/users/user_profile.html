@@ -126,10 +126,8 @@
                                 <div class="card" style="">
                                     <div class="card-body">
                                         <h4 class="mb-4"><i class="flaticon-user-plus"></i> Информация о профиле</h4>
-                                        <p class="mb-3"><span class="usr-work-position">Project Manager </span> at <a
-                                                href="">DesignReset</a></p>
-                                        <p class="mb-4"><span class="usr-work-position">3D Artist and Animator</span> at
-                                            <a href="">Concept Agency</a></p>
+                                        <p class="mb-3"><span class="usr-work-position">{% if user.works.job.name %}{{ user.works.job.name }}{% else %}Должность{% endif %} </span> в <a
+                                                href="#">{% if user.works.divisions %}{{ user.works.divisions }}{% else %}Подразделении{% endif %}</a></p>
                                         <p>Проживает: {{ user.address.country }}, г. {{ user.address.city }}</p>
                                         <p>Дата регистрации: {{ user.date_joined }}</p>
                                         <p>{% if followers %}{{ followers }}{% else %} 0 {% endif %}подписчиков</p>
@@ -229,45 +227,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="weather-section mb-4 br-6">
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="d-flex justify-content-between w-real-data">
-                                            <div class="w-real-time">
-                                                <div class="time d-flex">
-                                                    <p id="hour" class="mb-0">{% now 'H' %}</p>
-                                                    <p id="minut" class="mb-0">{% now 'm' %}</p>
-                                                    <p id="date" class="mb-0"></p>
-                                                </div>
-                                            </div>
-                                            <div class="w-real-day">
-                                                <div class="date d-flex">
-                                                    <div id="day">{% now 'd' %}-</div>
-                                                    <div id="month">{% now 'M' %}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12 text-center">
-                                        <div class="w-stats mb-4">
-                                            <i class="{{ wclass }} mb-4"></i>
-                                            <p class="w-temp"><span>{{ temp }}</span></p>
-                                            <p class="w-txt">{{ conditions }}</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="d-flex justify-content-between w-location">
-                                            <div class="w-location-city">{{ city }}</div>
-                                            <div class="w-location-country">{{ country }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
 
                             <div class="photo-section mb-4">
@@ -660,40 +619,43 @@
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 
-                            <div class="banner-section mb-4">
-                                <div class="card" style="">
-                                    <div class="card-body">
-                                        <h4 class="">Music Concert</h4>
-                                    </div>
-                                </div>
-                            </div>
+                             <div class="weather-section mb-4 br-6">
 
-                            <div class="instagram-section mb-4">
-                                <div class="card" style="">
-                                    <div class="card-body p-0">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h4 class=""><i class=""></i> Instagram</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="d-flex justify-content-between w-real-data">
+                                            <div class="w-real-time">
+                                                <div class="time d-flex">
+                                                    <p id="hour" class="mb-0">{% now 'H' %}</p>
+                                                    <p id="minut" class="mb-0">{% now 'm' %}</p>
+                                                    <p id="date" class="mb-0"></p>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-12 text-center">
-                                                <ul class="list-inline mb-0">
-                                                    <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
-                                                    <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
-                                                    <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
-                                                    <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
-                                                    <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
-                                                    <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
-                                                </ul>
+                                            <div class="w-real-day">
+                                                <div class="date d-flex">
+                                                    <div id="day">{% now 'd' %}-</div>
+                                                    <div id="month">{% now 'M' %}</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <div class="w-stats mb-4">
+                                            <i class="{{ wclass }} mb-4"></i>
+                                            <p class="w-temp"><span>{{ temp }}</span></p>
+                                            <p class="w-txt">{{ conditions }}</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="d-flex justify-content-between w-location">
+                                            <div class="w-location-city">{{ city }}</div>
+                                            <div class="w-location-country">{{ country }}</div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
 
                             <div class="calendar-section mb-4">

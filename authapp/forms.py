@@ -35,9 +35,13 @@ class UserRegisterForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.fields['first_name'].required = True
+        self.fields['last_name'].required = True
+        self.fields['email'].required = True
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control mb-4'
-            field.help_text = ''
+            #field.help_text = ''
+
 
 
 class UserProfileForm(UserChangeForm):

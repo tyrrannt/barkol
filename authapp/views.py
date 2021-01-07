@@ -12,6 +12,7 @@ from authapp.models import Person
 from libapp.models import MainMenu
 from edo.utilities import main_menu_generate, weather, groups
 from django.contrib.auth.decorators import user_passes_test
+from django.contrib import messages
 
 
 class UserProfile(DetailView):
@@ -22,7 +23,7 @@ class UserProfile(DetailView):
     form_class = UserEditForm
 
 
-    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    @method_decorator(user_passes_test(lambda u: u.is_active))
     def dispatch(self, request, *args, **kwargs):
         return super(UserProfile, self).dispatch(request, *args, **kwargs)
 
@@ -31,8 +32,6 @@ class UserProfile(DetailView):
         context['title'] = title = 'редактирование'
         context.update(weather('524901'))
         context.update(groups())
-
-        print(context)
         return context
 
 class AdminUsersActive(DeleteView):
@@ -78,6 +77,7 @@ def register(request):
             return HttpResponseRedirect(reverse('authapp:login'))
     else:
         register_form = UserRegisterForm()
+
 
     context = {'title': title, 'register_form': register_form}
     context.update(main_menu_generate(MainMenu.objects.all()))
