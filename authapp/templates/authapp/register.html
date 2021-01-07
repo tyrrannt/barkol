@@ -1,12 +1,38 @@
-{% extends 'authapp/base.html' %}
+{% extends 'authapp/base_clear.html' %}
 {% load staticfiles %}
 
 
 {% block content %}
-    <form class="form-horizontal" action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
+    <form class="form-login" action="{% url 'auth:register' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ register_form.as_table }}
-        <br>
-        <input class="form-control" type="submit" value="зарегистрироваться">
+        <div class="row">
+            <div class="col-md-12 text-center mb-4">
+                <img alt="logo" src="{% static 'img/logo2.png' %}" class="theme-logo">
+            </div>
+            <div class="col-md-12">
+                <label for="{{ register_form.username.id_for_label }}" class="">Имя пользователя</label>
+                {{ register_form.username }}
+                <label for="{{ register_form.first_name.id_for_label }}" class="">Имя</label>
+                {{ register_form.first_name }}
+                <label for="{{ register_form.last_name.id_for_label }}" class="">Фамилия</label>
+                {{ register_form.last_name }}
+                <label for="{{ register_form.email.id_for_label }}" class="">EMAIL</label>
+                {{ register_form.email }}
+                <label for="{{ register_form.password1.id_for_label }}" class="">Пароль</label>
+                {{ register_form.password1 }}
+                <label for="{{ register_form.password2.id_for_label }}" class="">Повторите пароль</label>
+                {{ register_form.password2 }}
+                <div class="terms-conditions-chkbox d-flex justify-content-center mb-4">
+                    <div class="custom-control custom-checkbox mr-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="remember-me">
+                        <label class="custom-control-label" for="customCheck1"><span class="d-block mt-1">Я согласен со всеми <a href="#">Условиями</a></span></label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-gradient-dark btn-rounded btn-block">Зарегистрироваться</button>
+                <div class="forgot-pass text-center mt-4">
+                    <a href="{% url 'index' %}">Вернуться на главную</a>
+                </div>
+            </div>
+        </div>
     </form>
 {% endblock %}

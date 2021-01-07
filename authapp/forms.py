@@ -31,12 +31,12 @@ class UserEditForm(UserChangeForm):
 class UserRegisterForm(UserCreationForm):
     class Meta:
         model = Person
-        fields = ('username', 'first_name', 'last_name', 'password1', 'password2', 'email', 'birthday', 'avatar')
+        fields = ('username', 'first_name', 'last_name', 'password1', 'password2', 'email')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'form-control py-4'
+            field.widget.attrs['class'] = 'form-control mb-4'
             field.help_text = ''
 
 

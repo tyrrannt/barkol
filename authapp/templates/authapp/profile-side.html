@@ -2,6 +2,7 @@
 {% load utilities %}
 
 <!--  BEGIN PROFILE SIDEBAR  -->
+{% if user.is_authenticated %}
 <aside class="profile-sidebar text-center">
     <div class="profile-content profile-content-scroll">
         <div class="usr-profile">
@@ -30,6 +31,7 @@
                 </div>
             </div>
         </div>
+
         <div class="user-links text-left">
             <ul class="list-unstyled">
                 <li><a href="apps_mailbox.html"><i class="flaticon-mail-22"></i> Входящие</a></li>
@@ -37,6 +39,8 @@
                 <li><a href="{% url 'authapp:logout' %}"><i class="flaticon-power-off"></i> Выход</a></li>
             </ul>
         </div>
+
     </div>
 </aside>
+{% endif %}
 <!--  BEGIN PROFILE SIDEBAR  -->
