@@ -53,15 +53,19 @@ class CreateNewPost(CreateView):
     def get_context_data(self, **kwargs):
         context = super(CreateNewPost, self).get_context_data(**kwargs)
         context['title'] = title = 'Создание нового поста'
-        context['author'] = self.user
+        #context['author'] = self.user
+        print(context)
         return context
 
     def get_form_kwargs(self):
         # pass "user" keyword argument with the current user to your form
         kwargs = super(CreateNewPost, self).get_form_kwargs()
-        _mutable = kwargs['data']._mutable
-        kwargs['data']._mutable = True
-        kwargs['data']['author'] = self.request.user
-        kwargs['data']._mutable = _mutable
+        try:
+            _mutable = kwargs['data']._mutable
+            kwargs['data']._mutable = True
+            kwargs['data']['author'] = self.user.pk
+            kwargs['data']._mutable = _mutable
+        except Exception:
+            print(kwargs)
         return kwargs
 

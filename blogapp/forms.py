@@ -8,7 +8,7 @@ class CreateNewPostForm(forms.ModelForm):
 
     class Meta:
         model = Blog
-        fields = ('category', 'acces_level', 'name', 'cover', 'short_desc', 'description', 'doc_file', 'author')
+        fields = ('category', 'acces_level', 'name', 'cover', 'short_desc', 'description', 'doc_file', 'author', 'published_by')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

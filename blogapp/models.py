@@ -21,6 +21,7 @@ class Blog(models.Model):
     doc_file = models.FileField(verbose_name='Файл документа', upload_to='library', blank=True)
     time_publication = models.DateTimeField(verbose_name='дата публикации статьи', auto_now_add=True)
     author = models.ForeignKey(Person, null=True, on_delete=models.SET_NULL, verbose_name='автор поста', default='')
+    published_by = models.BooleanField(verbose_name='Статус публикации', help_text='', default=False)
 
     def __str__(self):
         return f'({self.category.name}) {self.name} {self.time_publication}'
