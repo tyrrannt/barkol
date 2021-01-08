@@ -1,5 +1,6 @@
 {% extends 'libapp/base.html' %}
 {% load staticfiles %}
+{% load utilities %}
 
 {% block heads %}
     <title>{{ title }}</title>
@@ -20,7 +21,7 @@
                         <!-- BLOG ITEMS -->
                         <div class="rq-blog-items rq-image-post">
                             <div class="rq-blog-img-wrapper">
-                                <img src="{% static 'img/placeholder-770.jpg' %}" alt="Blog Image">
+                                <img src="{{ item.cover|media_folder_document }}" alt="Blog Image">
                                 <div class="rq-blog-cat-icon">
                                     <i class="ion-ios-camera-outline"></i>
                                 </div>
