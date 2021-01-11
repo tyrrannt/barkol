@@ -2,10 +2,13 @@
 //    	Imports
 //	=================
 
-@import '../../../assets/base/color_variables';   	// Color Variables
-@import '../../../assets/base/fonticons';   			// Fonticons Variables
-@import '../../../assets/base/urls';   				// URLS Variables
-@import '../../../assets/base/utilities_variables';  // Utilities Variables
+@import '../../../assets/base/color_variables';
+// Color Variables
+@import '../../../assets/base/fonticons';
+// Fonticons Variables
+@import '../../../assets/base/urls';
+// URLS Variables
+@import '../../../assets/base/utilities_variables'; // Utilities Variables
 
 /*
 	=======================================
@@ -14,25 +17,30 @@
 
 */
 .column-chart {
-	height: 300px;
-	.chart-column {
-		background: $color_47;
-	}
-	[data-cp-size] {
-		background: $color_47;
-	}
+  height: 300px;
+
+  .chart-column {
+    background: $color_47;
+  }
+
+  [data-cp-size] {
+    background: $color_47;
+  }
 }
+
 .stacked {
-	li {
-		list-style: none;
-	}
+  li {
+    list-style: none;
+  }
 }
+
 .group-by-number {
-	[data-group="5"] {
-		background: $additional-color-3;
-		color: $white;
-	}
+  [data-group="5"] {
+    background: $additional-color-3;
+    color: $white;
+  }
 }
+
 /*
 	=================================
 			bar charts
@@ -40,23 +48,24 @@
 
 */
 .bar-chart {
-	.chart-row {
-		background: $color_47;
-		min-height: 59px;
-	}
-	[data-cp-size] {
-		background: $color_47;
-		min-height: 59px;
-	}
+  .chart-row {
+    background: $color_47;
+    min-height: 59px;
+  }
+
+  [data-cp-size] {
+    background: $color_47;
+    min-height: 59px;
+  }
 }
 
 .custom-bar-chart.bar-chart {
-	ul {
-		li {
-			padding-top: 18px;
-			padding-left: $p-20;
-		}
-	}
+  ul {
+    li {
+      padding-top: 18px;
+      padding-left: $p-20;
+    }
+  }
 }
 
 /*
@@ -66,14 +75,14 @@
 
 */
 .custom-stacked-bar-chart.bar-chart {
-	ul {
-		li {
-			div {
-				padding-top: 15px;
-				padding-left: $p-20;
-			}
-		}
-	}
+  ul {
+    li {
+      div {
+        padding-top: 15px;
+        padding-left: $p-20;
+      }
+    }
+  }
 }
 
 /*
@@ -82,20 +91,23 @@
 	====================================
 */
 .scatter-plot {
-	.chart-dot {
-		border: $b-width-6 $solid $color_90;
-	}
-	[data-cp-x] {
-		border: $b-width-6 $solid $color_90;
-	}
-	[data-cp-y] {
-		border: $b-width-6 $solid $color_90;
-	}
+  .chart-dot {
+    border: $b-width-6 $solid $color_90;
+  }
+
+  [data-cp-x] {
+    border: $b-width-6 $solid $color_90;
+  }
+
+  [data-cp-y] {
+    border: $b-width-6 $solid $color_90;
+  }
 }
+
 @media (max-width: 575px) {
-	.column-chart {
-		.plot-container {
-			font-size: 13px;
-		}
-	}
+  .column-chart {
+    .plot-container {
+      font-size: 13px;
+    }
+  }
 }

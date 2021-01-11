@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('authapp', '0007_auto_20210103_0217'),
     ]
@@ -15,16 +14,19 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='counteragent',
             name='accountant',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='account', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='account',
+                                    to=settings.AUTH_USER_MODEL),
         ),
         migrations.AddField(
             model_name='counteragent',
             name='contact_person',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='contact', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='contact',
+                                    to=settings.AUTH_USER_MODEL),
         ),
         migrations.AddField(
             model_name='counteragent',
             name='director',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='direct', to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='direct',
+                                    to=settings.AUTH_USER_MODEL),
         ),
     ]

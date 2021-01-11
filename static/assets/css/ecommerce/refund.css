@@ -12,11 +12,12 @@ button.dt-button {
     transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
 }
+
 button.dt-button:hover:not(.disabled) {
     border: none;
     background-image: none;
     background-color: #24ccda;
-    color: #fff!important;
+    color: #fff !important;
     font-size: 13px;
     margin-right: 12px;
     padding: 6px 20px;
@@ -25,6 +26,7 @@ button.dt-button:hover:not(.disabled) {
     transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
 }
+
 button.dt-button:active:not(.disabled) {
     border: none;
     background-image: none;
@@ -38,6 +40,7 @@ button.dt-button:active:not(.disabled) {
     transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
 }
+
 button.dt-button:focus:not(.disabled) {
     border: none;
     background-image: none;
@@ -47,6 +50,7 @@ button.dt-button:focus:not(.disabled) {
     margin-right: 12px;
     padding: 6px 20px;
 }
+
 button.dt-button:active:not(.disabled):hover:not(.disabled) {
     border: none;
     background-image: none;
@@ -57,6 +61,7 @@ button.dt-button:active:not(.disabled):hover:not(.disabled) {
     padding: 6px 20px;
     box-shadow: inset 1px 1px 3px rgba(50, 50, 183, 0.2);
 }
+
 .dataTables_filter input {
     margin-left: 5px;
     border-radius: 30px;
@@ -64,31 +69,64 @@ button.dt-button:active:not(.disabled):hover:not(.disabled) {
     padding-top: 5px;
     border: solid 1px #d5dae2;
 }
-table.dataTable.display tbody tr.odd { background-color: #fff; }
-table.dataTable.display tbody tr:hover { background-color: #fff; }
-.table-striped tbody > tr:nth-child(odd) > td { background-color: #fff; }
-table.dataTable.display tbody tr.even>.sorting_1 { background-color: #fff; }
-.table > thead > tr > th { color: #3232b7; font-size: 16px; }
+
+table.dataTable.display tbody tr.odd {
+    background-color: #fff;
+}
+
+table.dataTable.display tbody tr:hover {
+    background-color: #fff;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td {
+    background-color: #fff;
+}
+
+table.dataTable.display tbody tr.even > .sorting_1 {
+    background-color: #fff;
+}
+
+.table > thead > tr > th {
+    color: #3232b7;
+    font-size: 16px;
+}
+
 .dataTables_wrapper.dt-bootstrap4 .table > thead > tr > th:hover {
     color: #ee3d50;
     border-bottom: solid 1px #ee3d50;
 }
+
 .table thead th {
-	vertical-align: bottom;
+    vertical-align: bottom;
     border-bottom: 1px solid #888ea88a;
 }
+
 .table-bordered td {
     border: 1px solid #888ea81f;
 }
-td { color: #515365; }
-.table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th { color: #f8538d; }
+
+td {
+    color: #515365;
+}
+
+.table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th {
+    color: #f8538d;
+}
+
 .table > tbody > tr > td {
     padding: 11px 14px;
     font-size: 14px;
 }
-table.dataTable.display tbody tr.odd>.sorting_1 { background-color: #ffffff; }
-table.dataTable.display tbody tr:hover>.sorting_1 { background-color: #fff; }
-#refund-report_paginate .pagination>.active>a {
+
+table.dataTable.display tbody tr.odd > .sorting_1 {
+    background-color: #ffffff;
+}
+
+table.dataTable.display tbody tr:hover > .sorting_1 {
+    background-color: #fff;
+}
+
+#refund-report_paginate .pagination > .active > a {
     background-color: #3232b7;
     border-color: transparent;
     color: #fff;
@@ -97,7 +135,11 @@ table.dataTable.display tbody tr:hover>.sorting_1 { background-color: #fff; }
     transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
 }
-div#refund-report_paginate .page-link:focus { box-shadow: none; }
+
+div#refund-report_paginate .page-link:focus {
+    box-shadow: none;
+}
+
 #refund-report_paginate ul.pagination li a {
     float: left;
     padding: 5px 12px;
@@ -108,6 +150,9 @@ div#refund-report_paginate .page-link:focus { box-shadow: none; }
     margin-left: 0px;
     transition: all .3s linear;
 }
+
 @media (max-width: 336px) {
-    ul.pagination li a { padding: 5px 10px; }
+    ul.pagination li a {
+        padding: 5px 10px;
+    }
 }

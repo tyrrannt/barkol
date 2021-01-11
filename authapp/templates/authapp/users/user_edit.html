@@ -1,0 +1,486 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+{% load utilities %}
+
+{% block css %}
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/dropify/dropify.min.css' %}">
+    <link href="{% static 'assets/css/users/account-setting.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'assets/css/ui-kit/tabs-accordian/custom-tabs.css' %}" rel="stylesheet" type="text/css"/>
+    <!--  END CUSTOM STYLE FILE  -->
+{% endblock %}
+
+{% block content %}
+
+    <!--  BEGIN CONTENT PART  -->
+    <div id="content" class="main-content">
+        <div class="container">
+            <div class="page-header">
+                {% if form.errors %}
+                    {% for field in form %}
+                        {% if field.errors %}
+                            <div class="alert alert-arrow-left alert-icon-left alert-light-danger mb-4" role="alert">
+                                <i class="flaticon-cancel-12 close" data-dismiss="alert"></i>
+                                <i class="flaticon-bell-13"></i>
+                                <strong>Ошибка!</strong> {{ field.errors }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <form class="general-info" action="{% url 'authapp:edit_user' user.id %}"
+                  method="post" enctype="multipart/form-data">{% csrf_token %}
+                <div class="col-xl-12 col-lg-12 col-12 layout-spacing">
+                    <div class="col-lg-12">
+                        <div class="statbox widget box box-shadow">
+                            <div class="widget-header widget-heading">
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                        <h4>Rounded Pills</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-content widget-content-area rounded-pills">
+                            <ul class="nav nav-pills mb-3  nav-fill" id="rounded-pills-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link  btn-rounded active" id="rounded-pills-home-tab"
+                                       data-toggle="pill" href="#rounded-pills-home" role="tab"
+                                       aria-controls="rounded-pills-home" aria-selected="true"><i
+                                            class="flaticon-home-fill-1"></i> Основная информация</a>
+                                </li>
+                                <li class="nav-item ml-1">
+                                    <a class="nav-link  btn-rounded" id="rounded-pills-profile-tab" data-toggle="pill"
+                                       href="#rounded-pills-profile" role="tab" aria-controls="rounded-pills-profile"
+                                       aria-selected="false"><i class="flaticon-user-7"></i> Дополнительно</a>
+                                </li>
+                                <li class="nav-item ml-1">
+                                    <a class="nav-link  btn-rounded" id="ronded-pills-contact-tab" data-toggle="pill"
+                                       href="#rounded-pills-contact" role="tab" aria-controls="rounded-pills-contact"
+                                       aria-selected="false"><i class="flaticon-telephone"></i> Контакты</a>
+                                </li>
+
+                                <li class="nav-item ml-1">
+                                    <a class="nav-link  btn-rounded" id="ronded-pills-settings-tab" data-toggle="pill"
+                                       href="#rounded-pills-settings" role="tab" aria-controls="rounded-pills-settings"
+                                       aria-selected="false"><i class="flaticon-settings-7"></i> Образование и
+                                        работа</a>
+                                </li>
+
+                            </ul>
+                            <div class="tab-content" id="rounded-pills-tabContent">
+                                <div class="tab-pane fade show active" id="rounded-pills-home" role="tabpanel"
+                                     aria-labelledby="rounded-pills-home-tab">
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-5">
+                                                <div class="upload ml-md-5 mt-4 pr-md-4">
+                                                    <input type="file" id="input-file-max-fs" class="dropify"
+                                                           data-default-file="assets/img/200x200.jpg"
+                                                           data-max-file-size="2M"/>
+                                                    <p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i> Upload
+                                                        Picture</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-md-7 mt-md-0 mt-4">
+                                                <div class="form">
+                                                    <div class="form-group">
+                                                        <label for="{{ form.last_name.id_for_label }}">Фамилия</label>
+                                                        {{ form.last_name }}
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="{{ form.first_name.id_for_label }}">Имя</label>
+                                                        {{ form.first_name }}
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="{{ form.surname.id_for_label }}">Отчество</label>
+                                                        {{ form.surname }}
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="{{ form.work.id_for_label }}">Profession</label>
+                                                        {{ form.works }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="rounded-pills-profile" role="tabpanel"
+                                     aria-labelledby="rounded-pills-profile-tab">
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="col-md-11 mx-auto mb-4">
+                                                <div class="dob-input">Date of Birth</div>
+                                                <div class="d-sm-flex d-block">
+                                                    <div class="form-group mr-1">
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option>Day</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                            <option>25</option>
+                                                            <option>26</option>
+                                                            <option>27</option>
+                                                            <option>28</option>
+                                                            <option>29</option>
+                                                            <option>30</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group mr-1">
+                                                        <select class="form-control" id="month">
+                                                            <option>Month</option>
+                                                            <option>Jan</option>
+                                                            <option>Feb</option>
+                                                            <option>Mar</option>
+                                                            <option>Apr</option>
+                                                            <option>May</option>
+                                                            <option>Jun</option>
+                                                            <option>Jul</option>
+                                                            <option>Aug</option>
+                                                            <option>Sep</option>
+                                                            <option>Oct</option>
+                                                            <option>Nov</option>
+                                                            <option>Dec</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group mr-1">
+                                                        <select class="form-control" id="year">
+                                                            <option>Year</option>
+                                                            <option>2018</option>
+                                                            <option>2017</option>
+                                                            <option>2016</option>
+                                                            <option>2015</option>
+                                                            <option>2014</option>
+                                                            <option>2013</option>
+                                                            <option>2012</option>
+                                                            <option>2011</option>
+                                                            <option>2010</option>
+                                                            <option>2009</option>
+                                                            <option>2008</option>
+                                                            <option>2007</option>
+                                                            <option>2006</option>
+                                                            <option>2005</option>
+                                                            <option>2004</option>
+                                                            <option>2003</option>
+                                                            <option>2002</option>
+                                                            <option>2001</option>
+                                                            <option>2000</option>
+                                                            <option>1999</option>
+                                                            <option>1998</option>
+                                                            <option>1997</option>
+                                                            <option>1996</option>
+                                                            <option>1995</option>
+                                                            <option>1994</option>
+                                                            <option>1993</option>
+                                                            <option>1992</option>
+                                                            <option>1991</option>
+                                                            <option>1990</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-11 mx-auto">
+                                                <div class="form-group">
+                                                    <label for="aboutBio">Bio</label>
+                                                    <textarea class="form-control" id="aboutBio"
+                                                              placeholder="Tell something interesting about yourself"
+                                                              rows="10"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="rounded-pills-contact" role="tabpanel"
+                                     aria-labelledby="ronded-pills-contact-tab">
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="col-md-11 mx-auto">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="address">Address</label>
+                                                            <input type="text" class="form-control mb-4" id="address"
+                                                                   placeholder="Los Angeles">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="location">Location</label>
+                                                            <input type="text" class="form-control mb-4" id="location"
+                                                                   placeholder="Location">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="phone">Phone</label>
+                                                            <input type="text" class="form-control mb-4" id="phone"
+                                                                   placeholder="Write your phone number here">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="email">Email</label>
+                                                            <input type="text" class="form-control mb-4" id="email"
+                                                                   placeholder="Write your email here">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="website1">Website</label>
+                                                            <input type="text" class="form-control mb-4" id="website1"
+                                                                   placeholder="Write your website here">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="rounded-pills-settings" role="tabpanel"
+                                     aria-labelledby="ronded-pills-settings-tab">
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="col-md-11 mx-auto">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="company">Company</label>
+                                                            <input type="text" class="form-control mb-4" id="company"
+                                                                   placeholder="Enter your company here">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="website2">Website</label>
+                                                            <input type="text" class="form-control mb-4" id="website2"
+                                                                   placeholder="Enter website here">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="country">Country</label>
+                                                            <select class="form-control" id="country">
+                                                                <option>All Countries</option>
+                                                                <option>United States</option>
+                                                                <option>India</option>
+                                                                <option>Japan</option>
+                                                                <option>China</option>
+                                                                <option>Brazil</option>
+                                                                <option>Norway</option>
+                                                                <option>Canada</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="town">Town</label>
+                                                            <input type="text" class="form-control mb-4" id="town"
+                                                                   placeholder="Enter city here">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="degree">Degree</label>
+                                                            <input type="text" class="form-control mb-4" id="degree"
+                                                                   placeholder="Add your education here">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Starting From</label>
+
+                                                                    <div class="row">
+
+                                                                        <div class="col-md-6">
+                                                                            <select class="form-control mb-4"
+                                                                                    id="s-from1">
+                                                                                <option>Month</option>
+                                                                                <option>Jan</option>
+                                                                                <option>Feb</option>
+                                                                                <option>Mar</option>
+                                                                                <option>Apr</option>
+                                                                                <option>May</option>
+                                                                                <option>Jun</option>
+                                                                                <option>Jul</option>
+                                                                                <option>Aug</option>
+                                                                                <option>Sep</option>
+                                                                                <option>Oct</option>
+                                                                                <option>Nov</option>
+                                                                                <option>Dec</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <select class="form-control mb-4"
+                                                                                    id="s-from2">
+                                                                                <option>Year</option>
+                                                                                <option>2020</option>
+                                                                                <option>2019</option>
+                                                                                <option>2018</option>
+                                                                                <option>2017</option>
+                                                                                <option>2016</option>
+                                                                                <option>2015</option>
+                                                                                <option>2014</option>
+                                                                                <option>2013</option>
+                                                                                <option>2012</option>
+                                                                                <option>2011</option>
+                                                                                <option>2010</option>
+                                                                                <option>2009</option>
+                                                                                <option>2008</option>
+                                                                                <option>2007</option>
+                                                                                <option>2006</option>
+                                                                                <option>2005</option>
+                                                                                <option>2004</option>
+                                                                                <option>2003</option>
+                                                                                <option>2002</option>
+                                                                                <option>2001</option>
+                                                                                <option>2000</option>
+                                                                                <option>1999</option>
+                                                                                <option>1998</option>
+                                                                                <option>1997</option>
+                                                                                <option>1996</option>
+                                                                                <option>1995</option>
+                                                                                <option>1994</option>
+                                                                                <option>1993</option>
+                                                                                <option>1992</option>
+                                                                                <option>1991</option>
+                                                                                <option>1990</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Ending In</label>
+
+                                                                    <div class="row">
+
+                                                                        <div class="col-md-6 mb-4">
+                                                                            <select class="form-control" id="end-in1">
+                                                                                <option>Month</option>
+                                                                                <option>Jan</option>
+                                                                                <option>Feb</option>
+                                                                                <option>Mar</option>
+                                                                                <option>Apr</option>
+                                                                                <option>May</option>
+                                                                                <option>Jun</option>
+                                                                                <option>Jul</option>
+                                                                                <option>Aug</option>
+                                                                                <option>Sep</option>
+                                                                                <option>Oct</option>
+                                                                                <option>Nov</option>
+                                                                                <option>Dec</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="col-md-6">
+                                                                            <select class="form-control input-sm"
+                                                                                    id="end-in2">
+                                                                                <option>Year</option>
+                                                                                <option>2020</option>
+                                                                                <option>2019</option>
+                                                                                <option>2018</option>
+                                                                                <option>2017</option>
+                                                                                <option>2016</option>
+                                                                                <option>2015</option>
+                                                                                <option>2014</option>
+                                                                                <option>2013</option>
+                                                                                <option>2012</option>
+                                                                                <option>2011</option>
+                                                                                <option>2010</option>
+                                                                                <option>2009</option>
+                                                                                <option>2008</option>
+                                                                                <option>2007</option>
+                                                                                <option>2006</option>
+                                                                                <option>2005</option>
+                                                                                <option>2004</option>
+                                                                                <option>2003</option>
+                                                                                <option>2002</option>
+                                                                                <option>2001</option>
+                                                                                <option>2000</option>
+                                                                                <option>1999</option>
+                                                                                <option>1998</option>
+                                                                                <option>1997</option>
+                                                                                <option>1996</option>
+                                                                                <option>1995</option>
+                                                                                <option>1994</option>
+                                                                                <option>1993</option>
+                                                                                <option>1992</option>
+                                                                                <option>1991</option>
+                                                                                <option>1990</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="save-info">
+                    <div class="row">
+                        <div class="col-md-11 mx-auto">
+                            <button class="btn btn-gradient-warning mb-4 float-right btn-rounded">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--  END CONTENT PART  -->
+
+{% endblock %}
+
+{% block footer %}
+    <!--  BEGIN CUSTOM SCRIPTS FILE  -->
+    <script src="{% static 'plugins/dropify/dropify.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js' %}"></script>
+    <script>
+        $('.dropify').dropify({
+            messages: {
+                'default': 'Click to Upload or Drag n Drop',
+                'remove': '<i class="flaticon-close-fill"></i>',
+                'replace': 'Upload or Drag n Drop'
+            }
+        });
+    </script>
+    <!--  END CUSTOM SCRIPTS FILE  -->
+{% endblock %}

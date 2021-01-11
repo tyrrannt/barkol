@@ -2,27 +2,32 @@
 //    	Imports
 //	=================
 
-@import '../base/color_variables';   	// Color Variables
-@import '../base/fonticons';   			// Fonticons Variables
-@import '../base/urls';   				// URLS Variables
-@import '../base/utilities_variables';  // Utilities Variables
+@import '../base/color_variables';
+// Color Variables
+@import '../base/fonticons';
+// Fonticons Variables
+@import '../base/urls';
+// URLS Variables
+@import '../base/utilities_variables'; // Utilities Variables
 
 
 .border-default {
-	border-color: $color_142 !important;
-}
-.table-bordered {
-	td {
-		border: $b-width-1 $solid $light-gray;
-	}
-	th {
-		border: $b-width-1 $solid $light-gray;
-	}
-}
-.widget-content-area {
-	padding-bottom: 32px;
+  border-color: $color_142 !important;
 }
 
+.table-bordered {
+  td {
+    border: $b-width-1 $solid $light-gray;
+  }
+
+  th {
+    border: $b-width-1 $solid $light-gray;
+  }
+}
+
+.widget-content-area {
+  padding-bottom: 32px;
+}
 
 
 //    ====================================

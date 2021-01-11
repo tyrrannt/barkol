@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     // Static Mask
 
@@ -16,23 +16,23 @@ $(document).ready(function(){
     // Aleternate Mask
 
     $("#alternate-masks1").inputmask({
-      mask: ["99.9", "X"],
-      definitions: {
-        "X": {
-          validator: "[xX]",
-          casing: "upper"
+        mask: ["99.9", "X"],
+        definitions: {
+            "X": {
+                validator: "[xX]",
+                casing: "upper"
+            }
         }
-      }
     });
 
 
     $("#alternate-masks2").inputmask("(99.9)|(X)", {
-      definitions: {
-        "X": {
-          validator: "[xX]",
-          casing: "upper"
+        definitions: {
+            "X": {
+                validator: "[xX]",
+                casing: "upper"
+            }
         }
-      }
     });
 
 
@@ -47,26 +47,29 @@ $(document).ready(function(){
 
     $("#email").inputmask(
         {
-            mask:"*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-            greedy:!1,onBeforePaste:function(m,a){return(m=m.toLowerCase()).replace("mailto:","")},
-            definitions:{"*":
-                {
-                    validator:"[0-9A-Za-z!#$%&'*+/=?^_`{|}~-]",
-                    cardinality:1,
-                    casing:"lower"
-                }
+            mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+            greedy: !1, onBeforePaste: function (m, a) {
+                return (m = m.toLowerCase()).replace("mailto:", "")
+            },
+            definitions: {
+                "*":
+                    {
+                        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~-]",
+                        cardinality: 1,
+                        casing: "lower"
+                    }
             }
         }
     )
 
     // IP Address
-    $("#ip-add").inputmask({mask:"999.999.999.999"});
+    $("#ip-add").inputmask({mask: "999.999.999.999"});
 
     // Phone Number
-    $("#ph-number").inputmask({mask:"(999) 999-9999"});
+    $("#ph-number").inputmask({mask: "(999) 999-9999"});
 
-     // Phone Number
-    $("#currency").inputmask({mask:"$999,9999,999.99"});
+    // Phone Number
+    $("#currency").inputmask({mask: "$999,9999,999.99"});
 
     /*
     ==================
@@ -77,34 +80,46 @@ $(document).ready(function(){
 
     // On Complete
 
-    $("#oncomplete").inputmask("99/99/9999",{ oncomplete: function(){ $('#oncompleteHelp').css('display', 'block'); } });
+    $("#oncomplete").inputmask("99/99/9999", {
+        oncomplete: function () {
+            $('#oncompleteHelp').css('display', 'block');
+        }
+    });
 
 
     // On InComplete
-    $("#onincomplete").inputmask("99/99/9999",{ onincomplete: function(){ $('#onincompleteHelp').css('display', 'block'); } });
+    $("#onincomplete").inputmask("99/99/9999", {
+        onincomplete: function () {
+            $('#onincompleteHelp').css('display', 'block');
+        }
+    });
 
-    
+
     // On Cleared
-    $("#oncleared").inputmask("99/99/9999",{ oncleared: function(){ $('#onclearedHelp').css('display', 'block'); } });
+    $("#oncleared").inputmask("99/99/9999", {
+        oncleared: function () {
+            $('#onclearedHelp').css('display', 'block');
+        }
+    });
 
 
     // Repeater
-    $("#repeater").inputmask({ "mask": "2", "repeat": 4});  // ~ mask "9999999999"
-    
+    $("#repeater").inputmask({"mask": "2", "repeat": 4});  // ~ mask "9999999999"
+
 
     // isComplete
 
-    $("#isComplete").inputmask({mask:"999.999.999.99"})
+    $("#isComplete").inputmask({mask: "999.999.999.99"})
     $("#isComplete").inputmask("setvalue", "117.247.169.64");
-    $('#isComplete').on('focus keyup', function(event) {
+    $('#isComplete').on('focus keyup', function (event) {
         event.preventDefault();
-        if($(this).inputmask("isComplete")){
+        if ($(this).inputmask("isComplete")) {
             $('#isCompleteHelp').css('display', 'block');
         }
     });
-    $('#isComplete').on('keyup', function(event) {
+    $('#isComplete').on('keyup', function (event) {
         event.preventDefault();
-        if(!$(this).inputmask("isComplete")){
+        if (!$(this).inputmask("isComplete")) {
             $('#isCompleteHelp').css('display', 'none');
         }
     });
@@ -114,18 +129,21 @@ $(document).ready(function(){
 
     $("#setVal").inputmask(
         {
-            mask:"*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-            greedy:!1,onBeforePaste:function(m,a){return(m=m.toLowerCase()).replace("mailto:","")},
-            definitions:{"*":
-                {
-                    validator:"[0-9A-Za-z!#$%&'*+/=?^_`{|}~-]",
-                    cardinality:1,
-                    casing:"lower"
-                }
+            mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+            greedy: !1, onBeforePaste: function (m, a) {
+                return (m = m.toLowerCase()).replace("mailto:", "")
+            },
+            definitions: {
+                "*":
+                    {
+                        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~-]",
+                        cardinality: 1,
+                        casing: "lower"
+                    }
             }
         }
     )
-    $('#setVal').on('focus', function(event) {
+    $('#setVal').on('focus', function (event) {
         $(this).inputmask("setvalue", 'test@mail.com');
     });
 

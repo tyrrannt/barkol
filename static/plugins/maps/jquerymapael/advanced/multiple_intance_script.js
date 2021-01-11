@@ -14,7 +14,7 @@ $(function () {
      */
     // Save setTooltip function for future use
     var baseSetTooltip = $.mapael.prototype.setTooltip;
-    $.mapael.prototype.setTooltip = function(elem){
+    $.mapael.prototype.setTooltip = function (elem) {
         // Save ref to Mapael object in self
         var self = this;
         // Some special processing for "path" element having a tooltip
@@ -163,16 +163,6 @@ $(function () {
     });
 
 
-
-
-
-
-
-
-
-
-
-
     var $mapcontainer4 = $(".mapcontainer4");
     $mapcontainer4.mapael({
         map: {
@@ -230,7 +220,6 @@ $(function () {
     $('#clearzoom1').on('click', function () {
         $mapcontainer4.trigger('zoom', {level: 0});
     });
-
 
 
     $(".mapcontainer5").mapael({

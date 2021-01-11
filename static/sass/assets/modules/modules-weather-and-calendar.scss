@@ -2,15 +2,18 @@
 //    	Imports
 //	=================
 
-@import '../base/color_variables';   	// Color Variables
-@import '../base/fonticons';   			// Fonticons Variables
-@import '../base/urls';   				// URLS Variables
-@import '../base/utilities_variables';  // Utilities Variables
+@import '../base/color_variables';
+// Color Variables
+@import '../base/fonticons';
+// Fonticons Variables
+@import '../base/urls';
+// URLS Variables
+@import '../base/utilities_variables';
+// Utilities Variables
 
 //    ==============================================
 //        Modules Weather and Calendar Imports 
 //    ==============================================
-
 
 @import 'weather-and-calendar/accounting-calendar';
 @import 'weather-and-calendar/analytics-calendar';

@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     $('#hue-demo').minicolors({
         control: 'hue',
         format: 'hex',

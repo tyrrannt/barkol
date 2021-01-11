@@ -106,7 +106,7 @@ $(function () {
         var deletedPlots = ["paris", "lyon"];
 
         $(".mapcontainer7").trigger('update', [{
-            mapOptions: {map: {defaultPlot:{attrs:{transform:'r55'}}}}, 
+            mapOptions: {map: {defaultPlot: {attrs: {transform: 'r55'}}}},
             animDuration: 1000
         }]);
     });

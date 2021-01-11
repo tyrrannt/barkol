@@ -1,9 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.utils.decorators import method_decorator
 from django.views.generic import DetailView
-from authapp.forms import UserLoginForm
-from authapp.forms import UserRegisterForm
-from authapp.forms import UserEditForm
+from authapp.forms import UserLoginForm, UserEditForm, UserUpdateForm, UserRegisterForm
 from django.contrib import auth
 from django.urls import reverse, reverse_lazy
 from django.views.generic.list import ListView
@@ -15,13 +13,21 @@ from django.contrib.auth.decorators import user_passes_test
 from django.contrib import messages
 
 
+class UserAll(ListView):
+    model = Person
+    template_name = 'authapp/users/user_list.html'
+
+    @method_decorator(user_passes_test(lambda u: u.is_active))
+    def dispatch(self, request, *args, **kwargs):
+        return super(UserAll, self).dispatch(request, *args, **kwargs)
+
+
 class UserProfile(DetailView):
     context = {}
     model = Person
     template_name = 'authapp/users/user_profile.html'
     success_url = reverse_lazy('authapp:profile')
     form_class = UserEditForm
-
 
     @method_decorator(user_passes_test(lambda u: u.is_active))
     def dispatch(self, request, *args, **kwargs):
@@ -34,16 +40,46 @@ class UserProfile(DetailView):
         context.update(groups())
         return context
 
-class AdminUsersActive(DeleteView):
+
+class UserUpdate(UpdateView):
     model = Person
-    template_name = 'adminapp/admin-users-update-delete.html'
-    success_url = reverse_lazy('admin_staff:admin_users')
+    template_name = 'authapp/users/user_edit.html'
+    success_url = reverse_lazy('authapp:all_user')
+    form_class = UserUpdateForm
+
+    @method_decorator(user_passes_test(lambda u: u.is_superuser))
+    def dispatch(self, request, *args, **kwargs):
+        return super(UserUpdate, self).dispatch(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(UserUpdate, self).get_context_data(**kwargs)
+        context['title'] = title = 'редактирование'
+        return context
+
+
+class UserRemove(DeleteView):
+    model = Person
+    template_name = 'authapp/users/user_edit.html'
+    success_url = reverse_lazy('authapp:all_user')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.is_active = False
+        self.object.save()
+        return HttpResponseRedirect(self.get_success_url())
+
+
+class UserActive(DeleteView):
+    model = Person
+    template_name = 'authapp/users/user_edit.html'
+    success_url = reverse_lazy('authapp:all_user')
 
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
         self.object.is_active = True
         self.object.save()
         return HttpResponseRedirect(self.get_success_url())
+
 
 def login(request):
     login_form = UserLoginForm(data=request.POST)
@@ -77,7 +113,6 @@ def register(request):
             return HttpResponseRedirect(reverse('authapp:login'))
     else:
         register_form = UserRegisterForm()
-
 
     context = {'title': title, 'register_form': register_form}
     context.update(main_menu_generate(MainMenu.objects.all()))

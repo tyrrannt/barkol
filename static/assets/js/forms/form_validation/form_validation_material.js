@@ -1,8 +1,8 @@
-function no_submit(){
+function no_submit() {
     return false;
 }
 
-function notifyOnErrorInput(input){
+function notifyOnErrorInput(input) {
     var message = input.data('validateHint');
     $.Notify({
         caption: 'Error',
@@ -10,7 +10,8 @@ function notifyOnErrorInput(input){
         type: 'alert'
     });
 }
-function submit(form){
+
+function submit(form) {
     console.log(form);
     return true;
 }

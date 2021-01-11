@@ -155,13 +155,13 @@ ul {
 }
 
 
-
-
 .parent.ex-1 {
 }
+
 .parent.ex-1 .dragula {
     padding: 15px;
 }
+
 .parent.ex-1 .dragula .media,
 body.gu-unselectable .media.el-drag-ex-1 {
     background-color: #fff;
@@ -170,6 +170,7 @@ body.gu-unselectable .media.el-drag-ex-1 {
     border-radius: 2px;
     box-shadow: 0px 0px 10px 0px rgba(113, 106, 202, 0.2);
 }
+
 .parent.ex-1 .dragula .media img,
 body.gu-unselectable .media.el-drag-ex-1 img {
     width: 50px;
@@ -183,6 +184,7 @@ body.gu-unselectable .media.el-drag-ex-1 .media-body h6 {
     font-size: 15px;
     margin-top: 2px;
 }
+
 .parent.ex-1 .dragula .media .media-body p,
 body.gu-unselectable .media.el-drag-ex-1 .media-body p {
     color: #888ea8;
@@ -191,12 +193,9 @@ body.gu-unselectable .media.el-drag-ex-1 .media-body p {
 }
 
 
-
-
-
-
 .parent.ex-2 {
 }
+
 .parent.ex-2 .dragula {
     padding: 15px;
 }
@@ -215,6 +214,7 @@ body.gu-unselectable .media.el-drag-ex-2 img {
     width: 45px;
     border-radius: 50%;
 }
+
 .parent.ex-2 .dragula .media i,
 body.gu-unselectable .media.el-drag-ex-2 i {
     font-size: 19px;
@@ -230,6 +230,7 @@ body.gu-unselectable .media.el-drag-ex-2 .media-body h6 {
     font-size: 16px;
     font-weight: 600;
 }
+
 .parent.ex-2 .dragula .media .media-body p,
 body.gu-unselectable .media.el-drag-ex-2 .media-body p {
     color: #888ea8;
@@ -239,51 +240,45 @@ body.gu-unselectable .media.el-drag-ex-2 .media-body p {
 
 .parent.ex-2 #left-events .f-icon-fill,
 body.gu-unselectable .media.el-drag-ex-2 .f-icon-fill {
-    display: none!important;
+    display: none !important;
     color: #e9b02b;
 }
 
 .parent.ex-2 #left-events .f-icon-line,
 body.gu-unselectable .media.el-drag-ex-2 .f-icon-line {
-    display: block!important;
+    display: block !important;
     color: #888ea8;
 }
 
 
 .parent.ex-2 #right-events .f-icon-fill,
 body.gu-unselectable .media.el-drag-ex-2 .f-icon-fill {
-    display: block!important;
+    display: block !important;
     color: #e9b02b;
 }
+
 .parent.ex-2 #right-events .f-icon-line,
 body.gu-unselectable .media.el-drag-ex-2 .f-icon-line {
-    display: none!important;
+    display: none !important;
     color: #e9b02b;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 .parent.ex-3 {
     /*background-color: #f1f3f1;*/
 }
+
 .parent.ex-3 .dragula {
     background-color: transparent;
     padding: 15px;
 }
+
 .parent.ex-3 .dragula div {
-    background-color: transparent!important;
+    background-color: transparent !important;
     padding: 0;
     margin: 0;
 }
+
 .parent.ex-3 .dragula div.media,
 body.gu-unselectable div.media.el-drag-ex-3.gu-mirror {
     border: 1px solid transparent;
@@ -291,25 +286,30 @@ body.gu-unselectable div.media.el-drag-ex-3.gu-mirror {
     border-radius: 2px;
     box-shadow: 0px 0px 10px 0px rgba(113, 106, 202, 0.2);
 }
+
 .parent.ex-3 .dragula div.media:hover {
     border: 1px solid #f1f3f1;
     border-radius: 4px;
 }
+
 .parent.ex-3 .dragula .media img,
 body.gu-unselectable .media.el-drag-ex-3.gu-mirror img {
     width: 52px;
     border-radius: 10%;
 }
+
 .parent.ex-3 .dragula .media .media-body h5,
 body.gu-unselectable .media.el-drag-ex-3.gu-mirror .media-body h5 {
     font-size: 13px;
 }
+
 .parent.ex-3 .dragula .media .media-body h5 span.usr-commented,
 body.gu-unselectable .media.el-drag-ex-3.gu-mirror .media-body h5 span.usr-commented {
     font-weight: 600;
     color: #3b3f5c;
     font-size: 14px;
 }
+
 .parent.ex-3 .dragula .media .media-body h5 span.comment-topic,
 body.gu-unselectable .media.el-drag-ex-3.gu-mirror .media-body h5 span.comment-topic {
     font-weight: 600;
@@ -325,18 +325,10 @@ body.gu-unselectable .media.el-drag-ex-3.gu-mirror .media-body p.meta-time {
 }
 
 
-
-
-
-
-
-
-
-
-
 .parent.ex-4 {
     /*background-color: #f1f3f1;*/
 }
+
 .parent.ex-4 .dragula {
     background-color: #f1f3f1;
     /*padding: 15px;*/
@@ -402,12 +394,12 @@ body.gu-unselectable .card.post.el-drag-ex-4.gu-mirror div.people-liked-post .pe
     font-weight: 600;
     font-size: 13px;
 }
+
 .card.post.text-post {
     border: 1px solid transparent;
     border-radius: 2px;
     box-shadow: 0px 0px 10px 0px rgba(113, 106, 202, 0.2);
 }
-
 
 
 /*Ex -5*/
@@ -416,6 +408,7 @@ body.gu-unselectable .card.post.el-drag-ex-4.gu-mirror div.people-liked-post .pe
 .parent.ex-5 {
     /*background-color: #f1f3f1;*/
 }
+
 .parent.ex-5 .dragula {
     background-color: #f1f3f1;
     /*padding: 15px;*/
@@ -423,15 +416,17 @@ body.gu-unselectable .card.post.el-drag-ex-4.gu-mirror div.people-liked-post .pe
     /*padding: 0;*/
     background-color: #fff;
 }
+
 .parent.ex-5 .dragula div,
 .parent.ex-5 .dragula .gu-transit {
-    background-color: transparent!important;
+    background-color: transparent !important;
     color: #fff;
     /*padding: 0;*/
     /*margin: 0;*/
 }
+
 .parent.ex-5 .dragula > div,
-.parent.ex-5 .dragula > .gu-transit  {
+.parent.ex-5 .dragula > .gu-transit {
     border-radius: 2px;
     border: 1px solid transparent;
     box-shadow: 0px 0px 10px 0px rgba(113, 106, 202, 0.2);
@@ -481,6 +476,7 @@ body.gu-unselectable .media.el-drag-ex-5.gu-mirror ul li img {
     box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
     margin-left: -26px;
 }
+
 .parent.ex-5 .dragula .media .media-body h5,
 body.gu-unselectable .media.el-drag-ex-5.gu-mirror .media-body h6 {
     color: #000;
@@ -488,18 +484,16 @@ body.gu-unselectable .media.el-drag-ex-5.gu-mirror .media-body h6 {
 }
 
 
-
-
 .parent.ex-5 .dragula .media .media-body h5,
 .parent.ex-5 .dragula .gu-transit .media .media-body h5 {
     color: #141471;
     font-weight: 600;
 }
+
 .parent.ex-5 .dragula .media .media-body p,
 .parent.ex-5 .dragula .gu-transit .media .media-body p {
     color: #000;
 }
-
 
 
 /*.parent.ex-5 .dragula .tags ul li,
@@ -520,13 +514,6 @@ body.gu-unselectable .media.el-drag-ex-5.gu-mirror .media-body h6 {
     border-radius: 20px;
 
 }*/
-
-
-
-
-
-
-
 
 
 @media screen and (max-width: 991px) {

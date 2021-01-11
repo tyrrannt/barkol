@@ -9,8 +9,8 @@
     z-index: 100000;
     position: fixed;
     border-radius: 10%;
-    background-color: rgba(255,255,255,.5);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 }
 
 .ply-loading-spinner {
@@ -21,7 +21,7 @@
     border-radius: 100%;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 1px 3px rgba(0,0,0,.6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
 }
 
 .ply-loading-spinner::before {
@@ -39,15 +39,31 @@
 }
 
 @keyframes loading {
-  0%   { max-height: 0; }
-  50%  { max-height: 100%; top: 0; }
-  100% { max-height: 0; top: 120%; }
+    0% {
+        max-height: 0;
+    }
+    50% {
+        max-height: 100%;
+        top: 0;
+    }
+    100% {
+        max-height: 0;
+        top: 120%;
+    }
 }
 
 @-webkit-keyframes loading {
-  0%   { max-height: 0; }
-  50%  { max-height: 100%; top: 0; }
-  100% { max-height: 0; top: 120%; }
+    0% {
+        max-height: 0;
+    }
+    50% {
+        max-height: 100%;
+        top: 0;
+    }
+    100% {
+        max-height: 0;
+        top: 120%;
+    }
 }
 
 
@@ -55,12 +71,13 @@
 .ply-layer {
     color: #333;
     min-width: 280px;
-    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
     background-color: #fff;
     border-radius: 2px;
     font-size: 16px;
     font-family: "Arial", Helvetica;
 }
+
 .ply-layer.alert .ply-content,
 .ply-layer.confirm .ply-content {
     padding: 20px 0 15px;
@@ -89,15 +106,17 @@
 }
 
 .ply-content {
-    
+
 }
 
 .ply-footer {
-    
+
 }
+
 .ply-footer .ply-ctrl {
     margin-left: 20px;
 }
+
 .ply-footer .ply-ctrl:first-child {
     margin-left: 0;
 }
@@ -122,7 +141,7 @@
     border: 0;
     outline: 0;
     padding: 5px 20px;
-    box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     background-color: #39C082;
     border-radius: 30px;
     font-size: 18px;
@@ -135,17 +154,17 @@
 .ply-cancel {
     background-color: #ee3d50;
 }
+
 .ply-ok:focus,
 .ply-cancel:focus {
     box-shadow: 0 0 1px 2px rgba(255, 180, 0, .6);
-    border: 2px solid rgb(255, 210, 102)\9;
+    border: 2px solid rgb(255, 210, 102) \9;
 }
 
 .ply-ok::-moz-focus-inner,
 .ply-cancel::-moz-focus-inner {
     border: 0;
 }
-
 
 
 /* Forms */
@@ -161,6 +180,7 @@
     font-family: "Arial", Helvetica;
     box-sizing: border-box;
 }
+
 .ply-input:first-child {
     margin-top: 0;
 }
@@ -168,7 +188,6 @@
 .ply-input:focus {
     border-color: #e95f2b;
 }
-
 
 
 /* Global modifiers */
@@ -187,43 +206,49 @@
 }
 
 .ply-loading .ply-ok {
-    color: rgba(255,255,255,.7);
+    color: rgba(255, 255, 255, .7);
     -webkit-animation: ply-ok-loading 1s linear infinite;
-       -moz-animation: ply-ok-loading 1s linear infinite;
-            animation: ply-ok-loading 1s linear infinite;
+    -moz-animation: ply-ok-loading 1s linear infinite;
+    animation: ply-ok-loading 1s linear infinite;
     -webkit-background-size: 30px 30px;
-   -moz-background-size: 30px 30px;
-            background-size: 30px 30px;
+    -moz-background-size: 30px 30px;
+    background-size: 30px 30px;
     background-image: -webkit-gradient(linear, left top, right bottom,
-                                            color-stop(.25, rgba(255, 255, 255, .15)), color-stop(.25, transparent),
-                                            color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .15)),
-                                            color-stop(.75, rgba(255, 255, 255, .15)), color-stop(.75, transparent),
-                                            to(transparent));
+    color-stop(.25, rgba(255, 255, 255, .15)), color-stop(.25, transparent),
+    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .15)),
+    color-stop(.75, rgba(255, 255, 255, .15)), color-stop(.75, transparent),
+    to(transparent));
     background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
-                                            transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-                                            transparent 75%, transparent);
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
     background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
-                                            transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-                                            transparent 75%, transparent);
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
     background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
-                                            transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-                                            transparent 75%, transparent);
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
     background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
-                                            transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-                                            transparent 75%, transparent);
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
     background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%,
-						transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
-						transparent 75%, transparent);
+    transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+    transparent 75%, transparent);
 }
 
 @-webkit-keyframes ply-ok-loading {
-    to { background-position: 60px; }
+    to {
+        background-position: 60px;
+    }
 }
 
 @-moz-keyframes ply-ok-loading {
-    to { background-position: 60px; }
+    to {
+        background-position: 60px;
+    }
 }
 
 @keyframes ply-ok-loading {
-    to { background-position: 60px; }
+    to {
+        background-position: 60px;
+    }
 }

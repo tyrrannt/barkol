@@ -3,90 +3,77 @@
 */
 
 .wizard,
-.tabcontrol
-{
+.tabcontrol {
     display: block;
     width: 100%;
     overflow: hidden;
 }
 
 .wizard a,
-.tabcontrol a
-{
+.tabcontrol a {
     outline: 0;
 }
 
 .wizard ul,
-.tabcontrol ul
-{
+.tabcontrol ul {
     list-style: none !important;
     padding: 0;
     margin: 0;
 }
 
 .wizard ul > li,
-.tabcontrol ul > li
-{
+.tabcontrol ul > li {
     display: block;
     padding: 0;
 }
 
 /* Accessibility */
 .wizard > .steps .current-info,
-.tabcontrol > .steps .current-info
-{
+.tabcontrol > .steps .current-info {
     position: absolute;
     left: -999em;
 }
 
 .wizard > .content > .title,
-.tabcontrol > .content > .title
-{
+.tabcontrol > .content > .title {
     position: absolute;
     left: -999em;
 }
-
 
 
 /*
     Wizard
 */
 
-.wizard > .steps
-{
+.wizard > .steps {
     position: relative;
     display: block;
     width: 100%;
 }
 
-.wizard.vertical > .steps
-{
+.wizard.vertical > .steps {
     display: inline;
     float: left;
     width: 30%;
 }
 
-.wizard > .steps .number
-{
+.wizard > .steps .number {
     font-size: 1.429em;
 }
 
 .wizard > .steps > ul > li,
-.wizard > .actions > ul > li
-{
+.wizard > .actions > ul > li {
     float: left;
 }
 
-.wizard.vertical > .steps > ul > li
-{
+.wizard.vertical > .steps > ul > li {
     float: none;
     width: 100%;
 }
 
 .wizard > .steps a,
 .wizard > .steps a:hover,
-.wizard > .steps a:active
-{
+.wizard > .steps a:active {
     display: block;
     width: auto;
     padding: 10px;
@@ -99,8 +86,7 @@
 
 .wizard > .steps .disabled a,
 .wizard > .steps .disabled a:hover,
-.wizard > .steps .disabled a:active
-{
+.wizard > .steps .disabled a:active {
     background: #e9ecef;
     color: #aaa;
     cursor: default;
@@ -108,8 +94,7 @@
 
 .wizard > .steps .current a,
 .wizard > .steps .current a:hover,
-.wizard > .steps .current a:active
-{
+.wizard > .steps .current a:active {
     background: #25d5e4;
     color: #fff;
     cursor: default;
@@ -117,22 +102,19 @@
 
 .wizard > .steps .done a,
 .wizard > .steps .done a:hover,
-.wizard > .steps .done a:active
-{
+.wizard > .steps .done a:active {
     background: #3b3f5c;
     color: #fff;
 }
 
 .wizard > .steps .error a,
 .wizard > .steps .error a:hover,
-.wizard > .steps .error a:active
-{
+.wizard > .steps .error a:active {
     background: #ff3111;
     color: #fff;
 }
 
-.wizard > .content
-{
+.wizard > .content {
     background: #f1f3f9;
     display: block;
     margin-top: 27px;
@@ -145,96 +127,84 @@
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+
 .wizard > .content section.body:not(.current) {
-    display: none!important;
+    display: none !important;
 }
-.wizard.vertical > .content
-{
+
+.wizard.vertical > .content {
     display: inline;
     float: left;
     margin: 0 2.5% 0.5em 2.5%;
     width: 65%;
 }
 
-.wizard > .content > .body
-{
+.wizard > .content > .body {
     padding: 4.5%;
 }
 
-.wizard > .content > .body ul
-{
+.wizard > .content > .body ul {
     list-style: disc !important;
 }
 
-.wizard > .content > .body ul > li
-{
+.wizard > .content > .body ul > li {
     display: list-item;
 }
 
-.wizard > .content > .body > iframe
-{
+.wizard > .content > .body > iframe {
     border: 0 none;
     width: 100%;
     height: 100%;
 }
 
-.wizard > .content > .body input
-{
+.wizard > .content > .body input {
     display: block;
     border: 1px solid #ccc;
 }
 
-.wizard > .content > .body input[type="checkbox"]
-{
+.wizard > .content > .body input[type="checkbox"] {
     display: inline-block;
 }
 
-.wizard > .content > .body input.error
-{
+.wizard > .content > .body input.error {
     background: rgb(251, 227, 228);
     border: 1px solid #fbc2c4;
     color: #8a1f11;
 }
-.wizard > .content > .body label.error
-{
+
+.wizard > .content > .body label.error {
     color: #8a1f11;
     display: inline-block;
     margin-left: 1.5em;
 }
 
-.wizard > .actions
-{
+.wizard > .actions {
     margin-top: 30px;
     margin-bottom: 24px;
 }
 
-.wizard.vertical > .actions
-{
+.wizard.vertical > .actions {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-.wizard > .actions > ul
-{
+.wizard > .actions > ul {
     display: inline-block;
     text-align: right;
 }
 
-.wizard > .actions > ul > li
-{
+.wizard > .actions > ul > li {
     margin: 0 0.5em;
 }
 
-.wizard.vertical > .actions > ul > li
-{
+.wizard.vertical > .actions > ul > li {
     margin: 0 0 0 1em;
 }
 
 .wizard > .actions a,
 .wizard > .actions a:hover,
-.wizard > .actions a:active
-{
+.wizard > .actions a:active {
     background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     color: #fff;
     display: block;
@@ -248,8 +218,7 @@
 
 .wizard > .actions .disabled a,
 .wizard > .actions .disabled a:hover,
-.wizard > .actions .disabled a:active
-{
+.wizard > .actions .disabled a:active {
     background: #e6ecf5;
     color: #888ea8;
 }
@@ -258,21 +227,20 @@
     Tabcontrol
 */
 
-.tabcontrol > .steps
-{
+.tabcontrol > .steps {
     position: relative;
     display: block;
     width: 100%;
 }
-.tabcontrol > .steps > ul
-{
+
+.tabcontrol > .steps > ul {
     position: relative;
     margin: 6px 0 0 0;
     top: 1px;
     z-index: 1;
 }
-.tabcontrol > .steps > ul > li
-{
+
+.tabcontrol > .steps > ul > li {
     float: left;
     margin: 5px 2px 0 0;
     padding: 1px;
@@ -284,22 +252,22 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.tabcontrol > .steps > ul > li:hover
-{
+
+.tabcontrol > .steps > ul > li:hover {
     background: #edecec;
     border: 1px solid #bbb;
     padding: 0;
 }
-.tabcontrol > .steps > ul > li.current
-{
+
+.tabcontrol > .steps > ul > li.current {
     background: #fff;
     border: 1px solid #bbb;
     border-bottom: 0 none;
     padding: 0 0 1px 0;
     margin-top: 0;
 }
-.tabcontrol > .steps > ul > li > a
-{
+
+.tabcontrol > .steps > ul > li > a {
     color: #5f5f5f;
     display: inline-block;
     border: 0 none;
@@ -307,16 +275,16 @@
     padding: 10px 30px;
     text-decoration: none;
 }
-.tabcontrol > .steps > ul > li > a:hover
-{
+
+.tabcontrol > .steps > ul > li > a:hover {
     text-decoration: none;
 }
-.tabcontrol > .steps > ul > li.current > a
-{
+
+.tabcontrol > .steps > ul > li.current > a {
     padding: 15px 30px 10px 30px;
 }
-.tabcontrol > .content
-{
+
+.tabcontrol > .content {
     position: relative;
     display: inline-block;
     width: 100%;
@@ -325,20 +293,20 @@
     border-top: 1px solid #bbb;
     padding-top: 20px;
 }
-.tabcontrol > .content > .body
-{
+
+.tabcontrol > .content > .body {
     float: left;
     position: absolute;
     width: 95%;
     height: 95%;
     padding: 2.5%;
 }
-.tabcontrol > .content > .body ul
-{
+
+.tabcontrol > .content > .body ul {
     list-style: disc !important;
 }
-.tabcontrol > .content > .body ul > li
-{
+
+.tabcontrol > .content > .body ul > li {
     display: list-item;
 }
 
@@ -350,51 +318,56 @@
 .wizard.vertical > .steps a:active {
     margin-bottom: 5px;
 }
+
 .wizard > .steps .disabled a,
 .wizard > .steps .disabled a:hover,
 .wizard > .steps .disabled a:active {
     background-color: transparent;
     color: #888ea8;
 }
+
 .wizard > .steps a,
 .wizard > .steps a:hover,
 .wizard > .steps a:active {
-    -webkit-border-radius: 0; 
+    -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    border-radius: 0; 
+    border-radius: 0;
 }
+
 .wizard > .steps .current a .number,
 .wizard > .steps .current a:hover .number,
 .wizard > .steps .current a:active .number {
     border-color: #fff;
 }
+
 .wizard > .steps .done a .number,
 .wizard > .steps .done a:hover .number,
 .wizard > .steps .done a:active .number {
     border-color: #fff;
 }
+
 .wizard > .steps .done a .number,
 .wizard > .steps .done a:hover .number,
 .wizard > .steps .done a:active .number {
     border-color: #fff;
 }
+
 .wizard > .steps .last.current.done a,
 .wizard > .steps .last.current.done a:hover,
 .wizard > .steps .last.current.done a:active {
     background: #3862f5;
     color: #fff;
 }
+
 .wizard > .actions > ul > li {
     margin: 0;
 }
+
 .wizard > .steps .done a,
 .wizard > .steps .done a:hover,
-.wizard > .steps .done a:active{
+.wizard > .steps .done a:active {
     border-bottom: 3px solid #888ea8;
 }
-
-
-
 
 
 /*  Simple */
@@ -411,15 +384,18 @@
     display: flex;
     justify-content: space-around;
 }
+
 .circle.wizard .actions ul {
     justify-content: space-between;
 }
-.circle.wizard  > .steps > ul > li {
+
+.circle.wizard > .steps > ul > li {
     float: none;
     width: 100%;
     text-align: center;
     position: relative;
 }
+
 .circle.wizard > .steps .number {
     font-size: 15px;
     border: 2px solid #000;
@@ -434,6 +410,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .circle.wizard > .steps .current a,
 .circle.wizard > .steps .current a:hover,
 .circle.wizard > .steps .current a:active {
@@ -442,6 +419,7 @@
     cursor: default;
     text-align: center;
 }
+
 .circle.wizard > .steps ul li::after,
 .circle.wizard > .steps ul li::before {
     content: '';
@@ -457,9 +435,11 @@
     margin-right: auto;
     background-color: #f1f3f9;
 }
+
 .circle.wizard.wizard > .content {
     margin-top: 0
 }
+
 .circle.wizard > .steps a .number,
 .circle.wizard > .steps a:hover .number,
 .circle.wizard > .steps a:active .number {
@@ -469,12 +449,14 @@
     z-index: 10;
     text-align: center;
 }
+
 .circle.wizard > .steps .disabled a .number,
 .circle.wizard > .steps .disabled a:hover .number,
 .circle.wizard > .steps .disabled a:active .number {
     border-color: #f1f3f9;
     background-color: #f1f3f9;
 }
+
 .circle.wizard > .steps .current:not(.done) a .number,
 .circle.wizard > .steps .current:not(.done) a:hover .number,
 .circle.wizard > .steps .current:not(.done) a:active .number {
@@ -482,6 +464,7 @@
     background-color: #3862f5;
     color: #fff;
 }
+
 .circle.wizard > .steps .done a,
 .circle.wizard > .steps .done a:hover,
 .circle.wizard > .steps .done a:active {
@@ -489,22 +472,26 @@
     background-color: transparent;
     color: #343f55;
 }
+
 .circle.wizard > .steps .done a .number {
     border-color: #25d5e4;
 }
+
 .circle.wizard > .steps ul li.done::after,
 .circle.wizard > .steps ul li.done::before {
     background-color: #25d5e4;
 }
+
 .circle.wizard > .steps .last.current.done a,
 .circle.wizard > .steps .last.current.done a:hover,
 .circle.wizard > .steps .last.current.done a:active {
-        border: none;
+    border: none;
     background-color: transparent;
     color: #343f55;
 }
+
 .wizard > .steps .done a, .classic.wizard > .steps .current a, .wizard > .steps .disabled a {
-    cursor: pointer!important;
+    cursor: pointer !important;
 }
 
 
@@ -514,14 +501,17 @@
     display: flex;
     justify-content: space-around;
 }
+
 .classic.wizard .actions ul {
     justify-content: space-between;
 }
-.classic.wizard  > .steps > ul > li {
+
+.classic.wizard > .steps > ul > li {
     float: none;
     width: 100%;
     text-align: center;
 }
+
 .classic.wizard > .steps .number {
     font-size: 15px;
     border: 2px solid #888ea8;
@@ -537,6 +527,7 @@
     margin-right: auto;
     margin-bottom: 10px;
 }
+
 .classic.wizard > .steps .current a,
 .classic.wizard > .steps .current a:hover,
 .classic.wizard > .steps .current a:active {
@@ -546,6 +537,7 @@
     text-align: center;
     border-bottom: 3px solid #ffbb44;
 }
+
 .classic.wizard.wizard > .content {
     margin-top: 0
 }
@@ -556,15 +548,18 @@
     display: flex;
     justify-content: space-around;
 }
+
 .icon-changing.wizard .actions ul {
     justify-content: space-between;
 }
-.icon-changing.wizard  > .steps > ul > li {
+
+.icon-changing.wizard > .steps > ul > li {
     float: none;
     width: 100%;
     text-align: center;
     position: relative;
 }
+
 .icon-changing.wizard > .steps .number {
     font-size: 15px;
     border: 2px solid #000;
@@ -579,6 +574,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .icon-changing.wizard > .steps a i {
     display: block;
     font-size: 24px;
@@ -590,9 +586,11 @@
     margin-right: auto;
     margin-left: auto;
 }
+
 .icon-changing.wizard > .steps li.disabled a i {
     background: #f1f3f9;
 }
+
 .icon-changing.wizard > .steps .current a,
 .icon-changing.wizard > .steps .current a:hover,
 .icon-changing.wizard > .steps .current a:active {
@@ -601,9 +599,11 @@
     cursor: default;
     text-align: center;
 }
+
 .icon-changing.wizard.wizard > .content {
     margin-top: 0
 }
+
 .icon-changing.wizard > .steps a .number,
 .icon-changing.wizard > .steps a:hover .number,
 .icon-changing.wizard > .steps a:active .number {
@@ -613,6 +613,7 @@
     z-index: 10;
     text-align: center;
 }
+
 .icon-changing.wizard > .steps .done a,
 .icon-changing.wizard > .steps .done a:hover,
 .icon-changing.wizard > .steps .done a:active {
@@ -620,17 +621,21 @@
     background-color: transparent;
     color: #343f55;
 }
+
 .icon-changing.wizard > .steps .done a i {
     background-color: #24ccda;
     color: #fff;
 }
+
 .icon-changing.wizard > .steps .done a .number {
     border-color: #3862f5;
 }
+
 .icon-changing.wizard > .steps ul li.done:not(.last)::after,
 .icon-changing.wizard > .steps ul li.done:not(.last)::before {
     background-color: #3862f5;
 }
+
 .icon-changing.wizard > .steps .last.current.done a,
 .icon-changing.wizard > .steps .last.current.done a:hover,
 .icon-changing.wizard > .steps .last.current.done a:active {
@@ -645,15 +650,18 @@
     display: flex;
     justify-content: space-around;
 }
+
 .ico-text.wizard .actions ul {
     justify-content: space-between;
 }
-.ico-text.wizard  > .steps > ul > li {
+
+.ico-text.wizard > .steps > ul > li {
     float: none;
     width: 100%;
     text-align: center;
     position: relative;
 }
+
 .ico-text.wizard > .steps .number {
     font-size: 15px;
     border: 2px solid #000;
@@ -668,14 +676,17 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .ico-text.wizard > .steps a i {
     display: block;
     font-size: 32px;
     margin-bottom: 12px;
 }
+
 .ico-text.wizard > .steps li.disabled {
     opacity: .5;
 }
+
 .ico-text.wizard > .steps a,
 .ico-text.wizard > .steps a:hover,
 .ico-text.wizard > .steps a:active {
@@ -683,6 +694,7 @@
     font-size: 15px;
     font-weight: 600;
 }
+
 .ico-text.wizard > .steps .current a,
 .ico-text.wizard > .steps .current a:hover,
 .ico-text.wizard > .steps .current a:active {
@@ -692,10 +704,12 @@
     text-align: center;
     border-bottom: 2px solid #3232b7;
 }
+
 .ico-text.wizard.wizard > .content {
     margin-top: 0;
     background: transparent;
 }
+
 .ico-text.wizard > .steps a .number,
 .ico-text.wizard > .steps a:hover .number,
 .ico-text.wizard > .steps a:active .number {
@@ -705,6 +719,7 @@
     z-index: 10;
     text-align: center;
 }
+
 .ico-text.wizard > .steps .done a,
 .ico-text.wizard > .steps .done a:hover,
 .ico-text.wizard > .steps .done a:active {
@@ -712,17 +727,20 @@
     background-color: transparent;
     color: #343f55;
 }
+
 .ico-text.wizard > .steps .done a .number {
     border-color: #3862f5;
 }
+
 .ico-text.wizard > .steps ul li.done:not(.last)::after,
 .ico-text.wizard > .steps ul li.done:not(.last)::before {
     background-color: #3862f5;
 }
+
 .ico-text.wizard > .steps .last.current.done a,
 .ico-text.wizard > .steps .last.current.done a:hover,
 .ico-text.wizard > .steps .last.current.done a:active {
-        border: none;
+    border: none;
     background-color: transparent;
     color: #343f55;
 }
@@ -732,22 +750,27 @@
     display: flex;
     justify-content: space-around;
 }
+
 .pill.wizard .actions ul {
     justify-content: space-between;
 }
-.pill.wizard  > .steps > ul > li {
+
+.pill.wizard > .steps > ul > li {
     float: none;
     width: 100%;
     text-align: center;
     position: relative;
 }
+
 .pill.wizard > .steps a i {
     display: block;
     font-size: 24px;
 }
+
 .pill.wizard > .steps li.disabled {
     opacity: .5;
 }
+
 .pill.wizard > .steps .disabled a,
 .pill.wizard > .steps .disabled a:hover,
 .pill.wizard > .steps .disabled a:active {
@@ -755,6 +778,7 @@
     color: #3b3f5c;
     border: solid 1px #e9ecef;
 }
+
 .pill.wizard > .steps a,
 .pill.wizard > .steps a:hover,
 .pill.wizard > .steps a:active {
@@ -764,15 +788,18 @@
     margin-right: 6px;
     border-radius: 20px;
 }
+
 .pill.wizard.wizard > .content {
     margin-top: 0;
     background: transparent;
 }
+
 .pill.wizard > .steps a .number,
 .pill.wizard > .steps a:hover .number,
 .pill.wizard > .steps a:active .number {
     border: none;
 }
+
 .pill.wizard > .steps .done a,
 .pill.wizard > .steps .done a:hover,
 .pill.wizard > .steps .done a:active {
@@ -780,13 +807,16 @@
     background-color: transparent;
     color: #343f55;
 }
+
 .pill.wizard > .steps .done a .number {
     border-color: #3862f5;
 }
+
 .pill.wizard > .steps ul li.done:not(.last)::after,
 .pill.wizard > .steps ul li.done:not(.last)::before {
     background-color: #3862f5;
 }
+
 .pill.wizard > .steps .last.current.done a,
 .pill.wizard > .steps .last.current.done a:hover,
 .pill.wizard > .steps .last.current.done a:active {
@@ -799,25 +829,29 @@
 /*Circle Vertical*/
 
 .circle.vertical.wizard {
-        display: flex;
+    display: flex;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+
 .circle.vertical.wizard > .steps {
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
     max-width: 30%;
 }
+
 .circle.vertical.wizard ul, .circle.vertical.wizard.tabcontrol ul {
     display: block;
 }
+
 .circle.vertical.wizard .actions ul {
     justify-content: space-between;
     display: flex;
 }
-.circle.vertical.wizard  > .steps > ul > li {
+
+.circle.vertical.wizard > .steps > ul > li {
     float: none;
     width: 100%;
     text-align: center;
@@ -825,6 +859,7 @@
     padding-top: 26px;
     padding-bottom: 10px;
 }
+
 .circle.vertical.wizard > .steps .number {
     font-size: 15px;
     border: 2px solid #000;
@@ -839,6 +874,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .circle.vertical.wizard > .steps .current a,
 .circle.vertical.wizard > .steps .current a:hover,
 .circle.vertical.wizard > .steps .current a:active {
@@ -847,6 +883,7 @@
     cursor: default;
     text-align: center;
 }
+
 .circle.vertical.wizard > .steps ul li::after,
 .circle.vertical.wizard > .steps ul li::before {
     content: '';
@@ -862,12 +899,14 @@
     margin-right: auto;
     background-color: #f1f3f9;
 }
+
 .circle.vertical.wizard.wizard > .content {
-     -ms-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
     flex: 0 0 70%;
     max-width: 70%;
     margin: 0;
 }
+
 .circle.vertical.wizard > .steps a .number,
 .circle.vertical.wizard > .steps a:hover .number,
 .circle.vertical.wizard > .steps a:active .number {
@@ -877,12 +916,14 @@
     z-index: 10;
     text-align: center;
 }
+
 .circle.vertical.wizard > .steps .disabled a .number,
 .circle.vertical.wizard > .steps .disabled a:hover .number,
 .circle.vertical.wizard > .steps .disabled a:active .number {
     border-color: #f1f3f9;
     background-color: #f1f3f9;
 }
+
 .circle.vertical.wizard > .steps .done a,
 .circle.vertical.wizard > .steps .done a:hover,
 .circle.vertical.wizard > .steps .done a:active {
@@ -890,13 +931,16 @@
     background-color: transparent;
     color: #343f55;
 }
+
 .circle.vertical.wizard > .steps .done a .number {
     border-color: #25d5e4;
 }
+
 .circle.vertical.wizard > .steps ul li.done::after,
 .circle.vertical.wizard > .steps ul li.done::before {
     background-color: #25d5e4;
 }
+
 .circle.vertical.wizard > .steps .last.current.done a,
 .circle.vertical.wizard > .steps .last.current.done a:hover,
 .circle.vertical.wizard > .steps .last.current.done a:active {
@@ -908,42 +952,49 @@
 /*Pill Vertical*/
 
 .pills.vertical.wizard {
-        display: flex;
+    display: flex;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+
 .pills.vertical.wizard > .steps {
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
     max-width: 30%;
 }
+
 .pills.vertical.wizard ul, .pills.vertical.wizard.tabcontrol ul {
     display: flow-root;
     justify-content: space-around;
 }
+
 .pills.vertical.wizard .actions ul {
     justify-content: space-between;
     display: flex;
 }
-.pills.vertical.wizard  > .steps > ul > li {
+
+.pills.vertical.wizard > .steps > ul > li {
     float: none;
     width: 100%;
     text-align: center;
     position: relative;
 }
+
 .pills.vertical.wizard > .steps .number {
     font-size: 15px;
-     border: none; 
+    border: none;
     font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .pills.vertical.wizard > .steps li.disabled {
     opacity: .5;
 }
+
 .pills.vertical.wizard > .steps a,
 .pills.vertical.wizard > .steps a:hover,
 .pills.vertical.wizard > .steps a:active {
@@ -952,6 +1003,7 @@
     border-radius: 20px;
     margin-bottom: 25px;
 }
+
 .pills.vertical.wizard > .steps .disabled a,
 .pills.vertical.wizard > .steps .disabled a:hover,
 .pills.vertical.wizard > .steps .disabled a:active {
@@ -959,6 +1011,7 @@
     color: #3b3f5c;
     border: solid 1px #e9ecef;
 }
+
 .pills.vertical.wizard > .steps .current a,
 .pills.vertical.wizard > .steps .current a:hover,
 .pills.vertical.wizard > .steps .current a:active {
@@ -968,12 +1021,14 @@
     border-radius: 30px;
     margin-right: 5px;
 }
+
 .pills.vertical.wizard.wizard > .content {
-     -ms-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
     flex: 0 0 70%;
     max-width: 70%;
     margin: 0;
 }
+
 .pills.vertical.wizard > .steps .done a,
 .pills.vertical.wizard > .steps .done a:hover,
 .pills.vertical.wizard > .steps .done a:active {
@@ -981,13 +1036,16 @@
     background-color: transparent;
     color: #343f55;
 }
+
 .pills.vertical.wizard > .steps .done a .number {
     border-color: #3862f5;
 }
+
 .pills.vertical.wizard > .steps ul li.done:not(.last)::after,
 .pills.vertical.wizard > .steps ul li.done:not(.last)::before {
     background-color: #3862f5;
 }
+
 .pills.vertical.wizard > .steps .last.current.done a,
 .pills.vertical.wizard > .steps .last.current.done a:hover,
 .pills.vertical.wizard > .steps .last.current.done a:active {
@@ -997,8 +1055,6 @@
 }
 
 
-
-
 /*For Validation Checkbox */
 
 label.custom-control-label {
@@ -1006,21 +1062,19 @@ label.custom-control-label {
 }
 
 
-
-
-
 @media (max-width: 575px) {
     .classic.wizard ul[role="tablist"],
     .icon-changing.wizard ul[role="tablist"],
     .ico-text.wizard ul[role="tablist"],
-    .pill.wizard ul[role="tablist"]
-    {
+    .pill.wizard ul[role="tablist"] {
         display: block;
     }
+
     .ico-text.wizard ul[role="tablist"] li,
     .pill.wizard ul[role="tablist"] li {
         margin-bottom: 2rem;
     }
+
     .pills.vertical.wizard > .steps,
     .pills.vertical.wizard.wizard > .content {
         -ms-flex: 0 0 100%;

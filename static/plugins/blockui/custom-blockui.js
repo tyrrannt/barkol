@@ -1,7 +1,7 @@
-$('#block-page').on('click', function() {
+$('#block-page').on('click', function () {
     $.blockUI({
         message: '<i class="flaticon-spinner-circle spin"></i>',
-        fadeIn: 800, 
+        fadeIn: 800,
         timeout: 2000, //unblock after 2 seconds
         overlayCSS: {
             backgroundColor: '#1b2024',
@@ -20,9 +20,9 @@ $('#block-page').on('click', function() {
 });
 
 
-$('#block-content').on('click', function() {
+$('#block-content').on('click', function () {
     var block = $('#reload');
-    $(block).block({ 
+    $(block).block({
         message: '<i class="flaticon-spinner-1 spin"></i>',
         timeout: 2000, //unblock after 2 seconds
         overlayCSS: {
@@ -40,15 +40,15 @@ $('#block-content').on('click', function() {
 });
 
 // Growl notification
-$('#block-growl').on('click', function() {
+$('#block-growl').on('click', function () {
     $.blockUI({
-        message: $('.blockui-growl-message'), 
-        fadeIn: 700, 
-        fadeOut: 700, 
+        message: $('.blockui-growl-message'),
+        fadeIn: 700,
+        fadeOut: 700,
         timeout: 3000, //unblock after 3 seconds
-        showOverlay: false, 
-        centerY: false, 
-        css: { 
+        showOverlay: false,
+        centerY: false,
+        css: {
             width: '250px',
             backgroundColor: 'transparent',
             top: '20px',
@@ -57,16 +57,15 @@ $('#block-growl').on('click', function() {
             border: 0,
             opacity: .95,
             zIndex: 1200,
-        } 
-    }); 
+        }
+    });
 });
 
 
-
 // Custom message position
-$('#message-position').on('click', function() {
+$('#message-position').on('click', function () {
     var block = $('#m-s-reload');
-    $(block).block({ 
+    $(block).block({
         message: '<i class="flaticon-circle-reload-line spin"></i>',
         timeout: 2000, //unblock after 2 seconds
         centerX: 0,
@@ -91,7 +90,7 @@ $('#message-position').on('click', function() {
 
 
 // Auto unblock
-$('#auto-unblock').on('click', function() {
+$('#auto-unblock').on('click', function () {
     var block = $('#a-u-reload');
     $(block).block({
         message: '<i class="flaticon-spinner-4 spin"></i>',
@@ -110,13 +109,11 @@ $('#auto-unblock').on('click', function() {
 });
 
 
-
-
 // Block callback
-$('#block-callback').on('click', function() {
+$('#block-callback').on('click', function () {
     $.blockUI({
         message: '<i class="flaticon-spinner-3 spin"></i>',
-        fadeIn: 800, 
+        fadeIn: 800,
         timeout: 2000, //unblock after 2 seconds
         overlayCSS: {
             backgroundColor: '#1b2024',
@@ -131,18 +128,15 @@ $('#block-callback').on('click', function() {
             padding: 0,
             backgroundColor: 'transparent'
         },
-        onBlock: function() {
-            alert('Page is now blocked. FadeIn completed.'); 
-        } 
+        onBlock: function () {
+            alert('Page is now blocked. FadeIn completed.');
+        }
     });
 });
 
 
-
-
-
 // Default message
-$('#default-message').on('click', function() {
+$('#default-message').on('click', function () {
     var block = $('#d-t-reload');
     $(block).block({
         message: '<span class="text-semibold">Please wait...</span>',
@@ -162,9 +156,8 @@ $('#default-message').on('click', function() {
 });
 
 
-
 // Custom message animation
-$('#message-animation').on('click', function() {
+$('#message-animation').on('click', function () {
     var block = $(this).parent();
     $(block).block({
         message: $('.blockui-animation-container'),
@@ -191,12 +184,10 @@ $('#message-animation').on('click', function() {
 });
 
 
-
-
 // Modal Blockui
-$('#modal-blockui').on('click', function() {
+$('#modal-blockui').on('click', function () {
     var block = $('#modal-reload');
-    $(block).block({ 
+    $(block).block({
         message: '<i class="flaticon-circle-reload-line spin"></i>',
         showOverlay: false,
         timeout: 2000, //unblock after 2 seconds
@@ -211,9 +202,9 @@ $('#modal-blockui').on('click', function() {
 
 
 // Custom Overlay
-$('#overlay-custom').on('click', function() {
+$('#overlay-custom').on('click', function () {
     var block = $('#custom-overlay');
-    $(block).block({ 
+    $(block).block({
         message: '<i class="flaticon-spinner-5 spin"></i>',
         timeout: 2000, //unblock after 2 seconds
         overlayCSS: {
@@ -231,10 +222,8 @@ $('#overlay-custom').on('click', function() {
 });
 
 
-
-
 // Custom message
-$('#custom-message').on('click', function() {
+$('#custom-message').on('click', function () {
     var block = $('#c-style');
     $(block).block({
         message: '<span class="text-semibold"><i class="flaticon-spinner-1 spin position-left"></i>&nbsp; Updating data</span>',
@@ -257,14 +246,11 @@ $('#custom-message').on('click', function() {
 });
 
 
-
-
-
 // Multiple messages
-$('#multiple-messages').on('click', function() {
+$('#multiple-messages').on('click', function () {
     var message = $(this).next('.multiMessageBlockUi');
     var block = $(this).parent();
-    $(block).block({ 
+    $(block).block({
         message: message,
         overlayCSS: {
             backgroundColor: '#fff',
@@ -279,29 +265,29 @@ $('#multiple-messages').on('click', function() {
             padding: 0,
             backgroundColor: 'transparent'
         },
-        onBlock: function(){
+        onBlock: function () {
             clearTimeout();
         }
     });
 
     window.setTimeout(function () {
-       message.html('<i class="flaticon-spinner-4 spin"></i> <span class="text-semibold display-block">Loading</span>')
-    }, 0); 
+        message.html('<i class="flaticon-spinner-4 spin"></i> <span class="text-semibold display-block">Loading</span>')
+    }, 0);
 
     window.setTimeout(function () {
-       message.html('<i class="flaticon-spinner-4 spin"></i> <span class="text-semibold display-block">Please wait</span>')
-    }, 2000); 
+        message.html('<i class="flaticon-spinner-4 spin"></i> <span class="text-semibold display-block">Please wait</span>')
+    }, 2000);
 
     window.setTimeout(function () {
-       message.addClass('bg-danger').html('<i class="flaticon-danger-3"></i> <span class="text-semibold display-block">Load error</span>')
+        message.addClass('bg-danger').html('<i class="flaticon-danger-3"></i> <span class="text-semibold display-block">Load error</span>')
     }, 4000);
 
     window.setTimeout(function () {
-       $(block).unblock({
-        onUnblock: function(){
-            message.removeClass('bg-danger');
-        }
-       });
+        $(block).unblock({
+            onUnblock: function () {
+                message.removeClass('bg-danger');
+            }
+        });
     }, 6000);
 });
 

@@ -27,8 +27,8 @@ $(function () {
         return msg;
     };
 
-    $('#closeButton').click(function() {
-        if($(this).is(':checked')) {
+    $('#closeButton').click(function () {
+        if ($(this).is(':checked')) {
             $('#addBehaviorOnToastCloseClick').prop('disabled', false);
         } else {
             $('#addBehaviorOnToastCloseClick').prop('disabled', true);
@@ -115,18 +115,18 @@ $(function () {
         }
 
         $('#toastrOptions').text('Command: toastr["'
-                + shortCutFunction
-                + '"]("'
-                + msg
-                + (title ? '", "' + title : '')
-                + '")\n\ntoastr.options = '
-                + JSON.stringify(toastr.options, null, 2)
+            + shortCutFunction
+            + '"]("'
+            + msg
+            + (title ? '", "' + title : '')
+            + '")\n\ntoastr.options = '
+            + JSON.stringify(toastr.options, null, 2)
         );
 
         var $toast = toastr[shortCutFunction](msg, title); // Wire up an event handler to a button in the toast, if it exists
         $toastlast = $toast;
 
-        if(typeof $toast === 'undefined'){
+        if (typeof $toast === 'undefined') {
             return;
         }
 
@@ -143,14 +143,15 @@ $(function () {
         }
         if ($toast.find('.clear').length) {
             $toast.delegate('.clear', 'click', function () {
-                toastr.clear($toast, { force: true });
+                toastr.clear($toast, {force: true});
             });
         }
     });
 
-    function getLastToast(){
+    function getLastToast() {
         return $toastlast;
     }
+
     $('#clearlasttoast').click(function () {
         toastr.clear(getLastToast());
     });

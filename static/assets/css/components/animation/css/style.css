@@ -8,6 +8,7 @@ input, select, button, textarea {
     font: inherit;
     color: inherit;
 }
+
 /*-----------------------------------*\
   $OBJECTS
 \*-----------------------------------*/
@@ -18,9 +19,11 @@ input, select, button, textarea {
     background-color: transparent;
     border-radius: 4px;
 }
+
 .butt:focus, .input:focus {
     outline: none;
 }
+
 .butt {
     border: 2px solid #f35626;
     line-height: 1.375;
@@ -31,14 +34,17 @@ input, select, button, textarea {
     cursor: pointer;
     /*-webkit-animation: hue 60s infinite linear;*/
 }
+
 .butt--primary {
     background-color: #f35626;
     color: #fff;
 }
+
 .input {
     border: 1px solid #c0c8c9;
     border-radius: 4px;
 }
+
 .input--dropdown {
     background-image: url("images/ddown.png");
     background-image: url("images/ddowneccb.svg?3"), none;
@@ -57,18 +63,23 @@ input, select, button, textarea {
     margin: 0 auto;
     text-align: center;
 }
+
 .mega {
     font-size: 4rem;
 }
+
 #animationSandbox {
     display: block;
 }
+
 .island {
     padding: 1.5rem;
 }
+
 .isle {
     padding: .75rem;
 }
+
 .spit {
     padding: .375rem;
 }
@@ -81,16 +92,19 @@ input, select, button, textarea {
 .site__header {
     -webkit-animation: bounceInUp 1s;
 }
+
 .site__title {
     color: #f35626;
-    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .site__content {
     -webkit-animation: bounceInUp 1s;
     -webkit-animation-delay: .1s;
 }
+
 .site__content form {
     -webkit-animation: bounceInUp 1s;
     -webkit-animation-delay: .1s;
@@ -105,13 +119,16 @@ input, select, button, textarea {
     .island {
         padding: 0.5rem;
     }
+
     .mega {
         font-size: 2rem;
     }
+
     h2 {
         font-size: 18px;
     }
 }
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .mega {
         font-size: 3rem;

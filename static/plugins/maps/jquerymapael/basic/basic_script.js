@@ -10,12 +10,12 @@ $(function () {
                     fill: "#888ea8"
                 },
                 attrsHover: {
-                    fill:"#515365",
+                    fill: "#515365",
                 }
             },
             defaultPlot: {
-                text : {
-                    position : "left"
+                text: {
+                    position: "left"
                 }
             }
         },
@@ -3332,7 +3332,7 @@ $(function () {
         }
     };
 
-    var getElemID = function(elem) {
+    var getElemID = function (elem) {
         // Show element ID
         return $(elem.node).attr("data-id");
     };

@@ -29,12 +29,12 @@ function notifi(options) {
     /**
      * Show the notification.
      */
-    this.show = function() {
+    this.show = function () {
 
         var notification = this.buildNotification();
         notification.animate({
-          'right': '15px',
-          'opacity': 1
+            'right': '15px',
+            'opacity': 1
         }, 500);
 
     };
@@ -42,7 +42,7 @@ function notifi(options) {
     /**
      * Show the notification.
      */
-    this.buildNotification = function() {
+    this.buildNotification = function () {
 
         var id = this.getNotificationId();
         var classes = this.getNotificationClass();
@@ -52,60 +52,60 @@ function notifi(options) {
         var timeout = this.getNotificationTimeout();
         var close_button = this.getNotificationClose();
 
-        if(message === null) {
+        if (message === null) {
             console.error('Message not set in notification');
             return false;
         }
 
-        if(title !== null) {
+        if (title !== null) {
             title = '<span class="notify-body-title">' + title + '</span>';
         } else {
             title = '';
         }
-      
-        if(icon !== null) {
+
+        if (icon !== null) {
             icon = '<div class="notification-body-icon">' + icon + '</div>';
         } else {
             icon = '';
         }
 
-        if(close_button === true) {
-            close_button =  '<div class="notify-action-buttons">' +
-                                '<a href="#" class="notify-square-button notify-close-button"></a>' +
-                            '</div>';
+        if (close_button === true) {
+            close_button = '<div class="notify-action-buttons">' +
+                '<a href="#" class="notify-square-button notify-close-button"></a>' +
+                '</div>';
         } else {
             close_button = '';
         }
 
-        var html =  '<div id="' + id + '" class="' + classes + '">' +
-                        '<div class="notify-body-wrapper">' +
-                            '<div class="notify-body">' +
-                                icon + 
-                                title +
-                                '<div class="notify-body-text">' +
-                                  message +
-                                '</div>' +
-                            '</div>' +
-                            close_button +
-                        '</div>' +
-                    '</div>';
-              
-        if($('#notify-holster').length === 0)
-          $('body').append('<div id="notify-holster"></div>');
-        
+        var html = '<div id="' + id + '" class="' + classes + '">' +
+            '<div class="notify-body-wrapper">' +
+            '<div class="notify-body">' +
+            icon +
+            title +
+            '<div class="notify-body-text">' +
+            message +
+            '</div>' +
+            '</div>' +
+            close_button +
+            '</div>' +
+            '</div>';
+
+        if ($('#notify-holster').length === 0)
+            $('body').append('<div id="notify-holster"></div>');
+
         $('#notify-holster').prepend(html);
-      
+
         var notification = $('#' + id);
-      
+
         notify_body = notification.find('.notify-body');
         notify_body.find('.notification-body-icon').css({
-          'height': notify_body.height()
+            'height': notify_body.height()
         });
-      
-        var self = this;
-      
 
-        if(close_button.length > 0) {
+        var self = this;
+
+
+        if (close_button.length > 0) {
 
             var notify_close = notification.find('.notify-close-button');
 
@@ -115,7 +115,7 @@ function notifi(options) {
 
         }
 
-        notify_close.on('click', function(e) {
+        notify_close.on('click', function (e) {
 
             e.preventDefault();
 
@@ -123,8 +123,8 @@ function notifi(options) {
 
         });
 
-        if(timeout !== null) {
-            setTimeout(function() {
+        if (timeout !== null) {
+            setTimeout(function () {
 
                 notify_close.click();
 
@@ -139,47 +139,47 @@ function notifi(options) {
     /**
      * Hide the notification.
      */
-    this.hide = function() {
-      
-      var notification = $('#' + this.getNotificationId());
-      
-      var self = this;
-      
-      notification.animate({
-        'right': '-360px',
-        'opacity': 0
-      }, 500, function () {
-        self.destroy();
-      });
-      
+    this.hide = function () {
+
+        var notification = $('#' + this.getNotificationId());
+
+        var self = this;
+
+        notification.animate({
+            'right': '-360px',
+            'opacity': 0
+        }, 500, function () {
+            self.destroy();
+        });
+
     };
 
     /**
      * Destroy the notification.
      */
-    this.destroy = function() {
-      
-      var notification = $('#' + this.getNotificationId());
-      
-      notification.remove();
-      
-      if($('#notify-holster').children().length === 0)
-        $('#notify-holster').remove();
-      
+    this.destroy = function () {
+
+        var notification = $('#' + this.getNotificationId());
+
+        notification.remove();
+
+        if ($('#notify-holster').children().length === 0)
+            $('#notify-holster').remove();
+
     };
-    
+
     /**
      * Get the notification icon
      *
      * returns {mixed}
      */
     this.getNotificationIcon = function () {
-      
-      if(this.options.icon.length === 0)
-        return null;
-      
-      return '<i class="flaticon-' + this.options.icon + '"></i>';
-      
+
+        if (this.options.icon.length === 0)
+            return null;
+
+        return '<i class="flaticon-' + this.options.icon + '"></i>';
+
     };
 
     /**
@@ -187,7 +187,7 @@ function notifi(options) {
      *
      * @returns {string}
      */
-    this.getNotificationClose = function() {
+    this.getNotificationClose = function () {
 
         return this.options.close_button;
 
@@ -198,21 +198,21 @@ function notifi(options) {
      *
      * @returns {mixed}
      */
-    this.getNotificationTimeout = function() {
+    this.getNotificationTimeout = function () {
 
-       return this.options.timeout
+        return this.options.timeout
 
     };
 
-  
+
     /**
      * Get the notification title.
      *
      * @returns {mixed}
      */
-    this.getNotificationTitle = function() {
+    this.getNotificationTitle = function () {
 
-        if(this.options.title.length === 0)
+        if (this.options.title.length === 0)
             return null;
 
         return this.options.title;
@@ -226,7 +226,7 @@ function notifi(options) {
      */
     this.getNotificationMessage = function () {
 
-        if(this.options.message.length === 0)
+        if (this.options.message.length === 0)
             return null;
 
         return this.options.message;
@@ -238,18 +238,18 @@ function notifi(options) {
      *
      * @returns {string}
      */
-    this.getNotificationClass = function() {
+    this.getNotificationClass = function () {
 
         var classes = 'notify notify-' + this.options.style;
-      
-        if(this.getNotificationIcon() !== null)
-          classes = classes + ' notify-with-icon';
 
-        if(this.options.theme === null)
+        if (this.getNotificationIcon() !== null)
+            classes = classes + ' notify-with-icon';
+
+        if (this.options.theme === null)
             classes = classes + ' notify-theme-' + this.config.theme;
         else
             classes = classes + ' notify-theme-' + this.options.theme;
-      
+
         return classes;
 
     };
@@ -259,9 +259,9 @@ function notifi(options) {
      *
      * @returns {string};
      */
-    this.getNotificationId = function() {
+    this.getNotificationId = function () {
 
-        if(this.id.length === 0)
+        if (this.id.length === 0)
             this.id = this.makeId()
 
         return this.id;
@@ -273,18 +273,18 @@ function notifi(options) {
      *
      * @returns {string}
      */
-    this.makeId = function() {
+    this.makeId = function () {
 
         var text = "";
         var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-        for(var i=0; i < 32; i++)
+        for (var i = 0; i < 32; i++)
             text += possible.charAt(Math.floor(Math.random() * possible.length));
 
         return "notifyjs-" + text;
 
     }
-    
+
     return this;
 
 }

@@ -1490,24 +1490,24 @@ $(function () {
         all_hidden = (all_hidden == 'show') ? 'hide' : 'show';
 
         $(".mapcontainer2").trigger('update', [{
-                setLegendElemsState: all_hidden,
-                animDuration: 1000
-            }]);
+            setLegendElemsState: all_hidden,
+            animDuration: 1000
+        }]);
     });
     $('#button-areas').on('click', function () {
         areas_hidden = (areas_hidden == 'show') ? 'hide' : 'show';
 
         $(".mapcontainer2").trigger('update', [{
-                setLegendElemsState: {"areaLegend": areas_hidden},
-                animDuration: 1000
-            }]);
+            setLegendElemsState: {"areaLegend": areas_hidden},
+            animDuration: 1000
+        }]);
     });
     $('#button-plots').on('click', function () {
         plots_hidden = (plots_hidden == 'show') ? 'hide' : 'show';
 
         $(".mapcontainer2").trigger('update', [{
-                setLegendElemsState: {"plotLegend": plots_hidden},
-                animDuration: 1000
-            }]);
+            setLegendElemsState: {"plotLegend": plots_hidden},
+            animDuration: 1000
+        }]);
     });
 });

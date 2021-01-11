@@ -1,1 +1,32 @@
-[{"model": "authapp.address", "pk": 1, "fields": {"postal_code": "121351", "country": 1, "region": null, "district": null, "microdistrict": null, "city": 1, "street": "\u041c\u043e\u043b\u043e\u0434\u043e\u0433\u0432\u0430\u0440\u0434\u0435\u0439\u0441\u043a\u0430\u044f", "house": "61", "apartment": null}}, {"model": "authapp.address", "pk": 2, "fields": {"postal_code": "143989", "country": 1, "region": "\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c", "district": null, "microdistrict": "\u041e\u043b\u044c\u0433\u0438\u043d\u043e", "city": 2, "street": "\u0428\u0435\u0441\u0442\u0430\u044f", "house": "15", "apartment": "311"}}]
+[
+  {
+    "model": "authapp.address",
+    "pk": 1,
+    "fields": {
+      "postal_code": "121351",
+      "country": 1,
+      "region": null,
+      "district": null,
+      "microdistrict": null,
+      "city": 1,
+      "street": "\u041c\u043e\u043b\u043e\u0434\u043e\u0433\u0432\u0430\u0440\u0434\u0435\u0439\u0441\u043a\u0430\u044f",
+      "house": "61",
+      "apartment": null
+    }
+  },
+  {
+    "model": "authapp.address",
+    "pk": 2,
+    "fields": {
+      "postal_code": "143989",
+      "country": 1,
+      "region": "\u041c\u043e\u0441\u043a\u043e\u0432\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c",
+      "district": null,
+      "microdistrict": "\u041e\u043b\u044c\u0433\u0438\u043d\u043e",
+      "city": 2,
+      "street": "\u0428\u0435\u0441\u0442\u0430\u044f",
+      "house": "15",
+      "apartment": "311"
+    }
+  }
+]

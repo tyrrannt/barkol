@@ -1,7 +1,7 @@
 // nav-Tabs
 
-$(document).ready(function() {
-    $(".custom-tabs a").click(function(event) {
+$(document).ready(function () {
+    $(".custom-tabs a").click(function (event) {
         event.preventDefault();
         $(this).parent().addClass("current");
         $(this).parent().siblings().removeClass("current");
@@ -13,11 +13,11 @@ $(document).ready(function() {
 
 // LIGHT BOX SCRIPT
 
- $(document).ready(function() {
+$(document).ready(function () {
     var $lightbox = $('#lightbox');
 
-    $('[data-target="#lightbox"]').on('click', function(event) {
-        var $img = $(this).find('img'), 
+    $('[data-target="#lightbox"]').on('click', function (event) {
+        var $img = $(this).find('img'),
             src = $img.attr('src'),
             alt = $img.attr('alt'),
             css = {
@@ -36,8 +36,8 @@ $(document).ready(function() {
 function initMap() {
     // Create a map object and specify the DOM element for display.
     var map = new google.maps.Map(document.getElementById('custom-map'), {
-      center: {lat: -34.397, lng: 150.644},
-      scrollwheel: false,
-      zoom: 8
+        center: {lat: -34.397, lng: 150.644},
+        scrollwheel: false,
+        zoom: 8
     });
 }

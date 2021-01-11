@@ -18,33 +18,35 @@
             <div class="row">
                 <div class="col-md-8 col-sm-7 rq-blog-post-wrapper">
                     {% for item in blog_post %}
-                        <!-- BLOG ITEMS -->
-                        <div class="rq-blog-items rq-image-post">
-                            <div class="rq-blog-img-wrapper">
-                                <img src="{{ item.cover|media_folder_document }}" alt="Blog Image">
-                                <div class="rq-blog-cat-icon">
-                                    <i class="ion-ios-camera-outline"></i>
+                        {% if item.published_by %}
+                            <!-- BLOG ITEMS -->
+                            <div class="rq-blog-items rq-image-post">
+                                <div class="rq-blog-img-wrapper">
+                                    <img src="{{ item.cover|media_folder_blog_cover }}" alt="Blog Image">
+                                    <div class="rq-blog-cat-icon">
+                                        <i class="ion-ios-camera-outline"></i>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="rq-blog-item-details">
-                                <h3>
-                                    <a href="#">{{ item.name }}</a>
-                                </h3>
-                                <h5>{{ item.short_desc }}</h5>
-                                <p>{{ item.description }}</p>
-                                <div>
-                                    <ol class="breadcrumb">
-                                        <li>
-                                            <time datetime="{{ item.time_publication }}">{{ item.time_publication }}</time>
-                                        </li>
-                                        <li class="active"><a href="#">{{ item.author }}</a></li>
-                                        <li><a href="">COMMENT<span> 3</span></a></li>
-                                    </ol>
+                                <div class="rq-blog-item-details">
+                                    <h3>
+                                        <a href="#">{{ item.name }}</a>
+                                    </h3>
+                                    <h5>{{ item.short_desc }}</h5>
+                                    <p>{{ item.description }}</p>
+                                    <div>
+                                        <ol class="breadcrumb">
+                                            <li>
+                                                <time datetime="{{ item.time_publication }}">{{ item.time_publication }}</time>
+                                            </li>
+                                            <li class="active"><a href="{% url 'authapp:edit_user' item.author.pk %}">{{ item.author }}</a></li>
+                                            <li><a href="">COMMENT<span> 3</span></a></li>
+                                        </ol>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- BLOG ITEMS END -->
+                            <!-- BLOG ITEMS END -->
+                        {% endif %}
                     {% endfor %}
                 </div>
 

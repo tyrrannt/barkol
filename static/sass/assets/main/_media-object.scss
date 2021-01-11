@@ -1,12 +1,13 @@
 /*      Media Object      */
 .media {
-	.media-body {
-		.media-heading {
-			color: $primary;
-			font-size: 1.125rem;
-		}
-		.media-text {
-			color: $color_49;
-		}
-	}
+  .media-body {
+    .media-heading {
+      color: $primary;
+      font-size: 1.125rem;
+    }
+
+    .media-text {
+      color: $color_49;
+    }
+  }
 }

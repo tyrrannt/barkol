@@ -1,48 +1,48 @@
 // Default
 
-$('.default').click(function() {
-   Snackbar.show({text: 'Example notification text.', duration: 100000});
+$('.default').click(function () {
+    Snackbar.show({text: 'Example notification text.', duration: 100000});
 });
 
 // Position
 
-$('.top-left').click(function() {
-    Snackbar.show({
+$('.top-left').click(function () {
+    Snackbar.show({
         text: 'Example notification text.',
         pos: 'top-left'
     });
 });
 
-$('.top-center').click(function() {
-    Snackbar.show({
+$('.top-center').click(function () {
+    Snackbar.show({
         text: 'Example notification text.',
         pos: 'top-center'
     });
 });
 
-$('.top-right').click(function() {
-    Snackbar.show({
+$('.top-right').click(function () {
+    Snackbar.show({
         text: 'Example notification text.',
         pos: 'top-right'
     });
 });
 
-$('.bottom-left').click(function() {
-    Snackbar.show({
+$('.bottom-left').click(function () {
+    Snackbar.show({
         text: 'Example notification text.',
         pos: 'bottom-left'
     });
 });
 
-$('.bottom-center').click(function() {
-    Snackbar.show({
+$('.bottom-center').click(function () {
+    Snackbar.show({
         text: 'Example notification text.',
         pos: 'bottom-center'
     });
 });
 
-$('.bottom-right').click(function() {
-    Snackbar.show({
+$('.bottom-right').click(function () {
+    Snackbar.show({
         text: 'Example notification text.',
         pos: 'bottom-right'
     });
@@ -51,8 +51,8 @@ $('.bottom-right').click(function() {
 
 // Action Button
 
-$('.no-action').click(function() {
-    Snackbar.show({
+$('.no-action').click(function () {
+    Snackbar.show({
         showAction: false
     });
 });
@@ -60,8 +60,8 @@ $('.no-action').click(function() {
 
 // Action Text
 
-$('.action-text').click(function() {
-    Snackbar.show({
+$('.action-text').click(function () {
+    Snackbar.show({
         actionText: 'Thanks!'
     });
 });
@@ -69,8 +69,8 @@ $('.action-text').click(function() {
 
 // Text Color
 
-$('.text-color').click(function() {
-    Snackbar.show({
+$('.text-color').click(function () {
+    Snackbar.show({
         actionTextColor: '#e9b02b',
     });
 });
@@ -78,11 +78,11 @@ $('.text-color').click(function() {
 
 // Click Callback
 
-$('.click-callback').click(function() {
-    Snackbar.show({
+$('.click-callback').click(function () {
+    Snackbar.show({
         text: 'Custom callback when action button is clicked.',
         width: 'auto',
-        onActionClick: function(element) {
+        onActionClick: function (element) {
             //Set opacity of element to 0 to close Snackbar 
             $(element).css('opacity', 0);
             Snackbar.show({
@@ -96,8 +96,8 @@ $('.click-callback').click(function() {
 
 // Duration
 
-$('.duration').click(function() {
-    Snackbar.show({
+$('.duration').click(function () {
+    Snackbar.show({
         text: 'Duration set to 5s',
         duration: 5000,
     });
@@ -106,48 +106,48 @@ $('.duration').click(function() {
 
 // Custom Background
 
-$('.snackbar-bg-primary').click(function() {
-    Snackbar.show({
+$('.snackbar-bg-primary').click(function () {
+    Snackbar.show({
         text: 'Primary',
         actionTextColor: '#fff',
         backgroundColor: '#1a73e9'
     });
 });
 
-$('.snackbar-bg-info').click(function() {
-    Snackbar.show({
+$('.snackbar-bg-info').click(function () {
+    Snackbar.show({
         text: 'Info',
         actionTextColor: '#fff',
         backgroundColor: '#00b1f4'
     });
 });
 
-$('.snackbar-bg-success').click(function() {
-    Snackbar.show({
+$('.snackbar-bg-success').click(function () {
+    Snackbar.show({
         text: 'Success',
         actionTextColor: '#fff',
         backgroundColor: '#1abc9c'
     });
 });
 
-$('.snackbar-bg-warning').click(function() {
-    Snackbar.show({
+$('.snackbar-bg-warning').click(function () {
+    Snackbar.show({
         text: 'Warning',
         actionTextColor: '#fff',
         backgroundColor: '#e9b02b'
     });
 });
 
-$('.snackbar-bg-danger').click(function() {
-    Snackbar.show({
+$('.snackbar-bg-danger').click(function () {
+    Snackbar.show({
         text: 'Danger',
         actionTextColor: '#fff',
         backgroundColor: '#e7515a'
     });
 });
 
-$('.snackbar-bg-dark').click(function() {
-    Snackbar.show({
+$('.snackbar-bg-dark').click(function () {
+    Snackbar.show({
         text: 'Dark',
         actionTextColor: '#fff',
         backgroundColor: '#4f5163'
@@ -157,8 +157,8 @@ $('.snackbar-bg-dark').click(function() {
 
 // Custom Text
 
-$('.snackbar-txt-primary').click(function() {
-    Snackbar.show({
+$('.snackbar-txt-primary').click(function () {
+    Snackbar.show({
         text: 'Primary',
         textColor: '#1a73e9',
         actionTextColor: '#1a73e9',
@@ -166,8 +166,8 @@ $('.snackbar-txt-primary').click(function() {
     });
 });
 
-$('.snackbar-txt-info').click(function() {
-    Snackbar.show({
+$('.snackbar-txt-info').click(function () {
+    Snackbar.show({
         text: 'Info',
         textColor: '#00b1f4',
         actionTextColor: '#00b1f4',
@@ -175,8 +175,8 @@ $('.snackbar-txt-info').click(function() {
     });
 });
 
-$('.snackbar-txt-success').click(function() {
-    Snackbar.show({
+$('.snackbar-txt-success').click(function () {
+    Snackbar.show({
         text: 'Success',
         textColor: '#1abc9c',
         actionTextColor: '#1abc9c',
@@ -184,8 +184,8 @@ $('.snackbar-txt-success').click(function() {
     });
 });
 
-$('.snackbar-txt-warning').click(function() {
-    Snackbar.show({
+$('.snackbar-txt-warning').click(function () {
+    Snackbar.show({
         text: 'Warning',
         textColor: '#e9b02b',
         actionTextColor: '#e9b02b',
@@ -193,8 +193,8 @@ $('.snackbar-txt-warning').click(function() {
     });
 });
 
-$('.snackbar-txt-danger').click(function() {
-    Snackbar.show({
+$('.snackbar-txt-danger').click(function () {
+    Snackbar.show({
         text: 'Danger',
         textColor: '#e7515a',
         actionTextColor: '#e7515a',
@@ -202,8 +202,8 @@ $('.snackbar-txt-danger').click(function() {
     });
 });
 
-$('.snackbar-txt-dark').click(function() {
-    Snackbar.show({
+$('.snackbar-txt-dark').click(function () {
+    Snackbar.show({
         text: 'Dark',
         textColor: '#4f5163',
         actionTextColor: '#4f5163',

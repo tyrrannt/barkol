@@ -9,16 +9,19 @@ body {
     box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
     color: #5247bd;
 }
+
 .form-control {
     color: #3862f5;
     border: 1px solid #e9ecef;
     border-radius: 2px;
 }
+
 .form-control:focus {
     color: #3b3f5c;
     border-color: #e9ecef;
     border-radius: 2px;
 }
+
 .input-group-addon {
     background-color: #fff;
     color: #3b3f5c;
@@ -38,9 +41,9 @@ body {
     padding: 6px .75rem;
     font-size: 1rem;
     text-transform: capitalize;
-    -webkit-box-shadow: 0 0px 0px 0 rgba(0,0,0,.16),0 0px 0px 0 rgba(0,0,0,.12);
-    -moz-box-shadow: 0 0px 0px 0 rgba(0,0,0,.16),0 0px 0px 0 rgba(0,0,0,.12);
-    box-shadow: 0 0px 0px 0 rgba(0,0,0,.16),0 0px 0px 0 rgba(0,0,0,.12);
+    -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .16), 0 0px 0px 0 rgba(0, 0, 0, .12);
+    -moz-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .16), 0 0px 0px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .16), 0 0px 0px 0 rgba(0, 0, 0, .12);
 }
 
 label.btn {
@@ -54,6 +57,7 @@ label.btn {
 blockquote small {
     display: inline-block;
 }
+
 /* Jumbotron */
 .docs-jumbotron {
     background-color: #0074d9;
@@ -211,7 +215,7 @@ blockquote small {
     margin-bottom: .5rem;
 }
 
-.btn-group>.btn, .btn-group .btn {
+.btn-group > .btn, .btn-group .btn {
     padding: 8px 8px;
 }
 

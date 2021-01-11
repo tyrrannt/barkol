@@ -10,7 +10,7 @@ $('.image-popup-vertical-fit').magnificPopup({
     mainClass: 'mfp-img-mobile',
     image: {
         verticalFit: true
-    } 
+    }
 });
 
 
@@ -21,7 +21,6 @@ $('.image-popup-fit-width').magnificPopup({
         verticalFit: false
     }
 });
-
 
 
 $('.image-popup-no-margins').magnificPopup({
@@ -40,12 +39,7 @@ $('.image-popup-no-margins').magnificPopup({
 });
 
 
-
-
-
-
-
-    // Gallery
+// Gallery
 
 
 $('.popup-gallery').magnificPopup({
@@ -56,11 +50,11 @@ $('.popup-gallery').magnificPopup({
     gallery: {
         enabled: true,
         navigateByImgClick: true,
-        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
         tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-        titleSrc: function(item) {
+        titleSrc: function (item) {
             return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
         }
     }
@@ -93,7 +87,7 @@ $('.popup-with-zoom-anim').magnificPopup({
 
     closeBtnInside: true,
     preloader: false,
-    
+
     midClick: true,
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
@@ -109,7 +103,7 @@ $('.popup-with-move-anim').magnificPopup({
 
     closeBtnInside: true,
     preloader: false,
-    
+
     midClick: true,
     removalDelay: 300,
     mainClass: 'my-mfp-slide-bottom'
@@ -127,8 +121,8 @@ $('.popup-with-form').magnificPopup({
     // When elemened is focused, some mobile browsers in some cases zoom in
     // It looks not nice, so we disable it:
     callbacks: {
-        beforeOpen: function() {
-            if($(window).width() < 700) {
+        beforeOpen: function () {
+            if ($(window).width() < 700) {
                 this.st.focus = false;
             } else {
                 this.st.focus = '#name';
@@ -156,17 +150,16 @@ $(document).on('click', '.popup-modal-dismiss', function (e) {
 $('#broken-image, #broken-ajax').magnificPopup({});
 
 
-
 // Ajax Popup
 
 $('.simple-ajax-popup-align-top').magnificPopup({
-	type: 'ajax',
-	alignTop: true,
-	overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
+    type: 'ajax',
+    alignTop: true,
+    overflowY: 'scroll' // as we know that popup content is tall we set scroll overflow by default to avoid jump
 });
 
 $('.simple-ajax-popup').magnificPopup({
-	type: 'ajax'
+    type: 'ajax'
 });
 
 

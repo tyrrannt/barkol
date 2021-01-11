@@ -2,38 +2,43 @@
 //    	Imports
 //	=================
 
-@import '../base/color_variables';   	// Color Variables
-@import '../base/fonticons';   			// Fonticons Variables
-@import '../base/urls';   				// URLS Variables
-@import '../base/utilities_variables';  // Utilities Variables
+@import '../base/color_variables';
+// Color Variables
+@import '../base/fonticons';
+// Fonticons Variables
+@import '../base/urls';
+// URLS Variables
+@import '../base/utilities_variables'; // Utilities Variables
 
 .table {
-	td {
-		padding: .75rem;
-		vertical-align: $v-align-top;
-		border-top: none;
-	}
-	>thead {
-		&:first-child {
-			>tr {
-				&:first-child {
-					>th {
-						border-top: none;
-						border-top: $b-width-1 $solid $color_64;
-						border-top: none;
-					}
-				}
-			}
-		}
-	}
+  td {
+    padding: .75rem;
+    vertical-align: $v-align-top;
+    border-top: none;
+  }
+
+  > thead {
+    &:first-child {
+      > tr {
+        &:first-child {
+          > th {
+            border-top: none;
+            border-top: $b-width-1 $solid $color_64;
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
 }
+
 .title-heading {
-	color: $color_76;
-	text-transform: initial;
-	font-weight: 600;
-	font-size: 18px;
-	margin: 0 0 20px 0;
-	text-transform: $transform-upper;
+  color: $color_76;
+  text-transform: initial;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  text-transform: $transform-upper;
 }
 
 //  ==============================================

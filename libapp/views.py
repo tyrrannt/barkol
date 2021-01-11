@@ -5,8 +5,6 @@ from authapp.models import Counteragent
 from edo.utilities import main_menu_generate, footer_info_generator
 
 
-
-
 def libs():
     pass
 

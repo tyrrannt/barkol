@@ -15,12 +15,12 @@ $('.timepicker').datetimepicker({
 
     // inline: true,
     // sideBySide: true
- });
+});
 
 $('#setTimeExample').timepicker();
-$('#setTimeButton').on('click', function (){
+$('#setTimeButton').on('click', function () {
     $('#setTimeExample').timepicker('setTime', new Date());
 });
 
 
-$('#scrollDefaultExample').timepicker({ 'scrollDefault': 'now' });
+$('#scrollDefaultExample').timepicker({'scrollDefault': 'now'});

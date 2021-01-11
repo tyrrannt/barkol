@@ -1,20 +1,20 @@
-$('#coupons-report').DataTable( {
+$('#coupons-report').DataTable({
     dom: '<"row"<"col-md-12"<"row"<"col-md-6"B><"col-md-6"f> > ><"col-md-12"rt> <"col-md-12"<"row"<"col-md-5 mb-md-0 mb-5"i><"col-md-7"p>>> >',
     buttons: {
         buttons: [
-            { extend: 'csv', className: 'btn btn-default btn-rounded btn-sm mb-4' },
-            { extend: 'excel', className: 'btn btn-default btn-rounded btn-sm mb-4' }
+            {extend: 'csv', className: 'btn btn-default btn-rounded btn-sm mb-4'},
+            {extend: 'excel', className: 'btn btn-default btn-rounded btn-sm mb-4'}
         ]
     },
     "language": {
         "paginate": {
-          "previous": "<i class='flaticon-arrow-left-1'></i>",
-          "next": "<i class='flaticon-arrow-right'></i>"
+            "previous": "<i class='flaticon-arrow-left-1'></i>",
+            "next": "<i class='flaticon-arrow-right'></i>"
         },
         "info": "Showing page _PAGE_ of _PAGES_"
     }
 
-} );
+});
 
 $("#n-progress-success").sparkline([2, 6, 8, 10, 14, 6, 19, 20, 15, 25, 15, 30, 30], {
     type: 'line',

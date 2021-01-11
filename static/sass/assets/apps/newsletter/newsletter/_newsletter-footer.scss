@@ -4,16 +4,19 @@
     ================
 */
 #footerWrapper {
-	padding: 25px;
-	p {
-		margin-bottom: $m-0;
-		color: $color_168;
-	}
-	a {
-		color: $color_168;
-		&:hover {
-			color: $color_48;
-			text-decoration: underline;
-		}
-	}
+  padding: 25px;
+
+  p {
+    margin-bottom: $m-0;
+    color: $color_168;
+  }
+
+  a {
+    color: $color_168;
+
+    &:hover {
+      color: $color_48;
+      text-decoration: underline;
+    }
+  }
 }

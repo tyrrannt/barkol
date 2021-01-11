@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('libapp', '0003_division'),
         ('authapp', '0019_auto_20210104_2115'),

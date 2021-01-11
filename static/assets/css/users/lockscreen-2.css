@@ -1,4 +1,7 @@
-html, body { height: 100%; }
+html, body {
+    height: 100%;
+}
+
 body {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -11,6 +14,7 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
 .form-lockscreen {
     width: 410px;
     max-width: 410px;
@@ -20,12 +24,14 @@ body {
     width: 100%;
     margin: auto;
 }
+
 .form-lockscreen img.usr-profile {
     color: #000;
     border-radius: 50%;
     width: 105px;
     border: solid 4px rgba(255, 255, 255, 0.5);
 }
+
 .form-lockscreen .input-group .form-control {
     position: relative;
     box-sizing: border-box;
@@ -39,7 +45,11 @@ body {
     background: rgba(230, 230, 230, 0.20);
     border: none;
 }
-.form-lockscreen .input-group .input-group-prepend { margin-right: 0; }
+
+.form-lockscreen .input-group .input-group-prepend {
+    margin-right: 0;
+}
+
 .form-lockscreen .input-group .input-group-prepend .input-group-text {
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
@@ -48,25 +58,36 @@ body {
     color: #fff;
     border-right: none;
 }
+
 .form-lockscreen .form-control::-webkit-input-placeholder {
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
 }
+
 .form-lockscreen .form-control::-ms-input-placeholder {
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
 }
+
 .form-lockscreen .form-control::-moz-placeholder {
     color: #fff;
     font-size: 13px;
     text-transform: uppercase;
 }
-.form-lockscreen .form-control:focus { z-index: 2; border-color: #fff; }
+
+.form-lockscreen .form-control:focus {
+    z-index: 2;
+    border-color: #fff;
+}
+
 .form-lockscreen .forgot-pass a {
     color: #fff;
     font-size: 13px;
     font-weight: 600;
 }
-.btn-gradient-warning { padding: 12px 15px 12px 15px; }
+
+.btn-gradient-warning {
+    padding: 12px 15px 12px 15px;
+}

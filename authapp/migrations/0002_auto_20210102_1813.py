@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('authapp', '0001_initial'),
     ]
@@ -31,7 +30,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='counteragent',
             name='juridical_address',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='juridical', to='authapp.Address'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='juridical',
+                                    to='authapp.Address'),
         ),
         migrations.AddField(
             model_name='counteragent',
@@ -41,7 +41,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='counteragent',
             name='physical_address',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='physical', to='authapp.Address'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='physical',
+                                    to='authapp.Address'),
         ),
         migrations.AddField(
             model_name='counteragent',
@@ -51,11 +52,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='counteragent',
             name='phone',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.PhoneNumber', verbose_name='номер телефона'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.PhoneNumber',
+                                    verbose_name='номер телефона'),
         ),
         migrations.AddField(
             model_name='person',
             name='phone',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.PhoneNumber', verbose_name='номер телефона'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.PhoneNumber',
+                                    verbose_name='номер телефона'),
         ),
     ]

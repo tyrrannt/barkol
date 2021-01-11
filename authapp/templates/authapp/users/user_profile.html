@@ -3,8 +3,8 @@
 {% load utilities %}
 
 {% block css %}
-<!--  BEGIN CUSTOM STYLE FILE  -->
-    <link href="{% static 'assets/css/users/user-profile.css' %}" rel="stylesheet" type="text/css" />
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="{% static 'assets/css/users/user-profile.css' %}" rel="stylesheet" type="text/css"/>
     <!--  END CUSTOM STYLE FILE  -->
 {% endblock %}
 
@@ -126,12 +126,15 @@
                                 <div class="card" style="">
                                     <div class="card-body">
                                         <h4 class="mb-4"><i class="flaticon-user-plus"></i> Информация о профиле</h4>
-                                        <p class="mb-3"><span class="usr-work-position">{% if user.works.job.name %}{{ user.works.job.name }}{% else %}Должность{% endif %} </span> в <a
-                                                href="#">{% if user.works.divisions %}{{ user.works.divisions }}{% else %}Подразделении{% endif %}</a></p>
+                                        <p class="mb-3"><span class="usr-work-position">{% if user.works.job.name %}
+                                            {{ user.works.job.name }}{% else %}Должность{% endif %} </span> в <a
+                                                href="#">
+                                            {% if user.works.divisions %}{{ user.works.divisions }}{% else %}
+                                                Подразделении{% endif %}</a></p>
                                         <p>Проживает: {{ user.address.country }}, г. {{ user.address.city }}</p>
                                         <p>Дата регистрации: {{ user.date_joined }}</p>
                                         <p>{% if followers %}{{ followers }}{% else %} 0 {% endif %}подписчиков</p>
-                                        <p>Состоит в  {% if groups %}{{ groups }}{% else %} 0 {% endif %} группах</p>
+                                        <p>Состоит в {% if groups %}{{ groups }}{% else %} 0 {% endif %} группах</p>
                                         <div class="social-networks-section mt-5">
                                             <h4 class="mb-4">Другие социальные сети</h4>
                                             <div class="row">
@@ -162,17 +165,23 @@
                                             <div class="col-sm-12 text-center">
                                                 <ul class="list-inline mb-0">
                                                     <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="admin-profile"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -239,23 +248,32 @@
                                             <div class="col-sm-12 text-center">
                                                 <ul class="list-inline mb-0">
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                     <li class="list-inline-item"><img alt="image-gallery"
-                                                                                      src="{% static 'assets/img/90x90.jpg' %}"></li>
+                                                                                      src="{% static 'assets/img/90x90.jpg' %}">
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -300,7 +318,8 @@
                                                              role="tabpanel" aria-labelledby="pills-status-tab">
                                                             <form>
                                                                 <div class="media">
-                                                                    <img class="mr-3" src="{% static 'assets/img/200x200.jpg' %}"
+                                                                    <img class="mr-3"
+                                                                         src="{% static 'assets/img/200x200.jpg' %}"
                                                                          alt="admin-profile">
                                                                     <div class="media-body">
                                                                         <div class="form-group">
@@ -318,7 +337,8 @@
                                                              aria-labelledby="pills-multimedia-tab">
                                                             <form>
                                                                 <div class="media">
-                                                                    <img class="mr-3" src="{% static 'assets/img/200x200.jpg' %}"
+                                                                    <img class="mr-3"
+                                                                         src="{% static 'assets/img/200x200.jpg' %}"
                                                                          alt="admin-profile">
                                                                     <div class="media-body">
                                                                         <div class="form-group">
@@ -336,7 +356,8 @@
                                                              aria-labelledby="pills-blog-post-tab">
                                                             <form>
                                                                 <div class="media">
-                                                                    <img class="mr-3" src="{% static 'assets/img/200x200.jpg' %}"
+                                                                    <img class="mr-3"
+                                                                         src="{% static 'assets/img/200x200.jpg' %}"
                                                                          alt="admin-profile">
                                                                     <div class="media-body">
                                                                         <div class="form-group">
@@ -433,17 +454,21 @@
                                                         <div class="col-sm-5 text-center">
                                                             <ul class="list-inline people-liked-img">
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}"
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}"
                                                                          class="ml-0">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -481,7 +506,8 @@
                                                             adipisicing elit, sed do eiusmod
                                                             tempor incididunt ut labore et dolore magna aliqua.</p>
                                                         <div class="photo mx-auto text-center">
-                                                            <img alt="image-sample" src="{% static 'assets/img/450x300.jpg' %}"
+                                                            <img alt="image-sample"
+                                                                 src="{% static 'assets/img/450x300.jpg' %}"
                                                                  class="img-fluid">
                                                         </div>
                                                     </div>
@@ -499,17 +525,21 @@
                                                         <div class="col-sm-5 text-center">
                                                             <ul class="list-inline people-liked-img">
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}"
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}"
                                                                          class="ml-0">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -549,19 +579,24 @@
                                                             tempor incididunt ut labore et dolore magna aliqua.</p>
 
                                                         <div class="gallery text-center mx-auto">
-                                                            <img alt="image-gallery" src="{% static 'assets/img/220x200.jpg' %}"
+                                                            <img alt="image-gallery"
+                                                                 src="{% static 'assets/img/220x200.jpg' %}"
                                                                  class="img-fluid mb-3 mt-3 mr-1"
                                                                  style="width: 209px; height: 180px;">
-                                                            <img alt="image-gallery" src="{% static 'assets/img/220x200.jpg' %}"
+                                                            <img alt="image-gallery"
+                                                                 src="{% static 'assets/img/220x200.jpg' %}"
                                                                  class="img-fluid mb-3 mt-3 mr-1"
                                                                  style="width: 209px; height: 180px;">
-                                                            <img alt="image-gallery" src="{% static 'assets/img/150x130.jpg' %}"
+                                                            <img alt="image-gallery"
+                                                                 src="{% static 'assets/img/150x130.jpg' %}"
                                                                  class="img-fluid mb-3 mr-1"
                                                                  style="width: 138px; height: 120px;">
-                                                            <img alt="image-gallery" src="{% static 'assets/img/150x130.jpg' %}"
+                                                            <img alt="image-gallery"
+                                                                 src="{% static 'assets/img/150x130.jpg' %}"
                                                                  class="img-fluid mb-3 mr-1"
                                                                  style="width: 138px; height: 120px;">
-                                                            <img alt="image-gallery" src="{% static 'assets/img/150x130.jpg' %}"
+                                                            <img alt="image-gallery"
+                                                                 src="{% static 'assets/img/150x130.jpg' %}"
                                                                  class="img-fluid mb-3 mr-1"
                                                                  style="width: 138px; height: 120px;">
                                                         </div>
@@ -580,17 +615,21 @@
                                                         <div class="col-sm-5 text-center">
                                                             <ul class="list-inline people-liked-img">
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}"
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}"
                                                                          class="ml-0">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                                 <li class="list-inline-item chat-online-usr">
-                                                                    <img alt="admin-profile" src="{% static 'assets/img/90x90.jpg' %}">
+                                                                    <img alt="admin-profile"
+                                                                         src="{% static 'assets/img/90x90.jpg' %}">
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -619,7 +658,7 @@
 
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
 
-                             <div class="weather-section mb-4 br-6">
+                            <div class="weather-section mb-4 br-6">
 
                                 <div class="row">
                                     <div class="col-md-12">
@@ -689,15 +728,18 @@
                                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
-                                                    <img class="d-block w-100" src="{% static 'assets/img/600x375.jpg' %}"
+                                                    <img class="d-block w-100"
+                                                         src="{% static 'assets/img/600x375.jpg' %}"
                                                          alt="First slide">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img class="d-block w-100" src="{% static 'assets/img/600x375.jpg' %}"
+                                                    <img class="d-block w-100"
+                                                         src="{% static 'assets/img/600x375.jpg' %}"
                                                          alt="Second slide">
                                                 </div>
                                                 <div class="carousel-item">
-                                                    <img class="d-block w-100" src="{% static 'assets/img/600x375.jpg' %}"
+                                                    <img class="d-block w-100"
+                                                         src="{% static 'assets/img/600x375.jpg' %}"
                                                          alt="Third slide">
                                                 </div>
                                             </div>
@@ -720,7 +762,7 @@
                                 <div class="card" style="">
                                     <div class="card-body">
                                         <h4 class="">Лента активности</h4>
-                                        {%  for item in items %}
+                                        {% for item in items %}
                                             <div class="media pb-4 pt-4">
                                                 <img class="mr-3" src="{% static 'assets/img/90x90.jpg' %}"
                                                      alt="admin-profile">

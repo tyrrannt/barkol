@@ -1,5 +1,5 @@
-.values1, .values2 { 
-    margin-top: 10px; 
+.values1, .values2 {
+    margin-top: 10px;
 }
 
 .btn-sm {
@@ -22,13 +22,13 @@
         overflow: hidden;
         display: block;
     }
-    
+
     .areaLegend, .plotLegend {
         position: relative;
         overflow: hidden;
         display: block;
     }
-    
+
     .custom-btn {
         position: relative;
         left: auto;

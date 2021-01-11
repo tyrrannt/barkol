@@ -201,24 +201,24 @@ $(function () {
                     stroke: "#888ea8"
                 },
                 attrsHover: {
-                    fill : "#f8538d"
+                    fill: "#f8538d"
                 }
             },
             defaultPlot: {
                 attrs: {
-                    opacity:0.6
+                    opacity: 0.6
                 },
                 attrsHover: {
-                    opacity:0.9
+                    opacity: 0.9
                 }
             },
-            afterInit: function(container, paper, areas, plots, options) {
+            afterInit: function (container, paper, areas, plots, options) {
                 // Bring all areas to front (in order to have stroke over other areas)
-                $.each(options.areas, function(id){
+                $.each(options.areas, function (id) {
                     areas[id].mapElem.toFront();
                 });
                 // Bring all plots to front, otherwise they will be hidden by areas
-                $.each(options.plots, function(id){
+                $.each(options.plots, function (id) {
                     plots[id].mapElem.toFront();
                 });
                 // Zoom on interesting region at init

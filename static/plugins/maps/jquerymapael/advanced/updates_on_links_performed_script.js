@@ -77,7 +77,7 @@ $(function () {
                     }
                 },
 
-            }, 
+            },
             animDuration: 1000,
             'deleteLinkKeys': ['parisrennes'],
             'newLinks': {

@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('authapp', '0011_auto_20210103_1639'),
     ]
@@ -18,6 +17,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='weather',
             name='city',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='city', to='authapp.City', verbose_name=''),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='city',
+                                    to='authapp.City', verbose_name=''),
         ),
     ]

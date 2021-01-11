@@ -5,8 +5,9 @@ span.instafilta-target {
     margin: 0 auto;
     height: 130px;
     text-align: center;
-    margin-bottom: 1.5rem!important;
+    margin-bottom: 1.5rem !important;
 }
+
 .fa {
     position: relative;
     display: block;
@@ -21,8 +22,12 @@ span.instafilta-target {
     color: #888ea8;
     box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2);
 }
+
 span.instafilta-target:hover .fa {
     color: #3862f5;
     border: 1px solid #f1f3f1;
 }
-span.instafilta-target:hover span { color: #3862f5; }
+
+span.instafilta-target:hover span {
+    color: #3862f5;
+}

@@ -42,14 +42,16 @@ def media_folder_products(string):
 
     return f'{settings.MEDIA_URL}{string}'
 
-@register.filter(name='media_folder_document')
-def media_folder_document(string):
+
+@register.filter(name='media_folder_blog_cover')
+def media_folder_blog_cover(string):
     """
     Автоматически добавляет относительный URL-путь к медиафайлам продуктов
-    products_images/product1.jpg --> /media/products_images/product1.jpg
+    cover/placeholder-770.jpg --> /media/cover/placeholder-770.jpg
     """
     if not string:
-        string = 'document_cover/placeholder-770.jpg'
+        string = 'cover/placeholder-770.jpg'
+
     return f'{settings.MEDIA_URL}{string}'
 
 

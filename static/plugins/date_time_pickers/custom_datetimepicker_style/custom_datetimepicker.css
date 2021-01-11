@@ -73,6 +73,7 @@
 .daterangepicker .daterangepicker_input i {
     font-size: 16px;
 }
+
 .daterangepicker.dropdown-menu {
     background-color: #eaeef1;
 }
@@ -89,7 +90,7 @@
     background-color: #eaeef1 !important;
 }
 
-.daterangepicker td.active, .daterangepicker td.active:hover{
+.daterangepicker td.active, .daterangepicker td.active:hover {
     background-color: #1f3a91;
 }
 
@@ -181,8 +182,8 @@
 ==============================
 */
 
-.demo { 
-    position: relative; 
+.demo {
+    position: relative;
 }
 
 .demo i {

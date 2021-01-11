@@ -570,7 +570,7 @@ $(function () {
         }
     });
 
-    slider.on('set', function(values){
+    slider.on('set', function (values) {
         var opt = {
             animDuration: 500,
             hiddenOpacity: 0.1,
@@ -9682,7 +9682,7 @@ $(function () {
         }
     });
 
-    slider.on('set', function(values){
+    slider.on('set', function (values) {
         var opt = {
             animDuration: 300,
             hiddenOpacity: 0.1,

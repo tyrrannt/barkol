@@ -1,1 +1,29 @@
-[{"model": "authapp.person", "pk": 1, "fields": {"password": "pbkdf2_sha256$150000$CHJ4oqkEZ127$F+EW2WjWWgjN7yRhH1uAb/gOP7KW6sn/x0nVh4h0oA8=", "last_login": "2021-01-02T23:46:44Z", "is_superuser": true, "username": "admin", "first_name": "\u0412\u0438\u0442\u0430\u043b\u0438\u0439", "last_name": "\u0428\u0430\u043a\u0438\u0440\u043e\u0432", "email": "shakirov.vitaliy@gmail.com", "is_staff": true, "is_active": true, "date_joined": "2020-12-26T22:45:26Z", "surname": "\u0420\u0443\u0441\u0442\u0430\u043c\u043e\u0432\u0438\u0447", "avatar": "users_avatars/sweetest-witchy.jpg", "birthday": "1981-10-11", "access_right": 0, "address": 2, "type_users": "staff_member", "phone": 2, "groups": [1], "user_permissions": []}}]
+[
+  {
+    "model": "authapp.person",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$CHJ4oqkEZ127$F+EW2WjWWgjN7yRhH1uAb/gOP7KW6sn/x0nVh4h0oA8=",
+      "last_login": "2021-01-02T23:46:44Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "\u0412\u0438\u0442\u0430\u043b\u0438\u0439",
+      "last_name": "\u0428\u0430\u043a\u0438\u0440\u043e\u0432",
+      "email": "shakirov.vitaliy@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-12-26T22:45:26Z",
+      "surname": "\u0420\u0443\u0441\u0442\u0430\u043c\u043e\u0432\u0438\u0447",
+      "avatar": "users_avatars/sweetest-witchy.jpg",
+      "birthday": "1981-10-11",
+      "access_right": 0,
+      "address": 2,
+      "type_users": "staff_member",
+      "phone": 2,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  }
+]

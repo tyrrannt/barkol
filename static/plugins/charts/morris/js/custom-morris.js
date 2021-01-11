@@ -1,4 +1,3 @@
-
 // Area 1
 
 Morris.Area({
@@ -11,11 +10,11 @@ Morris.Area({
         {x: '2011 Q4', y: 8, z: 2},
         {x: '2012 Q1', y: 4, z: 4}
     ],
-        lineColors: ['#3232b7', '#ee3d50'],
-        xkey: 'x',
-        ykeys: ['y', 'z'],
-        labels: ['Y', 'Z']
-}).on('click', function(i, row){
+    lineColors: ['#3232b7', '#ee3d50'],
+    xkey: 'x',
+    ykeys: ['y', 'z'],
+    labels: ['Y', 'Z']
+}).on('click', function (i, row) {
     console.log(i, row);
 });
 
@@ -48,11 +47,11 @@ Morris.Bar({
         {x: '2011 Q3', y: 0, z: 2, a: 4},
         {x: '2011 Q4', y: 2, z: 4, a: 3}
     ],
-    barColors: ['#f8538d', '#3862f5', '#24ccda'], 
+    barColors: ['#f8538d', '#3862f5', '#24ccda'],
     xkey: 'x',
     ykeys: ['y', 'z', 'a'],
     labels: ['Y', 'Z', 'A']
-}).on('click', function(i, row){
+}).on('click', function (i, row) {
     console.log(i, row);
 });
 
@@ -75,11 +74,12 @@ Morris.Donut({
         '#e95f2b',
         '#00b1f4'
     ],
-    formatter: function (x) { return x + "%"}
-}).on('click', function(i, row){
+    formatter: function (x) {
+        return x + "%"
+    }
+}).on('click', function (i, row) {
     console.log(i, row);
 });
-
 
 
 // Negative values
@@ -99,7 +99,7 @@ Morris.Line({
     element: 'nv',
     data: neg_data,
     lineColors: ['#3b3f5c'],
-    pointFillColors:['#ff3743'],
+    pointFillColors: ['#ff3743'],
     xkey: 'period',
     ykeys: ['a'],
     labels: ['Series A'],
@@ -119,7 +119,7 @@ window.m = Morris.Line({
     element: 'vg',
     data: decimal_data,
     lineColors: ['#3862f5'],
-    pointFillColors:['#f8538d'],
+    pointFillColors: ['#f8538d'],
     xkey: 'x',
     ykeys: ['y'],
     labels: ['sin(x)'],
@@ -146,7 +146,7 @@ Morris.Line({
     element: 'f-n-d-a-x-axis',
     data: day_data,
     lineColors: ['#ffbb44'],
-    pointFillColors:['#816cfd'],
+    pointFillColors: ['#816cfd'],
     xkey: 'elapsed',
     ykeys: ['value'],
     labels: ['value'],

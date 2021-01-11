@@ -12,11 +12,11 @@ input[readonly] {
 }
 
 .font-icon-list:hover {
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .font-icon-detail {
-    text-align: center; 
+    text-align: center;
 }
 
 .font-icon-detail span:first-child {
@@ -39,11 +39,11 @@ input[readonly] {
     width: 100%;
     padding: 0;
     border: 0;
-    color: #888ea8; 
+    color: #888ea8;
 }
 
 .font-icon-name:focus, .font-icon-name:active {
-    outline: none; 
+    outline: none;
 }
 
 .font-icon-code {
@@ -51,12 +51,12 @@ input[readonly] {
     overflow: hidden;
     text-align: center;
     /*opacity: 0;*/
-    transition: max-height 200ms linear, opacity 200ms linear; 
+    transition: max-height 200ms linear, opacity 200ms linear;
 }
 
 .font-icon-code.show {
     max-height: 200px;
-    opacity: 1; 
+    opacity: 1;
 }
 
 .code-value, .unicode-text {
@@ -68,7 +68,7 @@ input[readonly] {
 
 .unicode-text:focus,
 .unicode-text:active {
-    outline: none; 
+    outline: none;
 }
 
 .font-icon-list:hover .font-icon-name,
@@ -79,7 +79,7 @@ input[readonly] {
 .font-icon-detail.zeroclipboard-is-hover + .font-icon-code .unicode,
 .font-icon-detail.zeroclipboard-is-hover + .font-icon-code .unicode-text {
     cursor: text;
-    color: #3862f5; 
+    color: #3862f5;
 }
 
 .font-icon-list:hover .font-icon-detail span:first-child,

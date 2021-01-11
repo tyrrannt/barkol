@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('authapp', '0004_auto_20210102_1857'),
     ]
@@ -40,7 +39,8 @@ class Migration(migrations.Migration):
                 ('wind_speed', models.SmallIntegerField(max_length=3, verbose_name='')),
                 ('wind_deg', models.SmallIntegerField(max_length=3, verbose_name='')),
                 ('city_id', models.SmallIntegerField(max_length=6, verbose_name='')),
-                ('country', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Country')),
+                ('country',
+                 models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Country')),
             ],
         ),
         migrations.CreateModel(
@@ -49,7 +49,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('city_id', models.SmallIntegerField(max_length=6, verbose_name='')),
                 ('city_name', models.CharField(blank=True, max_length=30, null=True, verbose_name='город')),
-                ('country', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Country')),
+                ('country',
+                 models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Country')),
             ],
         ),
     ]

@@ -39,9 +39,6 @@
 
                     {% if user.is_superuser or user.is_staff %}
                         <li>
-                            <a href="{% url 'authapp:edit' %}">Админ</a>
-                        </li>
-                        <li>
                             <a href="{% url 'admin:index' %}">Admin</a>
                         </li>
                     {% endif %}

@@ -1,17 +1,20 @@
-.cp-spinners{
+.cp-spinners {
     margin: 10px auto;
 }
-.cp-spinner-block{
+
+.cp-spinner-block {
     display: inline-block;
     width: 100%;
     margin: 40px auto;
 }
-.cp-spinner-block span{
+
+.cp-spinner-block span {
     color: #3b3f5c;
     display: block;
     padding: 5px 0px;
 }
-.cp-spinner-block pre{
+
+.cp-spinner-block pre {
     font-size: .75em;
     color: #3232b7;
     background-color: rgba(50, 50, 183, 0.06);

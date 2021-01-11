@@ -1,0 +1,169 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+{% load utilities %}
+
+{% block heads %}
+    <title>{{ title }}</title>
+{% endblock %}
+
+{% block css %}
+    <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/table/datatable/datatables.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/table/datatable/custom_dt_customer.css' %}">
+    <!-- END PAGE LEVEL CUSTOM STYLES -->
+{% endblock %}
+
+{% block content %}
+
+    <!--  BEGIN CONTENT PART  -->
+    <div id="content" class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <div class="page-title">
+                    <h3>Custom DataTables</h3>
+                </div>
+            </div>
+
+            <div class="row layout-spacing">
+                <div class="col-lg-12">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-header">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                    <h4>Все посты</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="table-responsive mb-4 style-1">
+                                <table id="customer-info-detail-1" class="table style-1  table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="checkbox-column"> Номер</th>
+                                        <th>Наименование</th>
+                                        <th>Титульная картинка</th>
+                                        <th>Краткое описание</th>
+                                        <th>Описание</th>
+                                        <th>Время публикации</th>
+                                        <th>Автор</th>
+                                        <th class="">Статус публикации</th>
+                                        <th class="text-center">Действия</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for elem in object_list %}
+                                        <tr>
+                                            <td class="checkbox-column">{{ elem.pk }}</td>
+                                            <td class="customer-name-1">{{ elem.name }}</td>
+                                            <td class="">
+                                                <a class="product-list-img" href="javascript: void(0);">
+                                                    <img src="{{ elem.cover|media_folder_blog_cover }}" alt="product">
+                                                </a>
+                                            </td>
+                                            <td>{{ elem.short_desc }}</td>
+                                            <td>{{ elem.description }}</td>
+                                            <td>{{ elem.time_publication }}</td>
+                                            <td>{{ elem.author }}</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <div class=" align-self-center {% if elem.published_by %}d-m-success{% else %}d-m-danger{% endif %}  mr-1 data-marker"></div>
+                                                    <span class="{% if elem.published_by %}label label-success{% else %}label label-danger{% endif %}">{% if elem.published_by %}
+                                                        Опубликован{% else %}Скрыт{% endif %}</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="dropdown custom-dropdown">
+                                                    <a class="dropdown-toggle" href="#" role="button"
+                                                       id="dropdownMenuLink1"
+                                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                        <i class="flaticon-dot-three"></i>
+                                                    </a>
+
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                                        <a class="dropdown-item" href="javascript:void(0);">Просмотр</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Редактирование</a>
+                                                        <a class="dropdown-item"
+                                                           href="javascript:void(0);">Комментарии</a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">Удаление</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--  END CONTENT PART  -->
+
+{% endblock %}
+
+{% block custom_css %}
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="{% static 'plugins/table/datatable/datatables.js' %}"></script>
+    <script>
+        // var e;
+        c1 = $('#customer-info-detail-1').DataTable({
+            "lengthMenu": [5, 10, 20, 50, 100],
+            headerCallback: function (e, a, t, n, s) {
+                e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            },
+            columnDefs: [{
+                targets: 0, width: "30px", className: "", orderable: !1, render: function (e, a, t, n) {
+                    return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+                }
+            }],
+            "language": {
+                "paginate": {
+                    "previous": "<i class='flaticon-arrow-left-1'></i>",
+                    "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Показана страница _PAGE_ из _PAGES_"
+            }
+        });
+
+        multiCheck(c1);
+
+        c2 = $('#customer-info-detail-2').DataTable({
+            "lengthMenu": [5, 10, 20, 50, 100],
+            headerCallback: function (e, a, t, n, s) {
+                e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            },
+            columnDefs: [{
+                targets: 0, width: "30px", className: "", orderable: !1, render: function (e, a, t, n) {
+                    return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+                }
+            }],
+            "language": {
+                "paginate": {
+                    "previous": "<i class='flaticon-arrow-left-1'></i>",
+                    "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Показана страница _PAGE_ из _PAGES_"
+            }
+        });
+
+        multiCheck(c2);
+
+        c3 = $('#customer-info-detail-3').DataTable({
+            "lengthMenu": [5, 10, 20, 50, 100],
+            "language": {
+                "paginate": {
+                    "previous": "<i class='flaticon-arrow-left-1'></i>",
+                    "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Показана страница _PAGE_ из _PAGES_"
+            }
+        });
+
+        multiCheck(c3);
+    </script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+{% endblock %}

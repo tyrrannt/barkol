@@ -1,11 +1,13 @@
 /*-----text-transformation-----*/
 
 .t-lowercase {
-	text-transform: $transform-lower;
+  text-transform: $transform-lower;
 }
+
 .t-uppercase {
-	text-transform: $transform-upper;
+  text-transform: $transform-upper;
 }
+
 .t-capital {
-	text-transform: $transform-capital;
+  text-transform: $transform-capital;
 }

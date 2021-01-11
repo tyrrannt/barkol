@@ -1,5 +1,3 @@
-
-
 $(function () {
     $(".mapcontainer18").mapael({
         map: {
@@ -1848,8 +1846,8 @@ $(function () {
     });
 
     // Vars to keep track of current movement
-     var mouseDragging = false;
-     var mouseDown = false;
+    var mouseDragging = false;
+    var mouseDown = false;
 
     // Detect mousedown event
     $(".mapcontainer18 svg").mousedown(function () {

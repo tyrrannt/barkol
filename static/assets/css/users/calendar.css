@@ -10,6 +10,7 @@
     border-radius: 5px;
     min-width: 50px;
 }
+
 #monthrow th {
     color: #FBCA03 !important;
     background-color: #AA0505 !important;
@@ -19,8 +20,9 @@
     padding: 14px 20px 14px;
     font-size: 16px;
     font-weight: normal;
-    width:300px;
+    width: 300px;
 }
+
 #prev, #next {
     color: #FBCA03;
     font-size: 16px;
@@ -29,21 +31,37 @@
     font-weight: bold;
     border: none;
 }
-#prev { float: left; }
-#next { float: right; }
-#next:disabled, #prev:disabled { color: #AA0505 !important; }
-#next:hover:enabled, #prev:hover:enabled { color: #FBCA03 !important; }
+
+#prev {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+#next:disabled, #prev:disabled {
+    color: #AA0505 !important;
+}
+
+#next:hover:enabled, #prev:hover:enabled {
+    color: #FBCA03 !important;
+}
+
 #calendar td {
     text-align: center;
     padding: 6px 5px;
 }
+
 .daysoftheweek th {
     text-align: center;
     padding-top: 6px 15px;
 }
+
 .current-date {
     border-radius: 5%;
     color: #F9F9F9 !important;
     background-color: #F9BA32;
 }
+
 /** CALENDAR ENDS HERE **/

@@ -116,8 +116,10 @@ class Person(AbstractUser):
     access_right = models.ManyToManyField(AccessLevel, verbose_name='права доступа', default=0, help_text='')
     address = models.ForeignKey(Address, on_delete=models.SET_NULL, null=True, help_text='')
     type_users = models.CharField(verbose_name='тип пользователя', max_length=40, choices=type_of, help_text='')
-    phone = models.OneToOneField(PhoneNumber, verbose_name='номер телефона', on_delete=models.SET_NULL, null=True, related_name='cell')
-    corp_phone = models.OneToOneField(PhoneNumber, verbose_name='корпоративный номер', on_delete=models.SET_NULL, null=True, related_name='corp')
+    phone = models.OneToOneField(PhoneNumber, verbose_name='номер телефона', on_delete=models.SET_NULL, null=True,
+                                 related_name='cell')
+    corp_phone = models.OneToOneField(PhoneNumber, verbose_name='корпоративный номер', on_delete=models.SET_NULL,
+                                      null=True, related_name='corp')
     works = models.ForeignKey(Work, verbose_name='занятость', on_delete=models.SET_NULL, blank=True, null=True)
     gender = models.CharField(verbose_name='пол', max_length=7, blank=True, choices=type_of_gender, help_text='')
 

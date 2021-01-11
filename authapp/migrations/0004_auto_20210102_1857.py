@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('authapp', '0003_counteragent_base_counteragent'),
     ]
@@ -29,17 +28,20 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='counteragent',
             name='juridical_address',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='juridical', to='authapp.Address', verbose_name='Юридический адрес'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='juridical',
+                                    to='authapp.Address', verbose_name='Юридический адрес'),
         ),
         migrations.AlterField(
             model_name='counteragent',
             name='phone',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.PhoneNumber', verbose_name='Номер телефона'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.PhoneNumber',
+                                    verbose_name='Номер телефона'),
         ),
         migrations.AlterField(
             model_name='counteragent',
             name='physical_address',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='physical', to='authapp.Address', verbose_name='Физический адрес'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='physical',
+                                    to='authapp.Address', verbose_name='Физический адрес'),
         ),
         migrations.AlterField(
             model_name='counteragent',
@@ -49,6 +51,10 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='counteragent',
             name='type_counteragent',
-            field=models.CharField(choices=[('juridical_person', 'юридическое лицо'), ('physical_person', 'физическое лицо'), ('separate_subdivision', 'обособленное подразделение'), ('government_agency', 'государственный орган')], max_length=40, verbose_name='Тип контрагента'),
+            field=models.CharField(
+                choices=[('juridical_person', 'юридическое лицо'), ('physical_person', 'физическое лицо'),
+                         ('separate_subdivision', 'обособленное подразделение'),
+                         ('government_agency', 'государственный орган')], max_length=40,
+                verbose_name='Тип контрагента'),
         ),
     ]

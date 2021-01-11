@@ -13,6 +13,6 @@ $('#example2').Tabledit({
     hideIdentifier: true,
     columns: {
         identifier: [0, 'id'],
-        editable: [[1, 'name'], [2, 'date'], [3, 'sales'],  [4, 'progress']]
+        editable: [[1, 'name'], [2, 'date'], [3, 'sales'], [4, 'progress']]
     }
 });

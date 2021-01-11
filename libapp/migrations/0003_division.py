@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('libapp', '0002_auto_20201230_2212'),
     ]
@@ -18,8 +17,12 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=128, unique=True, verbose_name='Название категории')),
                 ('description', models.TextField(blank=True, verbose_name='Описание категории')),
                 ('hash_view', models.CharField(blank=True, max_length=256)),
-                ('access', models.ForeignKey(default=0, on_delete=django.db.models.deletion.SET_DEFAULT, to='libapp.AccessLevel', verbose_name='Категория доступа')),
-                ('parent_category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='libapp.Division')),
+                ('access',
+                 models.ForeignKey(default=0, on_delete=django.db.models.deletion.SET_DEFAULT, to='libapp.AccessLevel',
+                                   verbose_name='Категория доступа')),
+                ('parent_category',
+                 models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                   to='libapp.Division')),
             ],
             options={
                 'abstract': False,

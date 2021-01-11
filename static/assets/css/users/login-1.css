@@ -1,4 +1,7 @@
-html, body { height: 100%; }
+html, body {
+    height: 100%;
+}
+
 body {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -13,7 +16,11 @@ body {
     padding-bottom: 40px;
     background-color: #b4b1b1;
 }
-h5 { font-size: 0.875rem; }
+
+h5 {
+    font-size: 0.875rem;
+}
+
 .form-login {
     width: 410px;
     max-width: 410px;
@@ -21,15 +28,17 @@ h5 { font-size: 0.875rem; }
     margin: 0 auto;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 10px 60px 0 rgba(29,29,31,.09);
+    box-shadow: 0 10px 60px 0 rgba(29, 29, 31, .09);
     width: 100%;
     margin: auto;
 }
+
 .form-login label {
     color: #888ea8;
     text-transform: uppercase;
     font-size: 13px;
 }
+
 .form-login .form-control {
     position: relative;
     box-sizing: border-box;
@@ -40,33 +49,42 @@ h5 { font-size: 0.875rem; }
     background: transparent;
     border-bottom: 1px solid #e9ecef;
 }
+
 .form-login .form-control::-webkit-input-placeholder {
     color: #3862f5;
     font-size: 14px;
     opacity: 0;
 }
+
 .form-login .form-control::-ms-input-placeholder {
     color: #3862f5;
     font-size: 14px;
     opacity: 0;
 }
+
 .form-login .form-control::-moz-placeholder {
     color: #3862f5;
     font-size: 14px;
     opacity: 0;
 }
-.form-login .form-control:focus { z-index: 2; }
+
+.form-login .form-control:focus {
+    z-index: 2;
+}
+
 .form-login .checkbox .custom-control label {
     color: #3b3f5c;
     text-transform: capitalize;
     font-size: 14px;
 }
+
 .form-login .forgot-pass a {
     color: #5247bd;
     text-transform: lowercase;
     font-size: 13px;
     margin-left: -17px;
 }
+
 .form-login .social-icons h5 {
     color: #494949;
     font-weight: 600;

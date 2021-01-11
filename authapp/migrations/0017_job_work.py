@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('libapp', '0003_division'),
         ('authapp', '0016_auto_20210103_1752'),
@@ -24,8 +23,11 @@ class Migration(migrations.Migration):
             name='Work',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('divisions', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='libapp.Division', verbose_name='подразделение')),
-                ('job', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Job', verbose_name='должность')),
+                ('divisions',
+                 models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='libapp.Division',
+                                   verbose_name='подразделение')),
+                ('job', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Job',
+                                          verbose_name='должность')),
             ],
         ),
     ]

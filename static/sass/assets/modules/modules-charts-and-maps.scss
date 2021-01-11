@@ -2,35 +2,42 @@
 //    	Imports
 //	=================
 
-@import '../base/color_variables';   	// Color Variables
-@import '../base/fonticons';   			// Fonticons Variables
-@import '../base/urls';   				// URLS Variables
-@import '../base/utilities_variables';  // Utilities Variables
+@import '../base/color_variables';
+// Color Variables
+@import '../base/fonticons';
+// Fonticons Variables
+@import '../base/urls';
+// URLS Variables
+@import '../base/utilities_variables'; // Utilities Variables
 
 .title-heading {
-	color: $color_76;
-	text-transform: initial;
-	font-weight: 600;
-	font-size: 18px;
-	margin: 0 0 20px 0;
-	text-transform: $transform-upper;
+  color: $color_76;
+  text-transform: initial;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  text-transform: $transform-upper;
 }
+
 #activity-chart {
-	width: 100%;
-	height: 400px;
+  width: 100%;
+  height: 400px;
 }
+
 #bitcoin-chart {
-	width: 100%;
-	height: 525px;
+  width: 100%;
+  height: 525px;
 }
+
 #sale-statistics {
-	width: 100%;
-	height: 406px;
+  width: 100%;
+  height: 406px;
 }
+
 #radarchartdiv {
-	width: 100%;
-	height: 439px;
-	font-size: 11px;
+  width: 100%;
+  height: 439px;
+  font-size: 11px;
 }
 
 //    =============================================

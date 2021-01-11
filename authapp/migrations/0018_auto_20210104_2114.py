@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('authapp', '0017_job_work'),
     ]
@@ -14,11 +13,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='person',
             name='gender',
-            field=models.CharField(blank=True, choices=[('male', 'мужской'), ('female', 'женский')], max_length=7, verbose_name='пол'),
+            field=models.CharField(blank=True, choices=[('male', 'мужской'), ('female', 'женский')], max_length=7,
+                                   verbose_name='пол'),
         ),
         migrations.AddField(
             model_name='person',
             name='works',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Work', verbose_name='занятость'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Work',
+                                    verbose_name='занятость'),
         ),
     ]

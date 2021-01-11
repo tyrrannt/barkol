@@ -9,80 +9,81 @@
     {% block heads %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="{% static 'assets/css/loader.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/css/loader.css' %}" rel="stylesheet" type="text/css"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'assets/css/plugins.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'assets/css/plugins.css' %}" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
     {% block css %}{% endblock %}
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-    <link href="{% static 'plugins/maps/vector/jvector/jquery-jvectormap-2.0.3.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'plugins/maps/vector/jvector/jquery-jvectormap-2.0.3.css' %}" rel="stylesheet"
+          type="text/css"/>
     <link href="{% static 'plugins/charts/chartist/chartist.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'assets/css/default-dashboard/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/css/default-dashboard/style.css' %}" rel="stylesheet" type="text/css"/>
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 </head>
 <body>
-    <div id="eq-loader">
-      <div class="eq-loader-div">
-          <div class="eq-loading dual-loader mx-auto mb-5"></div>
-      </div>
+<div id="eq-loader">
+    <div class="eq-loader-div">
+        <div class="eq-loading dual-loader mx-auto mb-5"></div>
     </div>
+</div>
 
-    <!--  BEGIN NAVBAR  -->
-    {% include 'authapp/nav.html' %}
-    <!--  END NAVBAR  -->
+<!--  BEGIN NAVBAR  -->
+{% include 'authapp/nav.html' %}
+<!--  END NAVBAR  -->
 
-    <!--  BEGIN MAIN CONTAINER  -->
-    <div class="main-container" id="container">
-        <div class="overlay"></div>
-        <div class="ps-overlay"></div>
-        <div class="search-overlay"></div>
+<!--  BEGIN MAIN CONTAINER  -->
+<div class="main-container" id="container">
+    <div class="overlay"></div>
+    <div class="ps-overlay"></div>
+    <div class="search-overlay"></div>
 
-        <!--  BEGIN MODERN  -->
-        {% include 'authapp/side-bar.html' %}
-        <!--  END MODERN  -->
+    <!--  BEGIN MODERN  -->
+    {% include 'authapp/side-bar.html' %}
+    <!--  END MODERN  -->
 
-        <!--  BEGIN CONTENT PART  -->
-        {% block content %}{% endblock %}
-        <!--  END CONTENT PART  -->
+    <!--  BEGIN CONTENT PART  -->
+    {% block content %}{% endblock %}
+    <!--  END CONTENT PART  -->
 
-    </div>
-    <!-- END MAIN CONTAINER -->
+</div>
+<!-- END MAIN CONTAINER -->
 
-    <!--  BEGIN FOOTER  -->
-    {% include 'authapp/footer.html' %}
-    <!--  END FOOTER  -->
+<!--  BEGIN FOOTER  -->
+{% include 'authapp/footer.html' %}
+<!--  END FOOTER  -->
 
-    <!--  BEGIN PROFILE SIDEBAR  -->
-    {% include 'authapp/profile-side.html' %}
-    <!--  BEGIN PROFILE SIDEBAR  -->
+<!--  BEGIN PROFILE SIDEBAR  -->
+{% include 'authapp/profile-side.html' %}
+<!--  BEGIN PROFILE SIDEBAR  -->
 
-    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="{% static 'assets/js/libs/jquery-3.1.1.min.js' %}"></script>
-    <script src="{% static 'assets/js/loader.js' %}"></script>
-    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-    <script src="{% static 'plugins/blockui/jquery.blockUI.min.js' %}"></script>
-    <script src="{% static 'assets/js/app.js' %}"></script>
-    <script>
-        $(document).ready(function() {
-            App.init();
-        });
-    </script>
-    <script src="{% static 'assets/js/custom.js' %}"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
+<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+<script src="{% static 'assets/js/libs/jquery-3.1.1.min.js' %}"></script>
+<script src="{% static 'assets/js/loader.js' %}"></script>
+<script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'plugins/blockui/jquery.blockUI.min.js' %}"></script>
+<script src="{% static 'assets/js/app.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        App.init();
+    });
+</script>
+<script src="{% static 'assets/js/custom.js' %}"></script>
+<!-- END GLOBAL MANDATORY SCRIPTS -->
 
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="{% static 'plugins/charts/chartist/chartist.js' %}"></script>
-    <script src="{% static 'plugins/maps/vector/jvector/jquery-jvectormap-2.0.3.min.js' %}"></script>
-    <script src="{% static 'plugins/maps/vector/jvector/worldmap_script/jquery-jvectormap-world-mill-en.js' %}"></script>
-    <script src="{% static 'plugins/calendar/pignose/moment.latest.min.js' %}"></script>
-    <script src="{% static 'plugins/calendar/pignose/pignose.calendar.js' %}"></script>
-    <script src="{% static 'plugins/progressbar/progressbar.min.js' %}"></script>
-    <script src="{% static 'assets/js/default-dashboard/default-custom.js' %}"></script>
-    <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    {% block custom_css %}{% endblock %}
-    {% block footer %}{% endblock %}
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+<script src="{% static 'plugins/charts/chartist/chartist.js' %}"></script>
+<script src="{% static 'plugins/maps/vector/jvector/jquery-jvectormap-2.0.3.min.js' %}"></script>
+<script src="{% static 'plugins/maps/vector/jvector/worldmap_script/jquery-jvectormap-world-mill-en.js' %}"></script>
+<script src="{% static 'plugins/calendar/pignose/moment.latest.min.js' %}"></script>
+<script src="{% static 'plugins/calendar/pignose/pignose.calendar.js' %}"></script>
+<script src="{% static 'plugins/progressbar/progressbar.min.js' %}"></script>
+<script src="{% static 'assets/js/default-dashboard/default-custom.js' %}"></script>
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+{% block custom_css %}{% endblock %}
+{% block footer %}{% endblock %}
 </body>
 </html>

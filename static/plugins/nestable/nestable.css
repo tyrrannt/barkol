@@ -71,7 +71,7 @@
     background: #fff
 }
 
-.dd-item>button {
+.dd-item > button {
     display: block;
     position: relative;
     cursor: pointer;
@@ -91,7 +91,7 @@
     font-weight: bold
 }
 
-.dd-item>button:before {
+.dd-item > button:before {
     content: '\e943';
     display: block;
     position: absolute;
@@ -103,7 +103,7 @@
     margin-top: 2px;
 }
 
-.dd-item>button[data-action="collapse"]:before {
+.dd-item > button[data-action="collapse"]:before {
     content: '\e932'
 }
 
@@ -132,7 +132,7 @@
     z-index: 9999
 }
 
-.dd-dragel>.dd-item .dd-handle {
+.dd-dragel > .dd-item .dd-handle {
     margin-top: 0
 }
 
@@ -141,8 +141,8 @@
     box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1)
 }
 
-.dd-hover>.dd-handle {
-    background: #2ea8e5!important
+.dd-hover > .dd-handle {
+    background: #2ea8e5 !important
 }
 
 .dd3-content {
@@ -165,11 +165,11 @@
     background: #fff
 }
 
-.dd-dragel>.dd3-item>.dd3-content {
+.dd-dragel > .dd3-item > .dd3-content {
     margin: 0
 }
 
-.dd3-item>button {
+.dd3-item > button {
     margin-left: 30px
 }
 
@@ -206,9 +206,6 @@
 .dd3-handle:hover {
     background: #ddd
 }
-
-
-
 
 
 /*  Custom CSS for Nested List 2      */

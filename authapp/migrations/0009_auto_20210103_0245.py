@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('authapp', '0008_auto_20210103_0237'),
     ]
@@ -15,16 +14,20 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='counteragent',
             name='accountant',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='account', to=settings.AUTH_USER_MODEL, verbose_name='Бухгалтер'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL,
+                                    related_name='account', to=settings.AUTH_USER_MODEL, verbose_name='Бухгалтер'),
         ),
         migrations.AlterField(
             model_name='counteragent',
             name='contact_person',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='contact', to=settings.AUTH_USER_MODEL, verbose_name='Контактное лицо'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL,
+                                    related_name='contact', to=settings.AUTH_USER_MODEL,
+                                    verbose_name='Контактное лицо'),
         ),
         migrations.AlterField(
             model_name='counteragent',
             name='director',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='direct', to=settings.AUTH_USER_MODEL, verbose_name='Директор'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL,
+                                    related_name='direct', to=settings.AUTH_USER_MODEL, verbose_name='Директор'),
         ),
     ]

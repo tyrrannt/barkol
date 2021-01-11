@@ -5,7 +5,35 @@
         <nav id="modernSidebar">
             <ul class="menu-categories pl-0 m-0" id="topAccordion">
                 <li class="menu">
-                    <a href="#dashboard" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                    <a href="#users" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-user-group"></i>
+                            <span>Пользователи</span>
+                        </div>
+                    </a>
+                    <div class="collapse submenu list-unstyled eq-animated eq-fadeInUp" id="users"
+                         data-parent="#topAccordion">
+                        <ul class="submenu-scroll">
+                            <li>
+                                <ul class="list-unstyled sub-submenu" id="userss">
+                                    <li class="active">
+                                        <a href="{% url 'authapp:profile' user.pk %}">
+                                            <div><i class="flaticon-plus-2"></i> Мой профиль</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'authapp:all_user' %}">
+                                            <div><i class="flaticon-share-6"></i> Все пользователи</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu">
+                    <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">
                         <div class="">
                             <i class="flaticon-computer-6"></i>
                             <span>Блог</span>
@@ -16,7 +44,7 @@
                         <ul class="submenu-scroll">
                             <li>
                                 <ul class="list-unstyled sub-submenu" id="dashboards">
-                                    <li class="active">
+                                    <li>
                                         <a href="{% url 'blogapp:new_blog' %}">
                                             <div><i class="flaticon-plus-2"></i> Добавить новый пост</div>
                                         </a>
@@ -27,7 +55,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{% url 'blogapp:list_blog' %}">
                                             <div><i class="flaticon-share-6"></i> Все записи</div>
                                         </a>
                                     </li>

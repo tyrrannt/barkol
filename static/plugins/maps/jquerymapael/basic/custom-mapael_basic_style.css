@@ -32,11 +32,12 @@
     font-weight: bold;
     left: 10px;
     -webkit-user-select: none;
-    -khtml-user-select : none;
+    -khtml-user-select: none;
     -moz-user-select: none;
-    -o-user-select : none;
+    -o-user-select: none;
     user-select: none;
 }
+
 /* Reset Zoom button first */
 .mapael .zoomReset {
     top: 10px;
@@ -62,12 +63,15 @@
     .margin-bottom-37 {
         margin-bottom: 20px;
     }
+
     .margin-bottom-154 {
         margin-bottom: 20px
     }
+
     .margin-bottom-337 {
         margin-bottom: 20px;
     }
+
     .areaLegend, .plotLegend, .mapael .myLegend {
         position: relative;
         overflow: hidden;
@@ -79,9 +83,11 @@
     .margin-bottom-37 {
         margin-bottom: 20px;
     }
+
     .margin-bottom-154 {
         margin-bottom: 20px
     }
+
     .margin-bottom-337 {
         margin-bottom: 20px;
     }
@@ -91,6 +97,7 @@
     .margin-bottom-37 {
         margin-bottom: 20px;
     }
+
     .margin-bottom-337 {
         margin-bottom: 213px;
     }
@@ -100,6 +107,7 @@
     .margin-bottom-37 {
         margin-bottom: 30px;
     }
+
     .margin-bottom-337 {
         margin-bottom: 288px;
     }

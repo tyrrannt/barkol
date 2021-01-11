@@ -3,24 +3,27 @@
 */
 
 #social-card-2.card {
-	border: none;
-	background-color: $light-info;
-	padding: 46px 30px;
-	border-radius: 6px;
-	.media {
-		i {
-			color: $info;
-			font-size: 63px;
-		}
-		.media-body {
-			h5 {
-				color: $dark;
-				font-size: 23px;
-			}
-			p {
-				color: $dark;
-				font-size: 15px;
-			}
-		}
-	}
+  border: none;
+  background-color: $light-info;
+  padding: 46px 30px;
+  border-radius: 6px;
+
+  .media {
+    i {
+      color: $info;
+      font-size: 63px;
+    }
+
+    .media-body {
+      h5 {
+        color: $dark;
+        font-size: 23px;
+      }
+
+      p {
+        color: $dark;
+        font-size: 15px;
+      }
+    }
+  }
 }

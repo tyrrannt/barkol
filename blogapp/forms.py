@@ -8,7 +8,9 @@ class CreateNewPostForm(forms.ModelForm):
 
     class Meta:
         model = Blog
-        fields = ('category', 'acces_level', 'name', 'cover', 'short_desc', 'description', 'doc_file', 'author', 'published_by')
+        fields = (
+            'category', 'acces_level', 'name', 'cover', 'short_desc', 'description', 'doc_file', 'author',
+            'published_by')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,3 +21,14 @@ class CreateNewPostForm(forms.ModelForm):
         self.fields['acces_level'].widget.attrs['class'] = 'form-control form-custom'
         self.fields['doc_file'].widget.attrs['class'] = 'form-control-file'
         self.fields['cover'].widget.attrs['class'] = 'form-control-file'
+
+
+class ViewAllPostForm(forms.ModelForm):
+    class Meta:
+        model = Blog
+        fields = (
+            'category', 'acces_level', 'name', 'cover', 'short_desc', 'description', 'doc_file', 'author',
+            'published_by')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('authapp', '0014_auto_20210103_1731'),
     ]
@@ -14,7 +13,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='weather',
             name='city',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.City', verbose_name='Город'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.City',
+                                    verbose_name='Город'),
         ),
         migrations.AlterField(
             model_name='weather',
@@ -29,7 +29,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='weather',
             name='country',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Country', verbose_name='Страна'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='authapp.Country',
+                                    verbose_name='Страна'),
         ),
         migrations.AlterField(
             model_name='weather',

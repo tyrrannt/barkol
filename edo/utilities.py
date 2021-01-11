@@ -79,7 +79,7 @@ def weather(city_id):
     data = {}
     weather_class = {'Snow': 'flaticon-weather-3', 'Light snow': 'flaticon-weather-3',
                      'Clear sky': 'flaticon-sun-fill', 'Broken clouds': 'flaticon-sky-sun',
-                     'Light rain': 'flaticon-weather', 'Clouds': 'flaticon-sky-sun' }
+                     'Light rain': 'flaticon-weather', 'Clouds': 'flaticon-sky-sun'}
     try:
         model = Weather.objects.get(weather_date=date.date(), city__city_id=city_id)
         result.update({'conditions': model.weather_description})

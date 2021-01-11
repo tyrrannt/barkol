@@ -12,7 +12,7 @@ $(function () {
                     level: 10
                 }
             },
-             defaultArea: {
+            defaultArea: {
                 attrs: {
                     fill: "#e95f2b"
                 },

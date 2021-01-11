@@ -1,4 +1,7 @@
-html, body { height: 100%; }
+html, body {
+    height: 100%;
+}
+
 body {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -12,6 +15,7 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
 .form-login {
     width: 410px;
     max-width: 410px;
@@ -19,30 +23,35 @@ body {
     margin: 0 auto;
     background-color: #ffffff;
     border-radius: 6px;
-    box-shadow: 0 10px 60px 0 rgba(29,29,31,.09);
+    box-shadow: 0 10px 60px 0 rgba(29, 29, 31, .09);
     width: 100%;
     margin: auto;
 }
+
 .form-login .form-control::-webkit-input-placeholder {
     color: #fff;
     font-size: 14px;
     opacity: 0;
 }
+
 .form-login .form-control::-ms-input-placeholder {
     color: #fff;
     font-size: 14px;
     opacity: 0;
 }
+
 .form-login .form-control::-moz-placeholder {
     color: #fff;
     font-size: 14px;
     opacity: 0;
 }
+
 .form-login label {
     color: #3b3f5c;
     text-transform: uppercase;
     font-size: 13px;
 }
+
 .form-login .form-control {
     position: relative;
     box-sizing: border-box;
@@ -54,6 +63,7 @@ body {
     background: transparent;
     border-bottom: 1px solid #e9ecef;
 }
+
 .form-login .division {
     float: none;
     margin: 0 auto 18px;
@@ -63,14 +73,22 @@ body {
     width: 100%;
     color: #4f5163;
 }
+
 .form-login .division .line {
     border-top: 1px solid #e9ecef;
     position: absolute;
     top: 10px;
     width: 34%;
 }
-.form-login .division .line.line-left { left: 0; }
-.form-login .division .line.line-right { right: 0; }
+
+.form-login .division .line.line-left {
+    left: 0;
+}
+
+.form-login .division .line.line-right {
+    right: 0;
+}
+
 .login-text a {
     color: #6e45e2;
     margin-left: 5px;

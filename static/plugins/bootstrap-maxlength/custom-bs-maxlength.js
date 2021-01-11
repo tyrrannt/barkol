@@ -9,14 +9,14 @@ $('input.few-options').maxlength({
     limitReachedClass: "badge badge-warning"
 });
 $('input.alloptions').maxlength({
-  	alwaysShow: true,
-  	threshold: 10,
-  	warningClass: "badge badge-success",
+    alwaysShow: true,
+    threshold: 10,
+    warningClass: "badge badge-success",
     limitReachedClass: "badge badge-dark",
-  	separator: ' of ',
-  	preText: 'You have ',
-  	postText: ' chars remaining.',
-  	validate: true
+    separator: ' of ',
+    preText: 'You have ',
+    postText: ' chars remaining.',
+    validate: true
 });
 $('textarea.textarea').maxlength({
     alwaysShow: true,
@@ -24,34 +24,34 @@ $('textarea.textarea').maxlength({
 
 // Positions
 $('input.placement-top-left').maxlength({
-    placement:"top-left",
+    placement: "top-left",
     alwaysShow: true
 });
 $('input.placement-top').maxlength({
-    placement:"top",
+    placement: "top",
     alwaysShow: true
 });
 $('input.placement-top-right').maxlength({
-    placement:"top-right",
+    placement: "top-right",
     alwaysShow: true
 });
 $('input.placement-left').maxlength({
-    placement:"left",
+    placement: "left",
     alwaysShow: true
 });
 $('input.placement-right').maxlength({
-    placement:"right",
+    placement: "right",
     alwaysShow: true
 });
 $('input.placement-bottom-left').maxlength({
-    placement:"bottom-left",
+    placement: "bottom-left",
     alwaysShow: true
 });
 $('input.placement-bottom').maxlength({
-    placement:"bottom",
+    placement: "bottom",
     alwaysShow: true
 });
 $('input.placement-bottom-right').maxlength({
-    placement:"bottom-right",
+    placement: "bottom-right",
     alwaysShow: true
 });

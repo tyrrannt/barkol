@@ -1,4 +1,7 @@
-html, body { height: 100%; }
+html, body {
+    height: 100%;
+}
+
 body {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -11,6 +14,7 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
 .form-login {
     width: 410px;
     max-width: 410px;
@@ -20,11 +24,13 @@ body {
     width: 100%;
     margin: auto;
 }
+
 .form-login label {
     color: #888ea8;
     text-transform: uppercase;
     font-size: 13px;
 }
+
 .form-login .input-group .form-control {
     position: relative;
     box-sizing: border-box;
@@ -38,7 +44,11 @@ body {
     background: rgba(230, 230, 230, 0.20);
     border: none;
 }
-.form-login .input-group .input-group-prepend { margin-right: 0; }
+
+.form-login .input-group .input-group-prepend {
+    margin-right: 0;
+}
+
 .form-login .input-group .input-group-prepend .input-group-text {
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
@@ -47,47 +57,67 @@ body {
     border-right: none;
     border: none;
 }
+
 .form-login .form-control::-webkit-input-placeholder {
     color: #fff;
     font-size: 13px;
     text-transform: capitalize;
 }
+
 .form-login .form-control::-ms-input-placeholder {
     color: #fff;
     font-size: 13px;
     text-transform: capitalize;
 }
+
 .form-login .form-control::-moz-placeholder {
     color: #fff;
     font-size: 13px;
     text-transform: capitalize;
 }
+
 .form-login .form-control:focus {
     z-index: 2;
     border-color: #fff;
 }
+
 .form-login .checkbox .custom-control label {
     color: #fff;
     text-transform: initial;
     margin-left: -12px;
     font-size: 14px;
 }
+
 .form-login .forgot-pass a {
     color: #fff;
     font-size: 13px;
     font-weight: 600;
 }
-.form-login .checkbox .custom-checkbox .custom-control-input:checked~.custom-control-label::before { background-color: #fe998b; }
+
+.form-login .checkbox .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #fe998b;
+}
+
 .form-login .social-icons h5 {
     color: #494949;
     font-weight: 600;
 }
+
 .login-text p a {
     color: #af96ff;
     font-weight: 600;
     margin-left: 5px;
     margin-right: 5px;
 }
-.login-text p a:hover { color: #fe9a8b; }
-.btn-gradient-warning { padding: 12px 15px 12px 15px; }
-.custom-control-label::before { background-color: rgba(255, 255, 255, 0.6); }
+
+.login-text p a:hover {
+    color: #fe9a8b;
+}
+
+.btn-gradient-warning {
+    padding: 12px 15px 12px 15px;
+}
+
+.custom-control-label::before {
+    background-color: rgba(255, 255, 255, 0.6);
+}

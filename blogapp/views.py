@@ -5,7 +5,7 @@ from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, CreateView, UpdateView, DeleteView, ListView
 from django.contrib.auth.models import User
 
-from blogapp.forms import CreateNewPostForm
+from blogapp.forms import CreateNewPostForm, ViewAllPostForm
 from blogapp.models import Blog, BlogCategory
 from libapp.models import MainMenu
 from authapp.models import Counteragent, Person
@@ -28,9 +28,8 @@ def index(request):
 
 
 class ViewAllPost(ListView):
-    template_name = 'blogapp/create.html'
-    success_url = reverse_lazy('blog:index')
-    form_class = CreateNewPostForm
+    template_name = 'blogapp/list_view.html'
+    model = Blog
 
     @method_decorator(user_passes_test(lambda u: u.is_active))
     def dispatch(self, request, *args, **kwargs):
@@ -53,7 +52,7 @@ class CreateNewPost(CreateView):
     def get_context_data(self, **kwargs):
         context = super(CreateNewPost, self).get_context_data(**kwargs)
         context['title'] = title = 'Создание нового поста'
-        #context['author'] = self.user
+        # context['author'] = self.user
         print(context)
         return context
 
@@ -68,4 +67,3 @@ class CreateNewPost(CreateView):
         except Exception:
             print(kwargs)
         return kwargs
-

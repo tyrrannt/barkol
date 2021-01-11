@@ -31,7 +31,7 @@ $(function () {
                 tooltip: {content: "New York"},
                 myText: "Curabitur imperdiet velit eu urna aliquet, vitae aliquam nisi molestie. Etiam in eleifend lectus. Ut id velit dignissim, tristique urna at, sodales massa. Ut ultrices mi at varius elementum. Integer id mi sagittis, congue orci a, tristique neque. Maecenas varius rutrum dui eget lacinia. Suspendisse rutrum, enim auctor ullamcorper vestibulum, enim justo suscipit velit, in pretium dui elit et nisi. Vivamus hendrerit ex tempus, consectetur est eu, maximus quam. Sed congue nunc sed dapibus sagittis. ",
                 attrs: {
-                    fill:"#6156ce"
+                    fill: "#6156ce"
                 }
             },
             'an': {
@@ -40,7 +40,7 @@ $(function () {
                 tooltip: {content: "Anchorage"},
                 myText: "Nulla facilisi. Morbi eu tempor purus, ut pretium ante. Ut hendrerit auctor nisl a vehicula. Sed bibendum mattis magna, ut molestie libero imperdiet ac. Donec ac turpis facilisis, faucibus lorem feugiat, tincidunt lacus. Donec euismod, sem euismod sagittis elementum, nulla augue mattis mauris, tincidunt vestibulum purus libero vel tellus. Suspendisse id condimentum dolor, a interdum odio. Donec luctus sed mi at lacinia. ",
                 attrs: {
-                    fill:"#ff6f00"
+                    fill: "#ff6f00"
                 }
             },
             'sf': {
@@ -49,7 +49,7 @@ $(function () {
                 tooltip: {content: "San Francisco"},
                 myText: "Duis id sapien a lorem varius fringilla. Pellentesque leo mauris, pharetra in scelerisque ut, lacinia vitae libero. Quisque eleifend sagittis ipsum eget venenatis. Fusce enim justo, iaculis varius neque ut, mollis suscipit purus. Curabitur nisi risus, pellentesque non arcu in, varius suscipit tortor. Morbi eget blandit quam. Pellentesque quis nunc vel sem porttitor tempor. Maecenas et ullamcorper ipsum, ac aliquam arcu. ",
                 attrs: {
-                    fill:"#f8538d"
+                    fill: "#f8538d"
                 }
             },
             'pa': {
@@ -58,7 +58,7 @@ $(function () {
                 tooltip: {content: "Pahoa"},
                 myText: "Phasellus sit amet nulla quis leo pellentesque euismod. Cras vestibulum vulputate est, et volutpat dolor eleifend vel. Cras rhoncus ac massa vitae efficitur. Sed cursus bibendum leo, nec pellentesque diam fringilla non. Nam rhoncus tellus sapien, eget ornare ex luctus sed. Nunc at ligula odio. Quisque mollis, magna et aliquam posuere, sem turpis luctus urna, ac mollis arcu mi non neque. Cras sed rhoncus lorem. Sed bibendum, quam at porttitor convallis, sapien ex suscipit neque, et pulvinar est velit a dui. Curabitur tellus urna, porttitor sed eleifend non, ullamcorper id ligula. Aenean ac ligula gravida sem mollis consequat. Maecenas at felis est. Praesent commodo nunc ut arcu sollicitudin efficitur at vel mi. ",
                 attrs: {
-                    fill:"#07e0c4"
+                    fill: "#07e0c4"
                 }
             },
             'la': {
@@ -67,7 +67,7 @@ $(function () {
                 tooltip: {content: "Los Angeles"},
                 myText: "Phasellus mattis ligula elementum elit commodo placerat. Fusce maximus accumsan tristique. Mauris eu enim tortor. Aliquam non quam vitae elit sodales pharetra quis ac tortor. In ullamcorper hendrerit sem, ut suscipit massa dignissim non. Maecenas sed dui varius, tristique velit ac, bibendum ex. Phasellus tortor elit, luctus non accumsan sit amet, convallis non purus. Mauris lobortis tempor ex, vel ullamcorper tellus pharetra sed. ",
                 attrs: {
-                    fill:"#3232b7"
+                    fill: "#3232b7"
                 }
             },
             'dallas': {
@@ -76,7 +76,7 @@ $(function () {
                 tooltip: {content: "Dallas"},
                 myText: "Phasellus vitae sapien in turpis tempus pellentesque. Morbi ligula libero, facilisis scelerisque ex a, pellentesque luctus metus. Morbi sodales, velit sed ultricies maximus, lectus ipsum pulvinar elit, non facilisis ante tortor ac mauris. Mauris tempus vulputate vulputate. Donec consequat dolor lorem, rhoncus pharetra libero condimentum nec. Nunc in metus eros. Vivamus elementum imperdiet rhoncus. Aliquam suscipit nec sapien vitae blandit. Duis ultricies lacus nec ullamcorper eleifend. Nunc ut dignissim mauris. Sed sed tortor ultrices, rhoncus metus in, placerat urna. ",
                 attrs: {
-                    fill:"#e95f2b"
+                    fill: "#e95f2b"
                 }
             },
             'miami': {
@@ -85,7 +85,7 @@ $(function () {
                 tooltip: {content: "Miami"},
                 myText: "Suspendisse quis semper nisi, id ornare lectus. Nulla ac aliquam metus. Pellentesque molestie ligula quis lacus maximus, id eleifend dolor tincidunt. Mauris convallis purus vel eros rhoncus venenatis. Pellentesque mollis consectetur ipsum sed pharetra. In pharetra, mi nec placerat vestibulum, mi massa sodales arcu, nec commodo orci elit in enim. Praesent ante nisi, venenatis eget elementum et, cursus sed neque. Duis consequat dignissim nisl. In ut nisl orci. Pellentesque quis orci id lorem interdum hendrerit sed in erat. Ut felis risus, feugiat id posuere id, rhoncus nec dui. Nullam ut pretium diam. Nulla facilisi. Praesent erat neque, placerat non dapibus sed, gravida in erat. ",
                 attrs: {
-                    fill:"#24ccda"
+                    fill: "#24ccda"
                 }
             },
             'washington': {
@@ -94,7 +94,7 @@ $(function () {
                 tooltip: {content: "Washington"},
                 myText: "Praesent eu felis quis purus accumsan hendrerit. Mauris iaculis, eros eget cursus bibendum, est elit euismod enim, sit amet dignissim diam nisl in massa. Proin rhoncus justo dolor, sed fermentum augue pellentesque quis. Vivamus rutrum urna sapien, nec dignissim lectus varius ac. Fusce sed semper turpis. Integer efficitur ipsum eget est fringilla iaculis. Nam pellentesque tellus vitae lectus maximus varius. Proin convallis lorem nulla, sed rhoncus sapien molestie non. Cras dapibus turpis malesuada risus cursus, sit amet placerat lacus semper. Nam consequat leo at libero congue, sit amet dignissim lacus pellentesque. Quisque mollis aliquam libero at ultricies. Praesent facilisis augue eu auctor iaculis. Praesent a varius ligula, nec faucibus urna. Etiam id auctor felis. Praesent turpis leo, fermentum eu sapien eu, pulvinar bibendum lectus. Vestibulum dapibus, nisi quis tristique tempor, augue est posuere odio, vitae blandit elit nulla sit amet justo. ",
                 attrs: {
-                    fill:"#ffbb44"
+                    fill: "#ffbb44"
                 }
             },
             'seattle': {
@@ -103,7 +103,7 @@ $(function () {
                 tooltip: {content: "Seattle"},
                 myText: "Donec ultrices, augue vitae convallis malesuada, elit elit venenatis arcu, in rutrum lectus orci at erat. Nam id orci nunc. Suspendisse cursus massa vitae dignissim fermentum. Nullam velit lectus, congue at ultricies eget, varius in felis. In auctor mattis imperdiet. Maecenas feugiat sem ac ligula interdum maximus. Sed ex lectus, pellentesque in mi id, luctus viverra quam. Duis at laoreet erat. Pellentesque quis lorem aliquam neque fermentum malesuada id at nulla. Etiam egestas diam et porttitor tristique. ",
                 attrs: {
-                    fill:"#18d17f"
+                    fill: "#18d17f"
                 }
             }
         }

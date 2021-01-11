@@ -89,7 +89,6 @@ $(function () {
 });
 
 
-
 $(function () {
     $(".mapcontainer10").mapael({
         map: {
@@ -117,7 +116,7 @@ $(function () {
                     , stroke: "#fff"
                 }
                 , attrsHover: {
-                    fill : "#3b3f5c"
+                    fill: "#3b3f5c"
                 }
                 , text: {
                     attrs: {
@@ -210,8 +209,8 @@ $(function () {
         var deletedPlots = ["paris", "lyon"];
 
         $(".mapcontainer10").trigger('update', [{
-            mapOptions: updatedOptions, 
-            newPlots: newPlots, 
+            mapOptions: updatedOptions,
+            newPlots: newPlots,
             deletePlotKeys: deletedPlots,
             animDuration: 1000
         }]);

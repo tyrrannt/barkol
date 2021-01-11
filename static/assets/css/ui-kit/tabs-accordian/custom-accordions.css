@@ -8,19 +8,24 @@
     border-radius: 6px;
     margin-right: 15px;
 }
+
 .img-fluid {
     border-radius: 4px;
 }
+
 .accordion > .frame.active > .heading {
     background-color: #989ebf;
     border-color: #989ebf;
 }
+
 .accordion > .frame > .heading {
     background-color: #f1f3f3;
 }
+
 h5 {
     font-size: 15px;
 }
+
 .card {
     border: 1px solid #f1f3f1;
 }
@@ -28,6 +33,7 @@ h5 {
 .card-header {
     padding: 0;
 }
+
 .card-header h5 > span {
     padding: .75rem 1.25rem;
     cursor: pointer;
@@ -40,15 +46,18 @@ h5 {
     color: #3b3f5c;
     border-color: transparent;
 }
+
 .media img {
     border-radius: 4px;
     width: 70px;
     height: 70px;
 }
+
 .card-body h4.mb-4 {
     color: #6156ce;
     font-size: 18px;
 }
+
 .between-space-content .card-header {
     border-color: transparent;
     background-color: #07e0c4;
@@ -67,6 +76,7 @@ h5 {
     color: #f8538d;
     border-color: transparent;
 }
+
 i.float-right.flaticon-caret-up {
     color: #f8538d;
 }
@@ -77,6 +87,7 @@ i.float-right.flaticon-caret-up {
     border-color: transparent;
 
 }
+
 .toggle-false-content .card-body {
     background-color: #e6ecf5;
     color: #3b3f5c;
@@ -87,24 +98,26 @@ i.float-right.flaticon-caret-up {
     color: #ffffff;
     border-color: transparent;
 }
+
 .creative-accordion-content #creativeCollapseOne .card-body h4 {
     color: #e95f2b;
 }
+
 .creative-accordion-content #creativeCollapseThree .card-body h4 {
     color: #e95f2b;
 }
+
 .creative-accordion-content #creativeCollapseOne .card-body {
     color: #494949;
 }
+
 .creative-accordion-content #creativeCollapseTwo .card-body {
     color: #494949;
 }
+
 .creative-accordion-content #creativeCollapseThree .card-body {
     color: #494949;
 }
-
-
-
 
 
 /*  Small Accordion       */
@@ -134,6 +147,7 @@ i.float-right.flaticon-caret-up {
 .small-accordion-content #smallCollapseOne .card-body h4 {
     color: #e95f2b;
 }
+
 .small-accordion-content #smallCollapseThree .card-body h4 {
     color: #e95f2b;
 }
@@ -151,7 +165,6 @@ i.float-right.flaticon-caret-up {
 }
 
 
-
 /*  Creative Accordion       */
 
 .creative2-accordion-content #creativeAccordion .card {
@@ -160,6 +173,7 @@ i.float-right.flaticon-caret-up {
     border: none;
     border-radius: 0;
 }
+
 .creative2-accordion-content .card-header {
     background-color: #f1f3f0;
     color: #fff;
@@ -170,6 +184,7 @@ i.float-right.flaticon-caret-up {
     padding: 0 2px 0 0;
     color: #020333;
 }
+
 .creative2-accordion-content .card-header h5 .icon {
     display: inline-flex;
     padding: 15px 8px;
@@ -178,8 +193,9 @@ i.float-right.flaticon-caret-up {
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
 }
+
 .creative2-accordion-content .card-header h5 span.text {
-    
+
 }
 
 .creative2-accordion-content #creative2CollapseOne .card-body h4 {
@@ -189,19 +205,21 @@ i.float-right.flaticon-caret-up {
 .creative2-accordion-content #creative2CollapseThree .card-body h4 {
     color: #e95f2b;
 }
+
 .creative2-accordion-content #creative2CollapseOne .card-body {
     color: #494949;
     background-color: #fff;
 }
+
 .creative2-accordion-content #creative2CollapseTwo .card-body {
     color: #494949;
     background-color: #fff;
 }
+
 .creative2-accordion-content #creative2CollapseThree .card-body {
     color: #494949;
     background-color: #fff;
 }
-
 
 
 /*  Creative Accordion       */
@@ -214,22 +232,26 @@ i.float-right.flaticon-caret-up {
     border-top: 1px solid #eaedf2;
     margin-bottom: 3px;
 }
+
 .creative3-accordion-content .card-header {
     color: #fff;
     border: none;
 }
 
-.creative3-accordion-content  #creative3Accordion .card:last-child {
+.creative3-accordion-content #creative3Accordion .card:last-child {
     border-bottom: 1px solid #e9ecef;
 }
+
 .creative3-accordion-content .card-header h5 > span {
     padding: 1.35rem 1.25rem;
     color: #3b3f5c;
 }
+
 .creative3-accordion-content .card.c-1 {
-    background-color: #3b3f5c!important;
+    background-color: #3b3f5c !important;
     color: #fff;
 }
+
 .creative3-accordion-content .card.c-1 .card-header h5 > span {
     color: #fff;
 }
@@ -242,6 +264,7 @@ i.float-right.flaticon-caret-up {
     margin-right: 20px;
     color: #fff;
 }
+
 .creative3-accordion-content #creative3CollapseOne .card-body h4 {
     color: #e95f2b;
 }
@@ -254,26 +277,25 @@ i.float-right.flaticon-caret-up {
     color: #3b3f5c;
     background-color: #fff;
 }
+
 .creative3-accordion-content #creative3CollapseTwo .card-body {
     color: #3b3f5c;
     background-color: #fff;
 }
+
 .creative3-accordion-content #creative3CollapseThree .card-body {
     color: #3b3f5c;
     background-color: #fff;
 }
 
 
-
-
-
-
 /*     Pure CSS3 Hover Accordion      */
 
-.accordion{
+.accordion {
     background-color: #fff;
 }
-.single-accordion{
+
+.single-accordion {
     height: 35px;
     overflow: hidden;
     background: #ebedf2;
@@ -283,15 +305,18 @@ i.float-right.flaticon-caret-up {
     border-radius: 2px;
     -webkit-transition: all 1s;
 }
-.single-accordion:hover{
+
+.single-accordion:hover {
     height: 165px;
     border-radius: 10px;
     -webkit-transition: all 1s;
 }
-.single-accordion h3:hover{
+
+.single-accordion h3:hover {
     cursor: pointer;
 }
-.single-accordion h3{
+
+.single-accordion h3 {
     color: #fff;
     font-size: 22px;
     font-variant: small-caps;
@@ -299,12 +324,14 @@ i.float-right.flaticon-caret-up {
     margin-top: 16px;
     margin-bottom: 10px;
 }
-.single-accordion p{
+
+.single-accordion p {
     line-height: 25px;
     color: #515365;
     text-align: justify;
     font-size: 0.8rem;
 }
+
 @-moz-document url-prefix() {
     .dropcap:first-letter {
         padding: 20px 23px;
@@ -312,10 +339,11 @@ i.float-right.flaticon-caret-up {
 }
 
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .single-accordion h3 {
         font-size: 14px;
     }
+
     .single-accordion p {
         line-height: 22px;
         text-align: initial;

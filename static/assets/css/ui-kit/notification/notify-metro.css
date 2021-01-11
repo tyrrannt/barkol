@@ -1,8 +1,9 @@
 .notifyjs-metro-base {
     position: relative;
     min-height: 52px;
-    color:#444;
+    color: #444;
 }
+
 .notifyjs-metro-base .image {
     display: table;
     position: absolute;
@@ -16,7 +17,11 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-.notifyjs-metro-base .image img { height: 40px; }
+
+.notifyjs-metro-base .image img {
+    height: 40px;
+}
+
 .notifyjs-metro-base .text-wrapper {
     display: inline-block;
     vertical-align: top;
@@ -25,10 +30,12 @@
     clear: both;
     font-family: 'Segoe UI';
 }
+
 .notifyjs-metro-base .title {
     font-size: 15px;
     font-weight: bold;
 }
+
 .notifyjs-metro-base .text {
     font-size: 12px;
     font-weight: normal;

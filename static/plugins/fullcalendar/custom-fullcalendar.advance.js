@@ -1,22 +1,23 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $("#add-e").click(function(event) {
+    $("#add-e").click(function (event) {
         event.preventDefault();
         var inputField = $("#write-e");
-        var inputValue = $("#write-e").val();            
-        var html = '<div class=\'fc-event fc-new\' data-color=\'fc-new\'>'+inputValue+'</div>';
+        var inputValue = $("#write-e").val();
+        var html = '<div class=\'fc-event fc-new\' data-color=\'fc-new\'>' + inputValue + '</div>';
         $(html).appendTo(".add-event").hide().slideDown();
         $(inputField).val('');
         initializeExternalEvents();
     });
 
     initializeExternalEvents();
+
     function initializeExternalEvents() {
 
         /* initialize the external events
         -----------------------------------------------------------------*/
 
-        $('#external-events .fc-event').each(function() {
+        $('#external-events .fc-event').each(function () {
 
             // store data so the calendar knows to render an event upon drop
             $(this).data('event', {
@@ -34,7 +35,6 @@ $(document).ready(function() {
 
         });
     }
-
 
 
     /* initialize the calendar
@@ -100,7 +100,7 @@ $(document).ready(function() {
         editable: true,
         droppable: true, // this allows things to be dropped onto the calendar
         eventLimit: true,
-        drop: function() {
+        drop: function () {
             // is the "remove after drop" checkbox checked?
             if ($('#drop-remove').is(':checked')) {
                 // if so, remove the element from the "Draggable Events" list

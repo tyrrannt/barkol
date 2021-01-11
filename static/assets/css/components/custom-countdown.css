@@ -13,8 +13,16 @@
     text-indent: -20px;
     color: #e9ecef;
 }
-#cd-seperator .clock-val { color: #ee3d50; font-size: 50px; }
-#cd-seperator .clock-text { color: #3b3f5c; font-size: 25px; }
+
+#cd-seperator .clock-val {
+    color: #ee3d50;
+    font-size: 50px;
+}
+
+#cd-seperator .clock-text {
+    color: #3b3f5c;
+    font-size: 25px;
+}
 
 /* 
     Circle Countdown
@@ -28,11 +36,13 @@
     height: 155px;
     margin-left: -10px;
 }
+
 #cd-circle .clock-val {
     color: #6156ce;
     font-size: 45px;
     margin-bottom: 0;
 }
+
 #cd-circle .clock-text {
     color: #3b3f5c;
     font-size: 20px;
@@ -48,8 +58,16 @@
     padding: 20px;
     border-radius: 2px;
 }
-#cd-square .clock-val { color: #24ccda; font-size: 50px; }
-#cd-square .clock-text { color: #3b3f5c; font-size: 25px; }
+
+#cd-square .clock-val {
+    color: #24ccda;
+    font-size: 50px;
+}
+
+#cd-square .clock-text {
+    color: #3b3f5c;
+    font-size: 25px;
+}
 
 
 /*
@@ -62,4 +80,8 @@
     font-size: 50px;
     color: #fff;
 }
-#cd-fill-square .clock-text { color: #3b3f5c; font-size: 25px; }
+
+#cd-fill-square .clock-text {
+    color: #3b3f5c;
+    font-size: 25px;
+}

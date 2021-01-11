@@ -1,21 +1,25 @@
-
 //	=================
 //    	Imports
 //	=================
 
-@import '../base/color_variables';   	// Color Variables
-@import '../base/fonticons';   			// Fonticons Variables
-@import '../base/urls';   				// URLS Variables
-@import '../base/utilities_variables';  // Utilities Variables
+@import '../base/color_variables';
+// Color Variables
+@import '../base/fonticons';
+// Fonticons Variables
+@import '../base/urls';
+// URLS Variables
+@import '../base/utilities_variables'; // Utilities Variables
 
 .card {
-	border: none;
+  border: none;
 }
+
 .form-control {
-	font-size: 14px;
+  font-size: 14px;
 }
+
 h4 {
-	font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 

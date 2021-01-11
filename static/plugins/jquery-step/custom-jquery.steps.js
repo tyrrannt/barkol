@@ -37,7 +37,9 @@ $("#circle-basic").steps({
 });
 var formValidate = $("#formValidate");
 formValidate.validate({
-    errorPlacement: function errorPlacement(error, element) { element.before(error); },
+    errorPlacement: function errorPlacement(error, element) {
+        element.before(error);
+    },
     rules: {
         confirm: {
             equalTo: "#password"
@@ -51,18 +53,15 @@ formValidate.children("div").steps({
     autoFocus: true,
     titleTemplate: '#title#',
     cssClass: 'ico-text wizard',
-    onStepChanging: function (event, currentIndex, newIndex)
-    {
+    onStepChanging: function (event, currentIndex, newIndex) {
         formValidate.validate().settings.ignore = ":disabled,:hidden";
         return formValidate.valid();
     },
-    onFinishing: function (event, currentIndex)
-    {
+    onFinishing: function (event, currentIndex) {
         formValidate.validate().settings.ignore = ":disabled";
         return formValidate.valid();
     },
-    onFinished: function (event, currentIndex)
-    {
+    onFinished: function (event, currentIndex) {
         alert("Submitted!");
     }
 });

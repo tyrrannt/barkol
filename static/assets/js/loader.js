@@ -1,4 +1,4 @@
-$(window).on('load', function(event) {
+$(window).on('load', function (event) {
     event.preventDefault();
     $('#eq-loader').hide();
 });

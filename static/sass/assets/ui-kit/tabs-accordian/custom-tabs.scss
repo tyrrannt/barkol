@@ -1,69 +1,84 @@
-
 //	=================
 //    	Imports
 //	=================
 
-@import '../../base/color_variables';   	// Color Variables
-@import '../../base/fonticons';   			// Fonticons Variables
-@import '../../base/urls';   				// URLS Variables
-@import '../../base/utilities_variables';  // Utilities Variables
+@import '../../base/color_variables';
+// Color Variables
+@import '../../base/fonticons';
+// Fonticons Variables
+@import '../../base/urls';
+// URLS Variables
+@import '../../base/utilities_variables'; // Utilities Variables
 
 .border-default {
-	border-color: $color_142 !important;
+  border-color: $color_142 !important;
 }
+
 .widget-content-area {
-	padding-bottom: 32px;
+  padding-bottom: 32px;
 }
+
 .nav-tabs {
-	.nav-link.active {
-		color: $additional-color-5;
-		background-color: $white;
-		border-color: $color_142 $color_142 $white;
-		&:after {
-			color: $additional-color-5;
-		}
-	}
-	border-bottom: 1px solid $light-gray;
-	.nav-link {
-		&:hover {
-			border-color: $light-gray $light-gray $color_6;
-		}
-	}
-	.dropdown-item {
-		&:hover {
-			background-color: $color_54;
-			color: $color_2;
-		}
-	}
+  .nav-link.active {
+    color: $additional-color-5;
+    background-color: $white;
+    border-color: $color_142 $color_142 $white;
+
+    &:after {
+      color: $additional-color-5;
+    }
+  }
+
+  border-bottom: 1px solid $light-gray;
+
+  .nav-link {
+    &:hover {
+      border-color: $light-gray $light-gray $color_6;
+    }
+  }
+
+  .dropdown-item {
+    &:hover {
+      background-color: $color_54;
+      color: $color_2;
+    }
+  }
 }
+
 .dropdown-menu {
-	box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.1);
+  box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.1);
 }
+
 .nav-pills {
-	.nav-link.active {
-		background-color: $additional-color-5;
-		border-color: $color_none;
-		&:after {
-			color: $white;
-		}
-	}
-	.nav-link {
-		color: $color_11;
-	}
-	.show {
-		>.nav-link {
-			background-color: $additional-color-5;
-		}
-	}
+  .nav-link.active {
+    background-color: $additional-color-5;
+    border-color: $color_none;
+
+    &:after {
+      color: $white;
+    }
+  }
+
+  .nav-link {
+    color: $color_11;
+  }
+
+  .show {
+    > .nav-link {
+      background-color: $additional-color-5;
+    }
+  }
 }
+
 h4 {
-	color: $additional-color-5;
-	font-size: 1.125rem;
+  color: $additional-color-5;
+  font-size: 1.125rem;
 }
+
 blockquote.blockquote {
-	color: $color_11;
-	border-left: 2px solid #e95f2b;
-	background-color: $color_94;
+  color: $color_11;
+  border-left: 2px solid #e95f2b;
+  background-color: $color_94;
 }
 
 //    ====================================

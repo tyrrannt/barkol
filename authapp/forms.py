@@ -22,7 +22,23 @@ class UserEditForm(UserChangeForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'form-control py-4'
+            field.widget.attrs['class'] = 'form-control mb-4'
+            field.help_text = ''
+            if field_name == 'password':
+                field.widget = forms.HiddenInput()
+
+
+class UserUpdateForm(UserChangeForm):
+    class Meta:
+        model = Person
+        fields = (
+            'username', 'first_name', 'last_name', 'email', 'birthday', 'password', 'avatar', 'access_right', 'address',
+            'type_users', 'phone', 'corp_phone', 'works', 'gender', 'surname')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control mb-4'
             field.help_text = ''
             if field_name == 'password':
                 field.widget = forms.HiddenInput()
@@ -40,14 +56,15 @@ class UserRegisterForm(UserCreationForm):
         self.fields['email'].required = True
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control mb-4'
-            #field.help_text = ''
-
+            # field.help_text = ''
 
 
 class UserProfileForm(UserChangeForm):
     class Meta:
         model = Person
-        fields = ('username', 'first_name', 'last_name', 'surname', 'access_right', 'address', 'type_users', 'phone', 'email', 'birthday', 'password', 'avatar')
+        fields = (
+            'username', 'first_name', 'last_name', 'surname', 'access_right', 'address', 'type_users', 'phone', 'email',
+            'birthday', 'password', 'avatar')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -1,1 +1,20 @@
-[{"model": "authapp.city", "pk": 1, "fields": {"city_id": 524901, "country": 1, "city_name": "\u041c\u043e\u0441\u043a\u0432\u0430"}}, {"model": "authapp.city", "pk": 2, "fields": {"city_id": 579464, "country": 1, "city_name": "\u0411\u0430\u043b\u0430\u0448\u0438\u0445\u0430"}}]
+[
+  {
+    "model": "authapp.city",
+    "pk": 1,
+    "fields": {
+      "city_id": 524901,
+      "country": 1,
+      "city_name": "\u041c\u043e\u0441\u043a\u0432\u0430"
+    }
+  },
+  {
+    "model": "authapp.city",
+    "pk": 2,
+    "fields": {
+      "city_id": 579464,
+      "country": 1,
+      "city_name": "\u0411\u0430\u043b\u0430\u0448\u0438\u0445\u0430"
+    }
+  }
+]

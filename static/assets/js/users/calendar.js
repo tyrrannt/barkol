@@ -1,8 +1,8 @@
 /**
  *  calendar.js - Clean simple calendar for the Script on JavaScript.
- * 
+ *
  *  Copyright 2018 #!nit (initforcode.org)
- * 
+ *
  *  Permission is hereby granted, free of charge, to any person obtaining a
  *  copy of this software and associated documentation files (the "Software"),
  *  to deal in the Software without restriction, including without limitation
@@ -20,7 +20,7 @@
  *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
  *  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  *  DEALINGS IN THE SOFTWARE.
- * 
+ *
  **/
 
 let monthsNames = [
@@ -44,7 +44,7 @@ var dt = new Date();
  * This function resets any previously stored data and reinitializes the
  * calendar from scratch. Accepts a single month as argument. Only constructs
  * the calendar for the current year.
- * 
+ *
  */
 
 var calendarSetup = function (month) {
@@ -54,7 +54,9 @@ var calendarSetup = function (month) {
     month == null && (month = currentDate.getMonth());
 
     // Remove all existing rows.
-    $('.week').each(function () { $(this).remove(); })
+    $('.week').each(function () {
+        $(this).remove();
+    })
 
     // Set the little arrow keys.
     switch (month) {
@@ -76,13 +78,13 @@ var calendarSetup = function (month) {
 
     }
 
-    let firstDayOfMonth  = new Date(dt.getFullYear(), month, 1).getDay();
+    let firstDayOfMonth = new Date(dt.getFullYear(), month, 1).getDay();
     let totalDaysInMonth = new Date(dt.getFullYear(), month + 1, 0).getDate();
 
     // Create the first week.
     let calendarWeek = $('<div></div>');
     calendarWeek.addClass('week');
-    
+
     // Add empty <td> for non existing days.
     for (let i = 0; i < firstDayOfMonth; ++i) {
         emptyDay = $('<div></div>');              // Create new data for row.
@@ -108,7 +110,7 @@ var calendarSetup = function (month) {
             calendarWeek.addClass('week');
             dayCount = 0;
         }
-    
+
     }
 
     // Add empty <td> for non existing days.
@@ -137,7 +139,7 @@ var calendarSetup = function (month) {
 
 var prevMonth = function () {
     let month = $('#monthc').text();
-    calendarSetup(monthsNames.indexOf(month)-1);
+    calendarSetup(monthsNames.indexOf(month) - 1);
 }
 
 /**
@@ -146,7 +148,7 @@ var prevMonth = function () {
 
 var nextMonth = function () {
     let month = $('#monthc').text();
-    calendarSetup(monthsNames.indexOf(month)+1);
+    calendarSetup(monthsNames.indexOf(month) + 1);
 }
 
 $(document).ready(function () {

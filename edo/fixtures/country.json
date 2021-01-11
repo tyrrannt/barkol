@@ -1,1 +1,10 @@
-[{"model": "authapp.country", "pk": 1, "fields": {"code": "RU", "name": "\u0420\u043e\u0441\u0441\u0438\u044f"}}]
+[
+  {
+    "model": "authapp.country",
+    "pk": 1,
+    "fields": {
+      "code": "RU",
+      "name": "\u0420\u043e\u0441\u0441\u0438\u044f"
+    }
+  }
+]
